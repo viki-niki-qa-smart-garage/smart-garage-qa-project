@@ -1,1 +1,0 @@
-# Smart Garage - Test Cases
