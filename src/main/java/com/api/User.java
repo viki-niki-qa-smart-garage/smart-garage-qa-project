@@ -6,4 +6,5 @@ public class User {
     String email;
     String phoneNumber;
 
+    //Just a text
 }
