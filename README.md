@@ -2,33 +2,97 @@
 
 📌 Overview
 
-Smart Garage is a web application designed for auto repair shop owners to manage their daily operations.
-This repository contains the QA project for Smart Garage, including manual test design, automation scripts, API tests, reports, and documentation.
+Smart Garage is a web application designed for auto repair shop owners to manage day-to-day operations efficiently. It serves both employees and customers, providing functionality for:
 
-The goal of this QA project is to verify that Smart Garage meets all functional requirements and is production-ready.
+Vehicle management
+Service tracking
+Report generation
+Email notifications
+Loyalty management
+The purpose of this test plan is to ensure that all features meet functional, technical, and business requirements through structured manual and automated testing.
 
-🎯 QA Scope
+🎯 Objectives and Tasks
+Objectives:
 
-1.Manual Testing
+✅ Ensure all functional requirements are correctly implemented
 
-• Test Plan & Strategy
+✅ Validate input, authentication, and authorization mechanisms
 
-• High-level Test Cases
+✅ Verify filtering, sorting, report generation, PDF creation, currency conversion, and email notifications
 
-• Exploratory sessions
+✅ Confirm REST API endpoints are functional and documented via Swagger
 
-• Defect logging in Jira
+✅ Identify defects and report them for resolution
 
-2.Automation Testing
 
-• UI Automation: Selenium WebDriver + JUnit (Java)
+Tasks:
+📝 Design detailed manual test cases for all functional modules
 
-• API Testing: Postman + Java/RestAssured
+🏃 Execute test cases and document results
 
-🔧 Prerequisites
+🤖 Create automated suites covering at least the happy paths
 
-1.Java 17+
+🔗 Conduct integration testing for workflows like:
+customer registration → service → report generation → email
 
-2.Maven
+📊 Prepare test summary and defect reports
 
-3.Postman
+
+📥 Entry Criteria:
+
+Application deployed in test environment
+
+Test data prepared for customers, vehicles, services
+
+REST API deployed with Swagger documentation
+
+
+📌 Scope
+
+In Scope:
+
+Integration Testing
+
+System Testing:
+
+🧪 Testing Strategy
+Integration Testing
+
+Test full workflows:
+customer registration → vehicle/service creation → PDF report generation → emails
+
+
+
+API Testing:
+
+Verify all main endpoints
+
+Test CRUD operations for core entities: Users, Vehicles, Services
+
+Check status codes and request/response bodies
+
+
+🛠 Tools:
+
+Jira – Defect tracking, test management
+
+Selenium – Automated regression tests
+
+Postman – REST API testing
+
+Browser developer tools – UI inspection
+
+Docker
+
+Maven
+
+IntelliJ – IDE
+
+GitHub – Source control
+
+
+🏁 Exit Criteria:
+
+✅ All high-priority test cases executed and documented
+
+✅ 80% of highest-priority test cases executed
