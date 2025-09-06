@@ -23,5 +23,9 @@ public class Endpoints {
     private final String ADD_SERVICE = "/api/client-cars/{clientCarId}/services/{serviceId}";
     private final String CREATE_NEW_CLIENT_CAR = "api/users/{userId}/client-cars";
     private final String UPDATE_CAR_INFORMATION = "/api/client-cars/{clientCarId}";
+    private final String CREATE_SERVICE = "/api/services";
+    private final String DELETE_SERVICE = "/api/services/{serviceId}";
+    private final String UPDATE_SERVICE = "/api/services/{serviceId}";
+    private final String GET_FILTER_SORT_SERVICE = "/api/services/filter-sort?name={name}&price={price}&sortBy=name&sortDirection=asc";
 
 }
