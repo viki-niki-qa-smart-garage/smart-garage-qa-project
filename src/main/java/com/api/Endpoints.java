@@ -1,10 +1,10 @@
 package com.api;
 
 public class Endpoints {
-    private final String GET_USER_BY_ID = "/api/user/{userId}";
+    private final String GET_USER_BY_ID = "/api/user/{id}";
     private final String GET_ALL_USERS = "/api/users";
     private final String UPDATE_USER = "/api/users/customers";
-    private final String DELETE_USER = "/api/users/{userId}";
+    private final String DELETE_USER = "/api/users/{id}";
     private final String GET_USER_BY_USERNAME = "/api/users?username={username}&sortDirection={sort}&page={page}&size={size}";
     private final String GET_USER_BY_EMAIL = "/api/users?email={email}&sortDirection={sort}&page={page}&size={size}";
     private final String GET_USER_BY_PHONE_NUMBER = "/api/users?phoneNumber={phone}&sortDirection={sort}&page={page}&size={size}";
@@ -23,4 +23,9 @@ public class Endpoints {
     private final String ADD_SERVICE = "/api/client-cars/{clientCarId}/services/{serviceId}";
     private final String CREATE_NEW_CLIENT_CAR = "api/users/{userId}/client-cars";
     private final String UPDATE_CAR_INFORMATION = "/api/client-cars/{clientCarId}";
+    private final String CREATE_SERVICE = "/api/services";
+    private final String DELETE_SERVICE = "/api/services/{serviceId}";
+    private final String UPDATE_SERVICE = "/api/services/{serviceId}";
+    private final String GET_FILTER_SORT_SERVICE = "/api/services/filter-sort?name={name}&price={price}&sortBy=name&sortDirection=asc";
+
 }

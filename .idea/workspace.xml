@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit client-car-rest endpoints">
+    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit of Vehicle Endpoints">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +22,12 @@
     &quot;assignee&quot;: &quot;viks99sp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git",
-    "accountId": "696d0368-7a61-4ffd-bc26-93ac61440858"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git&quot;,
+    &quot;accountId&quot;: &quot;7e864bb5-6d8b-49b2-b41b-540d57279937&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -80,8 +81,8 @@
       <workItem from="1757092260476" duration="740000" />
       <workItem from="1757093925916" duration="94000" />
       <workItem from="1757094054092" duration="138000" />
-      <workItem from="1757152330450" duration="8168000" />
-      <workItem from="1757171500777" duration="603000" />
+      <workItem from="1757152330450" duration="429000" />
+      <workItem from="1757171548234" duration="1177000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -117,37 +118,21 @@
     </task>
     <task id="LOCAL-00005" summary="initial commit">
       <option name="closed" value="true" />
-      <created>1757153025873</created>
+      <created>1757153503353</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1757153025873</updated>
+      <updated>1757153503353</updated>
     </task>
-    <task id="LOCAL-00006" summary="initial commit">
+    <task id="LOCAL-00006" summary="initial commit of Vehicle Endpoints">
       <option name="closed" value="true" />
-      <created>1757156680838</created>
+      <created>1757157368873</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1757156680838</updated>
+      <updated>1757157368873</updated>
     </task>
-    <task id="LOCAL-00007" summary="initial commit">
-      <option name="closed" value="true" />
-      <created>1757157420834</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1757157420834</updated>
-    </task>
-    <task id="LOCAL-00008" summary="initial commit client-car-rest endpoints">
-      <option name="closed" value="true" />
-      <created>1757158910911</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1757158910911</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <MESSAGE value="initial commit client-car-rest endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit client-car-rest endpoints" />
+    <MESSAGE value="initial commit of Vehicle Endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit of Vehicle Endpoints" />
   </component>
 </project>
