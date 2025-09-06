@@ -15,6 +15,10 @@ public class Endpoints {
     private final String DELETE_VEHICLE = "/api/vehicles/{vehicleId}";
     private final String CREATE_VEHICLE = "/api/vehicles";
     private final String GET_CREATED_VEHICLE = "/api/vehicles/{vehicleId}";
+    private final String CREATE_SERVICE = "/api/services";
+    private final String UPDATE_SERVICE = "/api/services/{serviceId}";
+    private final String DELETE_SERVICE = "/api/services/{serviceId}";
+    private final String SORT_FILTER_SERVICES = "/api/services/filter-sort?name={name}&price={price}&sortBy=name&sortDirection=asc";
 
 
 }
