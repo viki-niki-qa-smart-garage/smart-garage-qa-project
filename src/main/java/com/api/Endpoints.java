@@ -1,7 +1,7 @@
 package com.api;
 
 public class Endpoints {
-    private final String GET_USER = "/api/user/{id}";
+    private final String GET_USER_BY_ID = "/api/user/{id}";
     private final String GET_ALL_USERS = "/api/users";
     private final String UPDATE_USER = "/api/users/customers";
     private final String DELETE_USER = "/api/users/{id}";
