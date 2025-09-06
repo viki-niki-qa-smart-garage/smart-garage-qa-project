@@ -15,6 +15,13 @@ public class Endpoints {
     private final String DELETE_VEHICLE = "/api/vehicles/{vehicleId}";
     private final String CREATE_VEHICLE = "/api/vehicles";
     private final String GET_CREATED_VEHICLE = "/api/vehicles/{vehicleId}";
-
+    private final String GET_CLIENT_CARS_SERVICES = "/api/client-cars/services";
+    private final String GET_CLIENT_CARS_SERVICE_HISTORY = "/api/users/{userId}/service-history";
+    private final String GET_CONCRETE_CAR_SERVICE = "/api/client-cars/{clientCarId}/services";
+    private final String FILTER_BY_OWNER_ASCENDING = "/api/client-cars/filter-sort?searchTerm={name}&sortBy=owner&sortDirection=asc";
+    private final String FILTER_BY_OWNER_DESCENDING = "/api/client-cars/filter-sort?searchTerm={name}&sortBy=owner&sortDirection=desc";
+    private final String ADD_SERVICE = "/api/client-cars/{clientCarId}/services/{serviceId}";
+    private final String CREATE_NEW_CLIENT_CAR = "api/users/{userId}/client-cars";
+    private final String UPDATE_CAR_INFORMATION = "/api/client-cars/{clientCarId}";
 
 }
