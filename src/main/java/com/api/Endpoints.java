@@ -9,4 +9,12 @@ public class Endpoints {
     private final String GET_USER_BY_EMAIL = "/api/users?email={email}&sortDirection={sort}&page={page}&size={size}";
     private final String GET_USER_BY_PHONE_NUMBER = "/api/users?phoneNumber={phone}&sortDirection={sort}&page={page}&size={size}";
     private final String GET_USER_BY_BRAND = "/api/users?vehicleBrand={brand}&sortDirection={sort}&page={page}&size={size}";
+    private final String GET_ALL_VEHICLES = "/api/vehicles";
+    private final String GET_VEHICLE_BY_ID = "/api/vehicles/{vehicleId}";
+    private final String UPDATE_VEHICLE = "/api/vehicles/{vehicleId}";
+    private final String DELETE_VEHICLE = "/api/vehicles/{vehicleId}";
+    private final String CREATE_VEHICLE = "/api/vehicles";
+    private final String GET_CREATED_VEHICLE = "/api/vehicles/{vehicleId}";
+
+
 }
