@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit of Vehicle Endpoints">
+    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit client-car-rest endpoints">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +24,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git&quot;,
-    &quot;accountId&quot;: &quot;7e864bb5-6d8b-49b2-b41b-540d57279937&quot;
+    &quot;accountId&quot;: &quot;696d0368-7a61-4ffd-bc26-93ac61440858&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -83,6 +82,8 @@
       <workItem from="1757094054092" duration="138000" />
       <workItem from="1757152330450" duration="429000" />
       <workItem from="1757171548234" duration="1177000" />
+      <workItem from="1757185614365" duration="1215000" />
+      <workItem from="1757237746997" duration="304000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
