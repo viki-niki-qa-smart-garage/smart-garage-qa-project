@@ -15,7 +15,7 @@ import io.restassured.response.Response;
 import static org.apache.http.HttpStatus.SC_OK;
 
 
-public class VehiclesApiTest extends BaseApiTest {
+public class VehicleApiTests extends BaseApiTest {
 
     @BeforeEach
     public void before() {
@@ -53,7 +53,7 @@ public class VehiclesApiTest extends BaseApiTest {
                 () -> Assertions.assertTrue(firstId == 1, "id must be 1"),
                 () -> Assertions.assertEquals("Audi", firstBrand, "Incorrect brand name"),
                 () -> Assertions.assertEquals("A4", firstModel, "Incorrect model name"),
-                () -> Assertions.assertEquals(2010, firstYear, "Incorrect year year"),
+                () -> Assertions.assertEquals(2010, firstYear, "Incorrect year"),
                 () -> Assertions.assertEquals("2.0 TDI", firstEngine, "Incorrect engineType name"),
                 () -> Assertions.assertFalse(firstDeleted, "deleted should be false")
         );

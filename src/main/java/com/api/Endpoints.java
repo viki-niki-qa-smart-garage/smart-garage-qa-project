@@ -2,14 +2,15 @@ package com.api;
 
 public class Endpoints {
     public static final String BASE_URL = "http://localhost:8081/api";
-    public static final String GET_USER_BY_ID = "/user/{id}";
-    public static final String GET_ALL_USERS = "/users";
-    public static final String UPDATE_USER = "/users/customers";
+    public static final String GET_USER_BY_ID = "/users/{id}";
+    public static final String GET_ALL_USERS = "/users?page=0&size=50";
+    public static final String UPDATE_USER = "/users/{id}";
+    public static final String CREATE_USER = "/users/customers";
     public static final String DELETE_USER = "/users/{id}";
-    public static final String GET_USER_BY_USERNAME = "/users?username={username}&sortDirection={sort}&page={page}&size={size}";
-    public static final String GET_USER_BY_EMAIL = "/users?email={email}&sortDirection={sort}&page={page}&size={size}";
-    public static final String GET_USER_BY_PHONE_NUMBER = "/users?phoneNumber={phone}&sortDirection={sort}&page={page}&size={size}";
-    public static final String GET_USER_BY_BRAND = "/users?vehicleBrand={brand}&sortDirection={sort}&page={page}&size={size}";
+    public static final String GET_USERS_BY_USERNAME = "/users?username={username}&sortDirection=acs&page=0&size=50";
+    public static final String GET_USERS_BY_EMAIL = "/users?email={email}&sortDirection=asc&page=0&size=50";
+    public static final String GET_USERS_BY_PHONE_NUMBER = "/users?phoneNumber={phoneNumber}&sortDirection=asc&page=0&size=50";
+    public static final String GET_USERS_BY_BRAND = "/users?vehicleBrand={brand}&sortDirection=asc&page=0&size=10";
     public static final String GET_ALL_VEHICLES = "/vehicles";
     public static final String GET_VEHICLE_BY_ID = "/vehicles/{vehicleId}";
     public static final String UPDATE_VEHICLE = "/vehicles/{vehicleId}";
