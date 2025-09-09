@@ -3,7 +3,9 @@ package tests.api;
 import com.api.Endpoints;
 import com.api.Vehicles;
 import core.BaseApiTest;
+import io.restassured.RestAssured;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -15,13 +17,17 @@ import static org.apache.http.HttpStatus.SC_OK;
 
 public class VehicleApiTests extends BaseApiTest {
 
+    @BeforeEach
+    public void before() {
+        RestAssured.authentication = RestAssured.preemptive().basic("user", "Qwertyuiop1!");
+    }
+
 
     @Test
     void getAllVehicles() {
 
         Response response =
                 given()
-                        .auth().preemptive().basic("user", "Qwertyuiop1!")
                         .contentType("application/json")
                         .when()
                         .get(Endpoints.GET_ALL_VEHICLES)
@@ -62,7 +68,6 @@ public class VehicleApiTests extends BaseApiTest {
 
         Response response =
                 given()
-                        .auth().preemptive().basic("user", "Qwertyuiop1!")
                         .contentType("application/json")
                         .pathParam("vehicleId", vehicleId)
                         .when()
@@ -86,7 +91,6 @@ public class VehicleApiTests extends BaseApiTest {
 
         Response response =
                 given()
-                        .auth().preemptive().basic("user", "Qwertyuiop1!")
                         .contentType("application/json")
                         .pathParam("vehicleId", vehicleId)
                         .body(vehicles)
@@ -100,15 +104,12 @@ public class VehicleApiTests extends BaseApiTest {
     }
 
 
-
-
     @Test
     void createVehicle() {
         Vehicles vehicles = new Vehicles("Volkswagen", "Polo", 2008, "1.4 TSI");
 
         Response response =
                 given()
-                        .auth().preemptive().basic("user", "Qwertyuiop1!")
                         .contentType("application/json")
                         .body(vehicles)
                         .when()
@@ -144,7 +145,6 @@ public class VehicleApiTests extends BaseApiTest {
 
         Response response =
                 given()
-                        .auth().preemptive().basic("user", "Qwertyuiop1!")
                         .contentType("application/json")
                         .pathParam("vehicleId", vehicleId)
                         .when()
@@ -159,7 +159,6 @@ public class VehicleApiTests extends BaseApiTest {
     }
 
 
-
     @Test
     void deleteVehicle() {
 
@@ -167,7 +166,6 @@ public class VehicleApiTests extends BaseApiTest {
 
         Response response =
                 given()
-                        .auth().preemptive().basic("user", "Qwertyuiop1!")
                         .contentType("application/json")
                         .pathParam("vehicleId", vehicleId)
                         .when()
@@ -178,9 +176,6 @@ public class VehicleApiTests extends BaseApiTest {
                         .extract().response();
 
     }
-
-
-
 }
 
 
