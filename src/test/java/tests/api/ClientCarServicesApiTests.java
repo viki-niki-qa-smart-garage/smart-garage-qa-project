@@ -40,6 +40,7 @@ public class ClientCarServicesApiTests extends BaseApiTest {
         List<Integer> usersId = response.jsonPath().getList("id");
         System.out.println(usersId);
     }
+    //just a text
 
     @Test
     void verifyUserHasTheKeywordInTheUsername() {
