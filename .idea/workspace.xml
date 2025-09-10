@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/api/OrderApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/VehicleApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/VehicleApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/ClientCarServicesApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/ClientCarServicesApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/UserApiCrudTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/UserApiCrudTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/UserApiSearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/UserApiSearchTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +51,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ClientCarServicesApiTests.addAServiceToAClientCar.executor": "Run",
+    "JUnit.ClientCarServicesApiTests.createANewClientCar.executor": "Run",
+    "JUnit.ClientCarServicesApiTests.filterClientCarsByOwner.executor": "Run",
+    "JUnit.ClientCarServicesApiTests.getAddedServiceToAClient.executor": "Run",
     "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
+    "JUnit.ClientCarServicesApiTests.getConcreteCarService.executor": "Run",
+    "JUnit.ClientCarServicesApiTests.getConcreteClientCarServiceHistory.executor": "Run",
+    "JUnit.ClientCarServicesApiTests.verifyUserHasTheKeywordInTheUsername.executor": "Run",
     "JUnit.OrderApiTests.getAllOrders.executor": "Run",
+    "JUnit.UserApiCrudTests.getAllUsers.executor": "Run",
+    "JUnit.UserApiCrudTests.getConcreteUser.executor": "Run",
     "JUnit.UserApiSearchTests.getAllUsersByBrand.executor": "Run",
     "JUnit.UserApiSearchTests.getAllUsersByBrandName.executor": "Run",
     "JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor": "Run",
@@ -91,8 +100,8 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OrderApiTests.getAllOrders">
-    <configuration name="ClientCarServicesApiTests.getClientCarServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ClientCarServicesApiTests.createANewClientCar">
+    <configuration name="ClientCarServicesApiTests.addAServiceToAClientCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -102,13 +111,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
       <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
-      <option name="METHOD_NAME" value="getClientCarServices" />
+      <option name="METHOD_NAME" value="addAServiceToAClientCar" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderApiTests.getAllOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientCarServicesApiTests.createANewClientCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -117,14 +126,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.OrderApiTests" />
-      <option name="METHOD_NAME" value="getAllOrders" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
+      <option name="METHOD_NAME" value="createANewClientCar" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserApiSearchTests.getAllUsersByBrand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientCarServicesApiTests.filterClientCarsByOwner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -133,14 +142,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.UserApiSearchTests" />
-      <option name="METHOD_NAME" value="getAllUsersByBrand" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
+      <option name="METHOD_NAME" value="filterClientCarsByOwner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserApiSearchTests.verifyUserBrandName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientCarServicesApiTests.getAddedServiceToAClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -149,14 +158,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.UserApiSearchTests" />
-      <option name="METHOD_NAME" value="verifyUserBrandName" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
+      <option name="METHOD_NAME" value="getAddedServiceToAClient" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehicleApiTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientCarServicesApiTests.verifyUserHasTheKeywordInTheUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -165,19 +174,20 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.VehicleApiTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
+      <option name="METHOD_NAME" value="verifyUserHasTheKeywordInTheUsername" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OrderApiTests.getAllOrders" />
-        <item itemvalue="JUnit.VehicleApiTests" />
-        <item itemvalue="JUnit.ClientCarServicesApiTests.getClientCarServices" />
-        <item itemvalue="JUnit.UserApiSearchTests.verifyUserBrandName" />
-        <item itemvalue="JUnit.UserApiSearchTests.getAllUsersByBrand" />
+        <item itemvalue="JUnit.ClientCarServicesApiTests.createANewClientCar" />
+        <item itemvalue="JUnit.ClientCarServicesApiTests.getAddedServiceToAClient" />
+        <item itemvalue="JUnit.ClientCarServicesApiTests.addAServiceToAClientCar" />
+        <item itemvalue="JUnit.ClientCarServicesApiTests.verifyUserHasTheKeywordInTheUsername" />
+        <item itemvalue="JUnit.ClientCarServicesApiTests.filterClientCarsByOwner" />
       </list>
     </recent_temporary>
   </component>

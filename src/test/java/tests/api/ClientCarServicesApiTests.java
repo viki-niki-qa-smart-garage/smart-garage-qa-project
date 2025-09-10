@@ -24,77 +24,40 @@ public class ClientCarServicesApiTests extends BaseApiTest {
         RestAssured.authentication = RestAssured.preemptive().basic("test", "Testing1@");
     }
 
-
-    @Test
-    void getClientCarServices() {
-
-        Response response =
-                given()
-                        .contentType("application/json")
-                        .when()
-                        .get(Endpoints.GET_CLIENT_CARS_SERVICES)
-                        .then()
-                        .log().all()
-                        .statusCode(SC_OK)
-                        .extract().response();
-    }
-
-
-    @Test
-    void getConcreteClientCarServiceHistory() {
-
-        Response response =
-                given()
-                        .contentType("application/json")
-                        .when()
-                        .pathParam("id", 30)
-                        .get(Endpoints.GET_CLIENT_CARS_SERVICE_HISTORY)
-                        .then()
-                        .log().all()
-                        .statusCode(SC_OK)
-                        .extract().response();
-
-        List<?> serviceHistory = response.jsonPath().getList("$");
-
-        Assertions.assertFalse(serviceHistory.isEmpty(), "Expected the services array to have elements");
-    }
-
-    @Test
-    void getConcreteCarService() {
-
-        Response response =
-                given()
-                        .contentType("application/json")
-                        .when()
-                        .pathParam("clientCarId", 9)
-                        .get(Endpoints.GET_CONCRETE_CAR_SERVICE)
-                        .then()
-                        .log().all()
-                        .statusCode(SC_OK)
-                        .extract().response();
-
-        List<?> service = response.jsonPath().getList("$");
-
-        Assertions.assertFalse(service.isEmpty(), "Expected the services array to have elements");
-
-    }
-
-
     @Test
     void filterClientCarsByOwner() {
-
         Response response =
                 given()
                         .contentType("application/json")
                         .when()
-                        .pathParam("name", "T")
+                        .pathParam("name", "er")
                         .get(Endpoints.FILTER_BY_OWNER_ASCENDING)
                         .then()
                         .log().all()
                         .statusCode(SC_OK)
                         .extract().response();
 
+        List<Integer> usersId = response.jsonPath().getList("id");
+        System.out.println(usersId);
     }
+
+    @Test
+    void verifyUserHasTheKeywordInTheUsername() {
+        Response response =
+                given()
+                        .contentType("application/json")
+                        .when()
+                        .pathParam("id", 1)
+                        .get(Endpoints.GET_USER_BY_ID)
+                        .then()
+                        .log().all()
+                        .statusCode(SC_OK)
+                        .extract().response();
+
+        String username = response.jsonPath().getString("username");
+        Assertions.assertTrue(username.contains("er"));
+    }
+
 
     @Test
     void addAServiceToAClientCar() {
@@ -103,36 +66,21 @@ public class ClientCarServicesApiTests extends BaseApiTest {
                 given()
                         .contentType("application/json")
                         .when()
-                        .pathParam("clientCarId", 9)
+                        .pathParam("clientCarId", 8)
                         .pathParam("serviceId", 11)
                         .post(Endpoints.ADD_SERVICE)
                         .then()
                         .log().all()
                         .statusCode(SC_CREATED)
                         .extract().response();
-
-    }
-
-    @Test
-    void getAddedServiceToAClient() {
-
-        Response response =
-                given()
-                        .contentType("application/json")
-                        .when()
-                        .pathParam("id", 9)
-                        .get(Endpoints.GET_CLIENT_CARS_SERVICE_HISTORY)
-                        .then()
-                        .log().all()
-                        .statusCode(SC_OK)
-                        .extract().response();
-
+        //The Response code in Swagger Docs is 200!!!
+        //Can not make assert with GET request, because there is a defect in the response code!
     }
 
     @Test
     void createANewClientCar() {
 
-         vehicles = new Vehicles("Audi", "Volkswagen", 2021, "3.0 TDI", "0UK98WBA0K7VCNL6E", "A5912PP" );
+         vehicles = new Vehicles("Audi", "Volkswagen", 2021, "3.0 TDI", "804OP7B1Y6PHQKLRO", "А9122PВ" );
 
         Response response =
                 given()

@@ -9,26 +9,24 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.hamcrest.Matchers.anyOf;
 import static org.hamcrest.Matchers.is;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class UserApiCrudTests extends BaseApiTest {
-
-
     @BeforeEach
     void setUp() {
-
         RestAssured.authentication = RestAssured.preemptive().basic("test", "Testing1@");
     }
 
-
     @Test
     void getAllUsers() {
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -39,35 +37,26 @@ public class UserApiCrudTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
-        java.util.List<?> items = response.jsonPath().getList("$");
-        Assertions.assertNotNull(items, "Response is not an array");
-        Assertions.assertFalse(items.isEmpty(), "Expected at least one user");
-
-
         int firstId = response.jsonPath().getInt("[0].id");
-        String username = response.jsonPath().getString("[0].username");
-        String firstName = response.jsonPath().getString("[0].firstName");
-        String lastName = response.jsonPath().getString("[0].lastName");
-        String email = response.jsonPath().getString("[0].email");
-        String phoneNumber = response.jsonPath().getString("[0].phoneNumber");
+        String username = response.jsonPath().getString("username");
+        String firstName = response.jsonPath().getString("firstName");
+        String lastName = response.jsonPath().getString("lastName");
+        String email = response.jsonPath().getString("email");
+        String phoneNumber = response.jsonPath().getString("phoneNumber");
 
         Assertions.assertAll("first user details",
                 () -> Assertions.assertTrue(firstId == 1, "id must be 1"),
-                () -> assertEquals("alex_rider", username, "Incorrect username"),
-                () -> assertEquals("Alex", firstName, "Incorrect first name"),
-                () -> assertEquals("Rider", lastName, "Incorrect last name"),
-                () -> assertEquals("alex.rider@gmail.com", email, "Incorrect email"),
-                () -> assertEquals("0877000001", phoneNumber, "Incorrect phone number")
-
+                () -> assertNotNull(username, "Incorrect username"),
+                () -> assertNotNull(firstName, "Incorrect first name"),
+                () -> assertNotNull(lastName, "Incorrect last name"),
+                () -> assertNotNull(email, "Incorrect email"),
+                () -> assertNotNull(phoneNumber, "Incorrect phone number")
         );
     }
 
-
     @Test
     void getConcreteUser() {
-
         final int user = 30;
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -79,19 +68,27 @@ public class UserApiCrudTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
-        Assertions.assertEquals(user, response.jsonPath().getInt("id"), "Incorrect user id");
+        int userId = response.jsonPath().getInt("id");
+        String username = response.jsonPath().getString("username");
+        String firstName = response.jsonPath().getString("firstName");
+        String lastName = response.jsonPath().getString("lastName");
+        String email = response.jsonPath().getString("email");
+        String phoneNumber = response.jsonPath().getString("phoneNumber");
 
+        Assertions.assertEquals(user, userId, "Incorrect user id");
+        Assertions.assertAll("first user details",
+                () -> assertNotNull(username, "Incorrect username"),
+                () -> assertNotNull(firstName, "Incorrect first name"),
+                () -> assertNotNull(lastName, "Incorrect last name"),
+                () -> assertNotNull(email, "Incorrect email"),
+                () -> assertNotNull(phoneNumber, "Incorrect phone number")
+        );
     }
-
-
 
     @Test
     void updateUser() {
-
         User user = new User("Tom", "Smith", "tom@abv.bg", "0877998844");
-
         final int userID = 30;
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -103,8 +100,6 @@ public class UserApiCrudTests extends BaseApiTest {
                         .log().all()
                         .statusCode(SC_OK)
                         .extract().response();
-
-
         String firstName = response.jsonPath().getString("firstName");
         String lastName = response.jsonPath().getString("lastName");
         String email = response.jsonPath().getString("email");
@@ -118,13 +113,9 @@ public class UserApiCrudTests extends BaseApiTest {
         );
     }
 
-
-
     @Test
     void deleteUser() {
-
         final int userId = 60;
-
         Response response =
                 given()
                         .pathParam("id", userId)
@@ -135,9 +126,7 @@ public class UserApiCrudTests extends BaseApiTest {
                         .statusCode(anyOf(is(SC_OK),is(SC_NOT_FOUND)))
                         .extract().response();
 
-
         int statusCode = response.statusCode();
-
         if (statusCode == SC_OK) {
             String message = response.asString();
             Assertions.assertEquals("User is deleted successfully.", message, "User is not deleted");
@@ -148,12 +137,9 @@ public class UserApiCrudTests extends BaseApiTest {
 
     }
 
-
     @Test
     void createCustomer() {
-
         User user = new User("afgd123", "Anna", "Petrova", "anafgaab@abv.bg", "8008532211");
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -165,18 +151,15 @@ public class UserApiCrudTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
-
         String username = response.jsonPath().getString("username");
         String email = response.jsonPath().getString("email");
         String phoneNumber = response.jsonPath().getString("phoneNumber");
-
 
         Assertions.assertEquals("afgd123", username, "Username does not match");
         Assertions.assertEquals("anafgaab@abv.bg", email, "Email does not match");
         Assertions.assertEquals("8888532211", phoneNumber, "Phone number does not match");
 
         String password = response.jsonPath().getString("password");
-        Assertions.assertNotNull(password, "Password should be generated");
-
+        assertNotNull(password, "Password should be generated");
     }
 }

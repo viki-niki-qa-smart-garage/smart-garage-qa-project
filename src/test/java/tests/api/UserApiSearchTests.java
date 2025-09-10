@@ -14,18 +14,14 @@ import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class UserApiSearchTests extends BaseApiTest {
-
     @BeforeEach
     void setUp() {
-
         RestAssured.authentication = RestAssured.preemptive().basic("test", "Testing1@");
     }
 
     @Test
     void getAllUsersByUsernameKeyword() {
-
         String usernameKeyword = "han";
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -40,7 +36,6 @@ public class UserApiSearchTests extends BaseApiTest {
 
         List<String> usernames = response.jsonPath().getList("username");
 
-
         for (String username : usernames) {
             Assertions.assertTrue(username.toLowerCase().contains(username.toLowerCase()),
                     "Username '" + username + "' does not contain the keyword '" + usernameKeyword + "'");
@@ -48,12 +43,9 @@ public class UserApiSearchTests extends BaseApiTest {
 
     }
 
-
     @Test
     void getAllUsersByEmailKeyword() {
-
         String emailKeyword = "abv";
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -68,7 +60,6 @@ public class UserApiSearchTests extends BaseApiTest {
 
         List<String> emails = response.jsonPath().getList("email");
 
-
         for (String email : emails) {
             Assertions.assertTrue(email.toLowerCase().contains(email.toLowerCase()),
                     "Username '" + email + "' does not contain the keyword '" + emailKeyword + "'");
@@ -78,9 +69,7 @@ public class UserApiSearchTests extends BaseApiTest {
 
     @Test
     void getAllUsersByPartialPhoneNumber() {
-
         String phoneKeyword = "005";
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -92,9 +81,7 @@ public class UserApiSearchTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
-
         List<String> phoneNumbers = response.jsonPath().getList("phoneNumber");
-
 
         for (String phoneNumber : phoneNumbers) {
             Assertions.assertTrue(
@@ -104,12 +91,9 @@ public class UserApiSearchTests extends BaseApiTest {
         }
     }
 
-
     @Test
     void getAllUsersByBrand() {
-
         String brand = "Volkswagen";
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -120,15 +104,11 @@ public class UserApiSearchTests extends BaseApiTest {
                         .log().all()
                         .statusCode(SC_OK)
                         .extract().response();
-
     }
-
 
     @Test
     void verifyUserBrandName() {
-
         String brand = "Volkswagen";
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -139,9 +119,7 @@ public class UserApiSearchTests extends BaseApiTest {
                         .log().all()
                         .statusCode(SC_OK)
                         .extract().response();
-
         String actualBrandName = response.jsonPath().getString("brand.name");
-
         Assertions.assertEquals(brand, actualBrandName, "Brand name does not match the expected value");
     }
 }
