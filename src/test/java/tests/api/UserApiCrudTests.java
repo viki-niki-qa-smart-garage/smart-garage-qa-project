@@ -18,6 +18,7 @@ import static org.hamcrest.Matchers.is;
 
 public class UserApiCrudTests extends BaseApiTest {
 
+
     @BeforeEach
     void setUp() {
 
@@ -57,18 +58,20 @@ public class UserApiCrudTests extends BaseApiTest {
                 () -> assertEquals("Rider", lastName, "Incorrect last name"),
                 () -> assertEquals("alex.rider@gmail.com", email, "Incorrect email"),
                 () -> assertEquals("0877000001", phoneNumber, "Incorrect phone number")
+
         );
     }
+
 
     @Test
     void getConcreteUser() {
 
-        final int userId = 24;
+        final int user = 30;
 
         Response response =
                 given()
                         .contentType("application/json")
-                        .pathParam("id", userId)
+                        .pathParam("id", user)
                         .when()
                         .get(Endpoints.GET_USER_BY_ID)
                         .then()
@@ -76,9 +79,10 @@ public class UserApiCrudTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
-        Assertions.assertEquals(userId, response.jsonPath().getInt("id"), "Incorrect user id");
+        Assertions.assertEquals(user, response.jsonPath().getInt("id"), "Incorrect user id");
 
     }
+
 
 
     @Test
@@ -86,12 +90,12 @@ public class UserApiCrudTests extends BaseApiTest {
 
         User user = new User("Tom", "Smith", "tom@abv.bg", "0877998844");
 
-        final int userId = 30;
+        final int userID = 30;
 
         Response response =
                 given()
                         .contentType("application/json")
-                        .pathParam("id", userId)
+                        .pathParam("id", userID)
                         .body(user)
                         .when()
                         .put(Endpoints.UPDATE_USER)
@@ -114,38 +118,6 @@ public class UserApiCrudTests extends BaseApiTest {
         );
     }
 
-
-
-    @Test
-    void createUser() {
-
-        User user = new User("anaaa123", "Anna", "Petrova", "anaaa@abv.bg", "8888532211");
-
-        Response response =
-                given()
-                        .contentType("application/json")
-                        .body(user)
-                        .when()
-                        .post(Endpoints.CREATE_USER)
-                        .then()
-                        .log().all()
-                        .statusCode(SC_OK)
-                        .extract().response();
-
-
-        String username = response.jsonPath().getString("username");
-        String email = response.jsonPath().getString("email");
-        String phoneNumber = response.jsonPath().getString("phoneNumber");
-
-        Assertions.assertEquals("anaaa123", username, "Username does not match");
-        Assertions.assertEquals("anaaa@abv.bg", email, "Email does not match");
-        Assertions.assertEquals("8888532211", phoneNumber, "Phone number does not match");
-
-        String password = response.jsonPath().getString("password");
-        Assertions.assertNotNull(password, "Password should be generated");
-
-
-    }
 
 
     @Test
@@ -173,6 +145,38 @@ public class UserApiCrudTests extends BaseApiTest {
             String message = response.jsonPath().getString("message");
             Assertions.assertEquals("User with id 60 not found.", message, "User is not deleted");
         }
+
+    }
+
+
+    @Test
+    void createCustomer() {
+
+        User user = new User("afgd123", "Anna", "Petrova", "anafgaab@abv.bg", "8008532211");
+
+        Response response =
+                given()
+                        .contentType("application/json")
+                        .body(user)
+                        .when()
+                        .post(Endpoints.CREATE_CUSTOMER)
+                        .then()
+                        .log().all()
+                        .statusCode(SC_OK)
+                        .extract().response();
+
+
+        String username = response.jsonPath().getString("username");
+        String email = response.jsonPath().getString("email");
+        String phoneNumber = response.jsonPath().getString("phoneNumber");
+
+
+        Assertions.assertEquals("afgd123", username, "Username does not match");
+        Assertions.assertEquals("anafgaab@abv.bg", email, "Email does not match");
+        Assertions.assertEquals("8888532211", phoneNumber, "Phone number does not match");
+
+        String password = response.jsonPath().getString("password");
+        Assertions.assertNotNull(password, "Password should be generated");
 
     }
 }
