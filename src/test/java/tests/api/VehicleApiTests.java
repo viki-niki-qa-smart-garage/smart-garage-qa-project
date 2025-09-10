@@ -17,6 +17,8 @@ import static org.apache.http.HttpStatus.SC_OK;
 
 public class VehicleApiTests extends BaseApiTest {
 
+    private static Integer vehicleId;
+
     @BeforeEach
     public void before() {
         RestAssured.authentication = RestAssured.preemptive().basic("user", "Qwertyuiop1!");
@@ -82,26 +84,6 @@ public class VehicleApiTests extends BaseApiTest {
 
     }
 
-    @Test
-    void updateVehicle() {
-
-        Vehicles vehicles = new Vehicles("Porsche", "GT3", 2010, "2.0 Boxer");
-
-        final int vehicleId = 34;
-
-        Response response =
-                given()
-                        .contentType("application/json")
-                        .pathParam("vehicleId", vehicleId)
-                        .body(vehicles)
-                        .when()
-                        .put(Endpoints.UPDATE_VEHICLE)
-                        .then()
-                        .log().all()
-                        .statusCode(SC_OK)
-                        .extract().response();
-
-    }
 
 
     @Test
@@ -124,7 +106,7 @@ public class VehicleApiTests extends BaseApiTest {
         String modelName = response.jsonPath().getString("model.name");
         Integer year = response.jsonPath().getInt("year.year");
         String engineType = response.jsonPath().getString("engineType.name");
-        Integer id = response.jsonPath().getInt("id");
+        vehicleId = response.jsonPath().getInt("id");
         boolean deleted = response.jsonPath().getBoolean("deleted");
 
 
@@ -132,7 +114,7 @@ public class VehicleApiTests extends BaseApiTest {
         Assertions.assertEquals("Polo", modelName, "Incorrect modelName");
         Assertions.assertEquals(2008, year, "Incorrect year");
         Assertions.assertEquals("1.4 TSI", engineType, "Incorrect engine type");
-        Assertions.assertTrue(id != null && id > 0, "Generated id should be > 0");
+        Assertions.assertTrue(vehicleId != null && vehicleId > 0, "Generated id should be > 0");
         Assertions.assertFalse(deleted, "New vehicle should not be deleted");
 
 
@@ -141,7 +123,7 @@ public class VehicleApiTests extends BaseApiTest {
     @Test
     void getCreatedVehicle() {
 
-        final int vehicleId = 50;
+//        final int vehicleId = 50;
 
         Response response =
                 given()
@@ -155,6 +137,25 @@ public class VehicleApiTests extends BaseApiTest {
                         .extract().response();
 
         Assertions.assertEquals(vehicleId, response.jsonPath().getInt("id"), "Incorrect id");
+    }
+
+    @Test
+    void updateVehicle() {
+
+        Vehicles vehicles = new Vehicles("Porsche", "GT3", 2010, "2.0 Boxer");
+
+
+        Response response =
+                given()
+                        .contentType("application/json")
+                        .pathParam("vehicleId", vehicleId)
+                        .body(vehicles)
+                        .when()
+                        .put(Endpoints.UPDATE_VEHICLE)
+                        .then()
+                        .log().all()
+                        .statusCode(SC_OK)
+                        .extract().response();
 
     }
 
@@ -162,7 +163,6 @@ public class VehicleApiTests extends BaseApiTest {
     @Test
     void deleteVehicle() {
 
-        final int vehicleId = 49;
 
         Response response =
                 given()

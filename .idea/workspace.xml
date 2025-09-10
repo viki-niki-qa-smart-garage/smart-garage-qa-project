@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/api/OrderApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/Vehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/Vehicles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/core/BaseApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/core/BaseApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/ClientCarServicesApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/ClientCarServicesApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/UserApiCrudTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/UserApiCrudTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/VehicleApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/VehicleApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,63 +49,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.ClientCarServicesApiTests.addAServiceToAClientCar.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientCarServicesApiTests.createANewClientCar.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientCarServicesApiTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientCarServicesApiTests.filterClientCarsByOwner.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientCarServicesApiTests.getAddedServiceToAClient.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientCarServicesApiTests.getClientCarServiceHistory.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientCarServicesApiTests.getClientCarServices.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientCarServicesApiTests.getConcreteCarService.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientCarServicesApiTests.getConcreteClientCarServiceHistory.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiCrudTests.createUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiCrudTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiCrudTests.getAllUsers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiCrudTests.getConcreteUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiCrudTests.updateUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByBrand.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByBrandName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByPartialPhoneNumber.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByUsernameKeyword.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.verifyUserBrandName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.createUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.deleteUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.getAllUsers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.getConcreteUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.updateUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehicleApiTests.updateVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.createVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.deleteVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.getAllVehicles.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.getConcreteVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.getCreatedVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.updateVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.api in SmartGarageTI.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/smart-garage-qa-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
+    "JUnit.OrderApiTests.getAllOrders.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByBrand.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByBrandName.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByPartialPhoneNumber.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByUsernameKeyword.executor": "Run",
+    "JUnit.UserApiSearchTests.verifyUserBrandName.executor": "Run",
+    "JUnit.UserApiTests.createUser.executor": "Run",
+    "JUnit.UserApiTests.deleteUser.executor": "Run",
+    "JUnit.UserApiTests.getAllUsers.executor": "Run",
+    "JUnit.UserApiTests.getConcreteUser.executor": "Run",
+    "JUnit.UserApiTests.updateUser.executor": "Run",
+    "JUnit.VehicleApiTests.executor": "Run",
+    "JUnit.VehicleApiTests.updateVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.createVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.deleteVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.getAllVehicles.executor": "Run",
+    "JUnit.VehiclesApiTest.getConcreteVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.getCreatedVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.updateVehicle.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/User/smart-garage-qa-project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClientCarServicesApiTests.createANewClientCar">
-    <configuration name="ClientCarServicesApiTests.addAServiceToAClientCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OrderApiTests.getAllOrders">
+    <configuration name="ClientCarServicesApiTests.getClientCarServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -118,13 +102,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
       <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
-      <option name="METHOD_NAME" value="addAServiceToAClientCar" />
+      <option name="METHOD_NAME" value="getClientCarServices" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientCarServicesApiTests.createANewClientCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderApiTests.getAllOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -133,14 +117,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
-      <option name="METHOD_NAME" value="createANewClientCar" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.OrderApiTests" />
+      <option name="METHOD_NAME" value="getAllOrders" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientCarServicesApiTests.filterClientCarsByOwner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserApiSearchTests.getAllUsersByBrand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -149,14 +133,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
-      <option name="METHOD_NAME" value="filterClientCarsByOwner" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.UserApiSearchTests" />
+      <option name="METHOD_NAME" value="getAllUsersByBrand" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientCarServicesApiTests.getAddedServiceToAClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserApiSearchTests.verifyUserBrandName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -165,14 +149,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
-      <option name="METHOD_NAME" value="getAddedServiceToAClient" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.UserApiSearchTests" />
+      <option name="METHOD_NAME" value="verifyUserBrandName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientCarServicesApiTests.getConcreteClientCarServiceHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehicleApiTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -181,20 +165,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
-      <option name="METHOD_NAME" value="getConcreteClientCarServiceHistory" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.VehicleApiTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClientCarServicesApiTests.createANewClientCar" />
-        <item itemvalue="JUnit.ClientCarServicesApiTests.getAddedServiceToAClient" />
-        <item itemvalue="JUnit.ClientCarServicesApiTests.addAServiceToAClientCar" />
-        <item itemvalue="JUnit.ClientCarServicesApiTests.filterClientCarsByOwner" />
-        <item itemvalue="JUnit.ClientCarServicesApiTests.getConcreteClientCarServiceHistory" />
+        <item itemvalue="JUnit.OrderApiTests.getAllOrders" />
+        <item itemvalue="JUnit.VehicleApiTests" />
+        <item itemvalue="JUnit.ClientCarServicesApiTests.getClientCarServices" />
+        <item itemvalue="JUnit.UserApiSearchTests.verifyUserBrandName" />
+        <item itemvalue="JUnit.UserApiSearchTests.getAllUsersByBrand" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +206,6 @@
       <workItem from="1757185614365" duration="1215000" />
       <workItem from="1757237746997" duration="16132000" />
       <workItem from="1757323558303" duration="17853000" />
-      <workItem from="1757438817840" duration="3538000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -289,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757256812309</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1757415447341</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757415447341</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
