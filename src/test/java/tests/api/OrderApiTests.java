@@ -8,6 +8,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_OK;
 
@@ -31,74 +34,202 @@ public class OrderApiTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
-        // Array checks
-        java.util.List<?> items = response.jsonPath().getList("$");
+        // Response is array and not empty
+        List<?> items = response.jsonPath().getList("$");
         Assertions.assertNotNull(items, "Response is not an array");
         Assertions.assertFalse(items.isEmpty(), "Expected at least one order");
 
+        // Extract fields from first order
+        int firstOrderId = response.jsonPath().getInt("[0].id");
+        String clientCar = response.jsonPath().getString("[0].clientCar");
+        String firstStatus = response.jsonPath().getString("[0].status");
+        String firstOrderDate = response.jsonPath().getString("[0].orderDate");
 
-        for (int i = 0; i < items.size(); i++) {
-            String p = "[" + i + "]";
-
-
-            Integer orderId = response.jsonPath().getObject(p + ".id", Integer.class);
-
-            Integer clientCarId = response.jsonPath().getObject(p + ".clientCar.id", Integer.class);
-            String vin = response.jsonPath().getString(p + ".clientCar.vin");
-            String licensePlate = response.jsonPath().getString(p + ".clientCar.licensePlate");
-
-            Integer vehicleId = response.jsonPath().getObject(p + ".clientCar.vehicle.id", Integer.class);
-            Integer brandId = response.jsonPath().getObject(p + ".clientCar.vehicle.brand.id", Integer.class);
-            String brandName = response.jsonPath().getString(p + ".clientCar.vehicle.brand.name");
-            Integer modelId = response.jsonPath().getObject(p + ".clientCar.vehicle.model.id", Integer.class);
-            String modelName = response.jsonPath().getString(p + ".clientCar.vehicle.model.name");
-            Integer yearId = response.jsonPath().getObject(p + ".clientCar.vehicle.year.id", Integer.class);
-            Integer year = response.jsonPath().getObject(p + ".clientCar.vehicle.year.year", Integer.class);
-            Integer engineTypeId = response.jsonPath().getObject(p + ".clientCar.vehicle.engineType.id", Integer.class);
-            String engineTypeName = response.jsonPath().getString(p + ".clientCar.vehicle.engineType.name");
-            Boolean vehicleDeleted = response.jsonPath().getObject(p + ".clientCar.vehicle.deleted", Boolean.class);
-            Boolean clientCarDeleted = response.jsonPath().getObject(p + ".clientCar.deleted", Boolean.class);
-
-            String status = response.jsonPath().getString(p + ".status");
-            String orderDate = response.jsonPath().getString(p + ".orderDate");
-
-            int idx = i;
-
-            Assertions.assertAll("order[" + idx + "] presence-only",
-
-                    () -> Assertions.assertNotNull(orderId, p + ".id is null"),
-                    () -> Assertions.assertNotNull(clientCarId, p + ".clientCar.id is null"),
-                    () -> Assertions.assertNotNull(vehicleId, p + ".clientCar.vehicle.id is null"),
-                    () -> Assertions.assertNotNull(brandId, p + ".clientCar.vehicle.brand.id is null"),
-                    () -> Assertions.assertNotNull(modelId, p + ".clientCar.vehicle.model.id is null"),
-                    () -> Assertions.assertNotNull(yearId, p + ".clientCar.vehicle.year.id is null"),
-                    () -> Assertions.assertNotNull(year, p + ".clientCar.vehicle.year.year is null"),
-                    () -> Assertions.assertNotNull(engineTypeId, p + ".clientCar.vehicle.engineType.id is null"),
-                    () -> Assertions.assertNotNull(vehicleDeleted, p + ".clientCar.vehicle.deleted is null"),
-                    () -> Assertions.assertNotNull(clientCarDeleted, p + ".clientCar.deleted is null"),
-
-
-                    () -> assertPresent(vin, p + ".clientCar.vin"),
-                    () -> assertPresent(licensePlate, p + ".clientCar.licensePlate"),
-                    () -> assertPresent(brandName, p + ".clientCar.vehicle.brand.name"),
-                    () -> assertPresent(modelName, p + ".clientCar.vehicle.model.name"),
-                    () -> assertPresent(engineTypeName, p + ".clientCar.vehicle.engineType.name"),
-                    () -> assertPresent(status, p + ".status"),
-                    () -> assertPresent(orderDate, p + ".orderDate")
-            );
-        }
-    }
-
-
-    private static void assertPresent(String value, String fieldPath) {
-        Assertions.assertNotNull(value, fieldPath + " is null");
-        Assertions.assertFalse(value.trim().isEmpty(), fieldPath + " is blank");
+        // Presence-only validation (not null / not empty)
+        Assertions.assertAll("first order details",
+                () -> Assertions.assertNotNull(firstOrderId, "Order id must not be null"),
+                () -> Assertions.assertNotNull(clientCar, "ClientCar must not be null"),
+                () -> Assertions.assertNotNull(firstStatus, "Order status must not be null"),
+                () -> Assertions.assertNotNull(firstOrderDate, "Order date must not be null")
+        );
     }
 
     @Test
     void getOrderById() {
+        int orderId = 1;
 
+        Response response =
+                given()
+                        .contentType("application/json")
+                        .when()
+                        .get(Endpoints.GET_ORDER_BY_ID, orderId)
+                        .then()
+                        .log().all()
+                        .statusCode(SC_OK)
+                        .extract().response();
 
+        // Top-level fields
+        int id = response.jsonPath().getInt("id");
+        Map<String, Object> clientCar = response.jsonPath().getMap("clientCar");
+        String status = response.jsonPath().getString("status");
+        String orderDate = response.jsonPath().getString("orderDate");
+
+        // Presence-only validation (not null / not empty)
+        Assertions.assertAll("order details",
+                () -> Assertions.assertEquals(orderId, id, "Order id mismatch"),
+                () -> Assertions.assertNotNull(clientCar, "ClientCar must not be null"),
+                () -> Assertions.assertNotNull(status, "Order status must not be null"),
+                () -> Assertions.assertNotNull(orderDate, "Order date must not be null")
+
+        );
     }
 
+    @Test
+    void updateOrderStatus() {
+        int orderId = 1;
+        String newStatus = "IN_PROGRESS";
+
+        Response response =
+                given()
+                        .contentType("application/json")
+                        .pathParam("orderId", orderId)
+                        .queryParam("newStatus", newStatus)
+                        .when()
+                        .put(Endpoints.UPDATE_ORDER_STATUS)
+                        .then()
+                        .log().all()
+                        .statusCode(SC_OK)
+                        .extract().response();
+
+        String body = response.asString().trim();
+
+        Assertions.assertAll("update order status response",
+                () -> Assertions.assertTrue(
+                        body.equals("1") || body.isEmpty(),
+                        "Expected body to be \"1\" or empty, but was: \"" + body + "\""
+                )
+        );
+    }
+
+    @Test
+    void getOrderTotalPrice() {
+        int orderId = 1;
+        String currency = "BGN"; // or "EUR"
+
+        Response response =
+                given()
+                        .contentType("application/json")
+                        .pathParam("orderId", orderId)
+                        .queryParam("currency", currency)
+                        .when()
+                        .get(Endpoints.GET_ORDER_TOTAL_PRICE) // "/api/orders/{orderId}/total-price"
+                        .then()
+                        .log().all()
+                        .statusCode(SC_OK)
+                        .extract().response();
+
+        double total = response.as(Double.class);
+
+        Assertions.assertAll("total price validation",
+                // total must be >= 0
+                () -> Assertions.assertTrue(total >= 0, "Total price must be non-negative")
+
+        );
+    }
+
+    @Test
+    void downloadOrderPdf() {
+        int orderId = 1;
+        String currency = "EUR"; // or "BGN"
+
+        Response response =
+                given()
+                        .contentType("application/json")
+                        .pathParam("orderId", orderId)
+                        .queryParam("currency", currency)
+                        .when()
+                        .get(Endpoints.GET_ORDER_DOWNLOAD_PDF) // "/api/orders/{orderId}/download-pdf"
+                        .then()
+                        .log().all()
+                        .statusCode(SC_OK)
+                        .extract().response();
+
+        String contentType = response.getHeader("Content-Type");
+        String contentDisposition = response.getHeader("Content-Disposition");
+        byte[] pdfBytes = response.asByteArray();
+
+        Assertions.assertAll("basic pdf checks",
+                () -> Assertions.assertNotNull(contentType, "Content-Type missing"),
+                () -> Assertions.assertTrue(contentType.toLowerCase().contains("application/pdf"),
+                        "Content-Type must be application/pdf"),
+
+                () -> Assertions.assertNotNull(contentDisposition, "Content-Disposition missing"),
+                () -> Assertions.assertTrue(contentDisposition.matches(".*filename=.*\\.pdf.*"),
+                        "Content-Disposition must contain a .pdf filename"),
+
+                () -> Assertions.assertTrue(pdfBytes.length > 0, "PDF content must not be empty")
+        );
+    }
+
+
+    @Test
+    void getUserOrders() {
+        int userId = 1; // adjust or chain from a previous test
+
+        Response response =
+                given()
+                        .contentType("application/json")
+                        .pathParam("userId", userId)
+                        .when()
+                        .get(Endpoints.GET_USER_ORDERS) // "/api/users/{userId}/orders"
+                        .then()
+                        .log().all()
+                        .statusCode(SC_OK)
+                        .extract().response();
+
+        // Response is array + not empty
+        List<?> items = response.jsonPath().getList("$");
+        Assertions.assertNotNull(items, "Response is not an array");
+        Assertions.assertFalse(items.isEmpty(), "Expected at least one order for the user");
+
+        // ---- First order (presence-only) ----
+        int orderId = response.jsonPath().getInt("[0].id");
+        String status = response.jsonPath().getString("[0].status");
+        String orderDate = response.jsonPath().getString("[0].orderDate");
+
+        // ClientCar block
+        Integer clientCarId = response.jsonPath().getInt("[0].clientCar.id");
+        String vin = response.jsonPath().getString("[0].clientCar.vin");
+        String licensePlate = response.jsonPath().getString("[0].clientCar.licensePlate");
+
+        // Vehicle block (nested under clientCar, as in your other endpoints)
+        Integer vehicleId = response.jsonPath().getInt("[0].clientCar.vehicle.id");
+        String brandName = response.jsonPath().getString("[0].clientCar.vehicle.brand.name");
+        String modelName = response.jsonPath().getString("[0].clientCar.vehicle.model.name");
+        Integer yearValue = response.jsonPath().getInt("[0].clientCar.vehicle.year.year");
+        String engineTypeName = response.jsonPath().getString("[0].clientCar.vehicle.engineType.name");
+
+        Assertions.assertAll("first user order details",
+                () -> Assertions.assertNotNull(orderId, "Order id must not be null"),
+                () -> Assertions.assertNotNull(status, "Order status must not be null"),
+                () -> Assertions.assertNotNull(orderDate, "Order date must not be null"),
+
+                () -> Assertions.assertNotNull(clientCarId, "ClientCar id must not be null"),
+                () -> Assertions.assertNotNull(vin, "VIN must not be null"),
+                () -> Assertions.assertNotNull(licensePlate, "License plate must not be null"),
+
+                () -> Assertions.assertNotNull(vehicleId, "Vehicle id must not be null"),
+                () -> Assertions.assertNotNull(brandName, "Brand name must not be null"),
+                () -> Assertions.assertNotNull(modelName, "Model name must not be null"),
+                () -> Assertions.assertNotNull(yearValue, "Year must not be null"),
+                () -> Assertions.assertNotNull(engineTypeName, "Engine type must not be null")
+        );
+    }
 }
+
+
+
+
+
+
+

@@ -30,9 +30,9 @@ public class Endpoints {
     public static final String GET_FILTER_SORT_SERVICE = "/services/filter-sort?name={name}&price={price}&sortBy=name&sortDirection=asc";
     public static final String GET_ALL_ORDERS = "/orders";
     public static final String GET_ORDER_BY_ID = "/orders/{orderId}";
-    public static final String UPDATE_ORDER_STATUS = "/orders/{{orderId}}/status?newStatus={status}";
-    public static final String GET_ORDER_TOTAL_PRICE = "/orders/{{orderId}}/total-price?currency={currency}";
-    public static final String GET_ORDER_DOWNLOAD_PDF = "/orders/{{orderId}}/download-pdf?currency={currency}";
+    public static final String UPDATE_ORDER_STATUS = "/orders/{orderId}/status";
+    public static final String GET_ORDER_TOTAL_PRICE = "/orders/{orderId}/total-price";
+    public static final String GET_ORDER_DOWNLOAD_PDF = "/orders/{orderId}/download-pdf";
     public static final String GET_USER_ORDERS= "/users/{userId}/orders";
 
 }
