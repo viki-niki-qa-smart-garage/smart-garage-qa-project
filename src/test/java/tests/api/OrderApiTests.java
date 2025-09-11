@@ -34,18 +34,18 @@ public class OrderApiTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
-        // Response is array and not empty
+
         List<?> items = response.jsonPath().getList("$");
         Assertions.assertNotNull(items, "Response is not an array");
         Assertions.assertFalse(items.isEmpty(), "Expected at least one order");
 
-        // Extract fields from first order
+
         int firstOrderId = response.jsonPath().getInt("[0].id");
         String clientCar = response.jsonPath().getString("[0].clientCar");
         String firstStatus = response.jsonPath().getString("[0].status");
         String firstOrderDate = response.jsonPath().getString("[0].orderDate");
 
-        // Presence-only validation (not null / not empty)
+
         Assertions.assertAll("first order details",
                 () -> Assertions.assertNotNull(firstOrderId, "Order id must not be null"),
                 () -> Assertions.assertNotNull(clientCar, "ClientCar must not be null"),
@@ -68,13 +68,13 @@ public class OrderApiTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
-        // Top-level fields
+
         int id = response.jsonPath().getInt("id");
         Map<String, Object> clientCar = response.jsonPath().getMap("clientCar");
         String status = response.jsonPath().getString("status");
         String orderDate = response.jsonPath().getString("orderDate");
 
-        // Presence-only validation (not null / not empty)
+
         Assertions.assertAll("order details",
                 () -> Assertions.assertEquals(orderId, id, "Order id mismatch"),
                 () -> Assertions.assertNotNull(clientCar, "ClientCar must not be null"),
@@ -122,7 +122,7 @@ public class OrderApiTests extends BaseApiTest {
                         .pathParam("orderId", orderId)
                         .queryParam("currency", currency)
                         .when()
-                        .get(Endpoints.GET_ORDER_TOTAL_PRICE) // "/api/orders/{orderId}/total-price"
+                        .get(Endpoints.GET_ORDER_TOTAL_PRICE)
                         .then()
                         .log().all()
                         .statusCode(SC_OK)
@@ -131,7 +131,7 @@ public class OrderApiTests extends BaseApiTest {
         double total = response.as(Double.class);
 
         Assertions.assertAll("total price validation",
-                // total must be >= 0
+
                 () -> Assertions.assertTrue(total >= 0, "Total price must be non-negative")
 
         );
@@ -140,7 +140,7 @@ public class OrderApiTests extends BaseApiTest {
     @Test
     void downloadOrderPdf() {
         int orderId = 1;
-        String currency = "EUR"; // or "BGN"
+        String currency = "BGN"; // or "EUR"
 
         Response response =
                 given()
@@ -148,7 +148,7 @@ public class OrderApiTests extends BaseApiTest {
                         .pathParam("orderId", orderId)
                         .queryParam("currency", currency)
                         .when()
-                        .get(Endpoints.GET_ORDER_DOWNLOAD_PDF) // "/api/orders/{orderId}/download-pdf"
+                        .get(Endpoints.GET_ORDER_DOWNLOAD_PDF)
                         .then()
                         .log().all()
                         .statusCode(SC_OK)
@@ -174,35 +174,35 @@ public class OrderApiTests extends BaseApiTest {
 
     @Test
     void getUserOrders() {
-        int userId = 1; // adjust or chain from a previous test
+        int userId = 1;
 
         Response response =
                 given()
                         .contentType("application/json")
                         .pathParam("userId", userId)
                         .when()
-                        .get(Endpoints.GET_USER_ORDERS) // "/api/users/{userId}/orders"
+                        .get(Endpoints.GET_USER_ORDERS)
                         .then()
                         .log().all()
                         .statusCode(SC_OK)
                         .extract().response();
 
-        // Response is array + not empty
+
         List<?> items = response.jsonPath().getList("$");
         Assertions.assertNotNull(items, "Response is not an array");
         Assertions.assertFalse(items.isEmpty(), "Expected at least one order for the user");
 
-        // ---- First order (presence-only) ----
+
         int orderId = response.jsonPath().getInt("[0].id");
         String status = response.jsonPath().getString("[0].status");
         String orderDate = response.jsonPath().getString("[0].orderDate");
 
-        // ClientCar block
+
         Integer clientCarId = response.jsonPath().getInt("[0].clientCar.id");
         String vin = response.jsonPath().getString("[0].clientCar.vin");
         String licensePlate = response.jsonPath().getString("[0].clientCar.licensePlate");
 
-        // Vehicle block (nested under clientCar, as in your other endpoints)
+
         Integer vehicleId = response.jsonPath().getInt("[0].clientCar.vehicle.id");
         String brandName = response.jsonPath().getString("[0].clientCar.vehicle.brand.name");
         String modelName = response.jsonPath().getString("[0].clientCar.vehicle.model.name");
