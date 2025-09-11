@@ -8,9 +8,6 @@ import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
-
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 import static org.apache.http.HttpStatus.SC_OK;
@@ -20,6 +17,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class UserApiCrudTests extends BaseApiTest {
+    User user;
     @BeforeEach
     void setUp() {
         RestAssured.authentication = RestAssured.preemptive().basic("test", "Testing1@");
@@ -87,7 +85,7 @@ public class UserApiCrudTests extends BaseApiTest {
 
     @Test
     void updateUser() {
-        User user = new User("Tom", "Smith", "tom@abv.bg", "0877998844");
+        user = new User("Tom", "Smith", "tom@abv.bg", "0877998844");
         final int userID = 30;
         Response response =
                 given()
@@ -134,12 +132,11 @@ public class UserApiCrudTests extends BaseApiTest {
             String message = response.jsonPath().getString("message");
             Assertions.assertEquals("User with id 60 not found.", message, "User is not deleted");
         }
-
     }
 
     @Test
     void createCustomer() {
-        User user = new User("afgd123", "Anna", "Petrova", "anafgaab@abv.bg", "8008532211");
+        user = new User("afgd123", "Anna", "Petrova", "anafgaab@abv.bg", "8008532211");
         Response response =
                 given()
                         .contentType("application/json")

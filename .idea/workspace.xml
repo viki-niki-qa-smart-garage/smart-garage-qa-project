@@ -7,8 +7,9 @@
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/OrderApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/OrderApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/VehicleApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/VehicleApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/Vehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/Vehicles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/ClientCarServicesApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/ClientCarServicesApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/UserApiCrudTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/UserApiCrudTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git",
-    "accountId": "7e864bb5-6d8b-49b2-b41b-540d57279937"
+    "accountId": "696d0368-7a61-4ffd-bc26-93ac61440858"
   }
 }]]></component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -51,7 +52,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ClientCarServicesApiTests.createANewClientCar.executor": "Run",
     "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
+    "JUnit.ClientCarServicesApiTests.updateClientCarDetails.executor": "Run",
     "JUnit.OrderApiTests.downloadOrderPdf.executor": "Run",
     "JUnit.OrderApiTests.getAllOrders.executor": "Run",
     "JUnit.OrderApiTests.getOrderById.executor": "Run",
@@ -98,7 +101,39 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OrderApiTests.getUserOrders">
+  <component name="RunManager" selected="JUnit.ClientCarServicesApiTests.updateClientCarDetails">
+    <configuration name="ClientCarServicesApiTests.createANewClientCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
+      <option name="METHOD_NAME" value="createANewClientCar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientCarServicesApiTests.updateClientCarDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.ClientCarServicesApiTests" />
+      <option name="METHOD_NAME" value="updateClientCarDetails" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderApiTests.downloadOrderPdf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
@@ -110,22 +145,6 @@
       <option name="PACKAGE_NAME" value="tests.api" />
       <option name="MAIN_CLASS_NAME" value="tests.api.OrderApiTests" />
       <option name="METHOD_NAME" value="downloadOrderPdf" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderApiTests.getAllOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.OrderApiTests" />
-      <option name="METHOD_NAME" value="getAllOrders" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,29 +182,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderApiTests.updateOrderStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.OrderApiTests" />
-      <option name="METHOD_NAME" value="updateOrderStatus" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClientCarServicesApiTests.updateClientCarDetails" />
+        <item itemvalue="JUnit.ClientCarServicesApiTests.createANewClientCar" />
         <item itemvalue="JUnit.OrderApiTests.getUserOrders" />
         <item itemvalue="JUnit.OrderApiTests.downloadOrderPdf" />
         <item itemvalue="JUnit.OrderApiTests.getOrderTotalPrice" />
-        <item itemvalue="JUnit.OrderApiTests.updateOrderStatus" />
-        <item itemvalue="JUnit.OrderApiTests.getAllOrders" />
       </list>
     </recent_temporary>
   </component>
@@ -215,6 +218,7 @@
       <workItem from="1757237746997" duration="16132000" />
       <workItem from="1757323558303" duration="17853000" />
       <workItem from="1757503757152" duration="11890000" />
+      <workItem from="1757583994130" duration="5902000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -296,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757443930370</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1757529408860</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1757529408860</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
