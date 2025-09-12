@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/testframework/core/BaseWebTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/system/LoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/system/RegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/testframework/core/BaseWebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testframework/core/BaseWebPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/core/BaseWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/core/BaseWebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/UserApiSearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/UserApiSearchTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/TestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,12 +36,12 @@
     &quot;assignee&quot;: &quot;viks99sp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git",
-    "accountId": "696d0368-7a61-4ffd-bc26-93ac61440858"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git&quot;,
+    &quot;accountId&quot;: &quot;696d0368-7a61-4ffd-bc26-93ac61440858&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -53,56 +54,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.ClientCarServicesApiTests.getClientCarServices.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.downloadOrderPdf.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.getAllOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.getOrderById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.getOrderTotalPrice.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.getUserOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.updateOrderStatus.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByBrand.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByBrandName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByPartialPhoneNumber.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByUsernameKeyword.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.verifyUserBrandName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.createUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.deleteUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.getAllUsers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.getConcreteUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.updateUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehicleApiTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehicleApiTests.getAllVehicles.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehicleApiTests.getCreatedVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehicleApiTests.updateVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.createVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.deleteVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.getAllVehicles.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.getConcreteVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.getCreatedVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.updateVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/smart-garage-qa-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
+    "JUnit.LoginTest.successfulLogin_when_validCredentials.executor": "Run",
+    "JUnit.OrderApiTests.downloadOrderPdf.executor": "Run",
+    "JUnit.OrderApiTests.getAllOrders.executor": "Run",
+    "JUnit.OrderApiTests.getOrderById.executor": "Run",
+    "JUnit.OrderApiTests.getOrderTotalPrice.executor": "Run",
+    "JUnit.OrderApiTests.getUserOrders.executor": "Run",
+    "JUnit.OrderApiTests.updateOrderStatus.executor": "Run",
+    "JUnit.RegistrationTest.successfulRegistration_when_validCredentials.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByBrand.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByBrandName.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByPartialPhoneNumber.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByUsernameKeyword.executor": "Run",
+    "JUnit.UserApiSearchTests.verifyUserBrandName.executor": "Run",
+    "JUnit.UserApiTests.createUser.executor": "Run",
+    "JUnit.UserApiTests.deleteUser.executor": "Run",
+    "JUnit.UserApiTests.getAllUsers.executor": "Run",
+    "JUnit.UserApiTests.getConcreteUser.executor": "Run",
+    "JUnit.UserApiTests.updateUser.executor": "Run",
+    "JUnit.VehicleApiTests.executor": "Run",
+    "JUnit.VehicleApiTests.getAllVehicles.executor": "Run",
+    "JUnit.VehicleApiTests.getCreatedVehicle.executor": "Run",
+    "JUnit.VehicleApiTests.updateVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.createVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.deleteVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.getAllVehicles.executor": "Run",
+    "JUnit.VehiclesApiTest.getConcreteVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.getCreatedVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.updateVehicle.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/User/smart-garage-qa-project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OrderApiTests.getUserOrders">
+  <component name="RunManager" selected="JUnit.LoginTest.successfulLogin_when_validCredentials">
+    <configuration name="LoginTest.successfulLogin_when_validCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.LoginTest" />
+      <option name="METHOD_NAME" value="successfulLogin_when_validCredentials" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderApiTests.downloadOrderPdf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
@@ -114,22 +133,6 @@
       <option name="PACKAGE_NAME" value="tests.api" />
       <option name="MAIN_CLASS_NAME" value="tests.api.OrderApiTests" />
       <option name="METHOD_NAME" value="downloadOrderPdf" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderApiTests.getAllOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.OrderApiTests" />
-      <option name="METHOD_NAME" value="getAllOrders" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,17 +170,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderApiTests.updateOrderStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest.successfulRegistration_when_validCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.api.*" />
+          <option name="PATTERN" value="tests.system.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.OrderApiTests" />
-      <option name="METHOD_NAME" value="updateOrderStatus" />
+      <option name="PACKAGE_NAME" value="tests.system" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.RegistrationTest" />
+      <option name="METHOD_NAME" value="successfulRegistration_when_validCredentials" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoginTest.successfulLogin_when_validCredentials" />
+        <item itemvalue="JUnit.RegistrationTest.successfulRegistration_when_validCredentials" />
         <item itemvalue="JUnit.OrderApiTests.getUserOrders" />
         <item itemvalue="JUnit.OrderApiTests.downloadOrderPdf" />
         <item itemvalue="JUnit.OrderApiTests.getOrderTotalPrice" />
-        <item itemvalue="JUnit.OrderApiTests.updateOrderStatus" />
-        <item itemvalue="JUnit.OrderApiTests.getAllOrders" />
       </list>
     </recent_temporary>
   </component>

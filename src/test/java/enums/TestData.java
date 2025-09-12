@@ -5,8 +5,8 @@ import lombok.Getter;
 @Getter
 public enum TestData {
 
-    CUSTOMER_USERNAME(""),
-    CUSTOMER_PASSWORD(""),
+    CUSTOMER_USERNAME("testUser"),
+    CUSTOMER_PASSWORD("Jl2#M3-D-dGr"),
 
     EMPLOYEE_USERNAME(""),
     EMPLOYEE_PASSWORD("");
