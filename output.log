@@ -1,0 +1,5 @@
+2025-09-12 16:28:51,063 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-12 16:28:53,894 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-12 16:28:54,249 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-12 16:28:54,392 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-12 16:28:54,478 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
