@@ -4,6 +4,7 @@ import com.api.Endpoints;
 import com.api.Vehicles;
 import core.BaseApiTest;
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,9 +17,7 @@ import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class ClientCarServicesApiTests extends BaseApiTest {
-
     Vehicles vehicles;
-
     @BeforeEach
     void setUp() {
         RestAssured.authentication = RestAssured.preemptive().basic("test", "Testing1@");
@@ -40,7 +39,6 @@ public class ClientCarServicesApiTests extends BaseApiTest {
         List<Integer> usersId = response.jsonPath().getList("id");
         System.out.println(usersId);
     }
-    //just a text
 
     @Test
     void verifyUserHasTheKeywordInTheUsername() {
@@ -59,10 +57,8 @@ public class ClientCarServicesApiTests extends BaseApiTest {
         Assertions.assertTrue(username.contains("er"));
     }
 
-
     @Test
     void addAServiceToAClientCar() {
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -80,9 +76,7 @@ public class ClientCarServicesApiTests extends BaseApiTest {
 
     @Test
     void createANewClientCar() {
-
-         vehicles = new Vehicles("Audi", "Volkswagen", 2021, "3.0 TDI", "804OP7B1Y6PHQKLRO", "А9122PВ" );
-
+         vehicles = new Vehicles("Audi", "Volkswagen", 2021, "3.0 TDI", "G35OCC63R3T8KNFZT", "C2999BA" );
         Response response =
                 given()
                         .contentType("application/json")
@@ -95,5 +89,30 @@ public class ClientCarServicesApiTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
+        JsonPath json = response.jsonPath();
+
+        Assertions.assertEquals("Audi", json.getString("vehicle.brand.name"), "Brand does not match");
+        Assertions.assertEquals("Volkswagen", json.getString("vehicle.model.name"), "Model does not match");
+        Assertions.assertEquals(2021, json.getInt("vehicle.year.year"), "Year does not match");
+        Assertions.assertEquals("3.0 TDI", json.getString("vehicle.engineType.name"), "Engine type does not match");
+        Assertions.assertEquals("G35OCC63R3T8KNFZT", json.getString("vin"), "VIN does not match");
+        Assertions.assertEquals("C2999BA", json.getString("licensePlate"), "License plate does not match");
+    }
+
+    @Test
+    void updateClientCarDetails() {
+        vehicles = new Vehicles("G45OCC63R3T8KNFZT", "C3999BA");
+        Response response =
+                given()
+                        .contentType("application/json")
+                        .body(vehicles)
+                        .when()
+                        .pathParam("clientCarId", 24)
+                        .put(Endpoints.UPDATE_CAR_DETAILS)
+                        .then()
+                        .log().all()
+                        .statusCode(SC_OK)
+                        .extract().response();
     }
 }
+
