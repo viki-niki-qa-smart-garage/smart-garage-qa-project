@@ -1,4 +1,8 @@
 package com.pages;
 
-public class HomePage {
+public class HomePage extends BasePage {
+
+    public HomePage() {
+        super("");
+    }
 }

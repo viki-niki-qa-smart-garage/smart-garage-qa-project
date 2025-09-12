@@ -1,18 +1,36 @@
 package testframework.core;
 
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import testframework.Driver;
 import testframework.DriverManager;
 
-public abstract class
-BaseWebPage {
+public abstract class BaseWebPage {
+    private final String pageUrl;
 
-    public static Driver driver() {
+    public abstract String getBasePageUrl();
+
+    public BaseWebPage(String pageSpecificUrl) {
+        pageUrl = pageSpecificUrl;
+    }
+
+    protected Driver driver() {
         return DriverManager.getDriver();
     }
 
-    public static WebDriverWait driverWait() {
+    protected WebDriverWait driverWait() {
         return driver().getDriverWait();
     }
 
+    public String getPageUrl() {
+        return getBasePageUrl() + pageUrl;
+    }
+
+    public void navigate() {
+        driver().get(getPageUrl());
+    }
+
+    public void assertNavigated() {
+        Assertions.assertEquals(getPageUrl(), driver().getCurrentUrl(), "Page was not navigated.");
+    }
 }
