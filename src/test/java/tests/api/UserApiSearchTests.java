@@ -35,12 +35,10 @@ public class UserApiSearchTests extends BaseApiTest {
 
 
         List<String> usernames = response.jsonPath().getList("username");
-
         for (String username : usernames) {
             Assertions.assertTrue(username.toLowerCase().contains(username.toLowerCase()),
                     "Username '" + username + "' does not contain the keyword '" + usernameKeyword + "'");
         }
-
     }
 
     @Test
@@ -64,7 +62,6 @@ public class UserApiSearchTests extends BaseApiTest {
             Assertions.assertTrue(email.toLowerCase().contains(email.toLowerCase()),
                     "Username '" + email + "' does not contain the keyword '" + emailKeyword + "'");
         }
-
     }
 
     @Test
