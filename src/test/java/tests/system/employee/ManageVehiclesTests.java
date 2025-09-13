@@ -26,18 +26,24 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
         clientCarsPage.clickThirdPageButton();
 
         WebElement vin = clientCarsPage.getVin();
-        Assertions.assertEquals( "WAUZZZ8P4AA000100", vin.getText(), "Client Car is not created");
+        Assertions.assertEquals("WAUZZZ8P4AA000100", vin.getText(), "Client Car is not created");
+        //da pitam viktor
     }
 
     @Test
-    public void browseAllVehiclesLinkedToCustomers(){
+    public void browseAllVehiclesLinkedToCustomers() {
         homePage.clickAdminPanelButton();
         adminPanelPage.clickClientCarsWindow();
         List<WebElement> cars = clientCarsPage.getCarList();
 
-        int rowCount = cars.size();
-        System.out.println("Rows: " + rowCount);
-
         Assertions.assertTrue(cars.size() > 0, "Expected at least 1 car on the page.");
+    }
+
+    @Test
+    public void updateExistingVehicleDetails(){
+        homePage.clickAdminPanelButton();
+        adminPanelPage.clickClientCarsWindow();
+        clientCarsPage.updateCarDetails("WAUZZZ8P4AA000099", "EB4321KK");
+
     }
 }

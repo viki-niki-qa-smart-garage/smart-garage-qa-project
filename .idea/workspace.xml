@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit of Login and Registration happy path tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pages/UsersPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/CustomerProfileTests.java" afterDir="false" />
+    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit of ManageVehiclesTests happy path tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +31,12 @@
     &quot;assignee&quot;: &quot;viks99sp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git&quot;,
-    &quot;accountId&quot;: &quot;7e864bb5-6d8b-49b2-b41b-540d57279937&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git",
+    "accountId": "7e864bb5-6d8b-49b2-b41b-540d57279937"
   }
-}</component>
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -53,11 +52,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
-    "JUnit.CustomerProfileTests.browseAllCustomersProfiles.executor": "Run",
-    "JUnit.CustomerProfileTests.filterCustomersByName.executor": "Run",
     "JUnit.LoginTest.successfulLogin_when_validCredentials.executor": "Run",
     "JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers.executor": "Run",
     "JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials.executor": "Run",
+    "JUnit.ManageVehiclesTests.updateExistingVehicleDetails.executor": "Run",
     "JUnit.OrderApiTests.downloadOrderPdf.executor": "Run",
     "JUnit.OrderApiTests.getAllOrders.executor": "Run",
     "JUnit.OrderApiTests.getOrderById.executor": "Run",
@@ -105,39 +103,7 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerProfileTests.filterCustomersByName">
-    <configuration name="CustomerProfileTests.browseAllCustomersProfiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
-      <option name="METHOD_NAME" value="browseAllCustomersProfiles" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerProfileTests.filterCustomersByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
-      <option name="METHOD_NAME" value="filterCustomersByName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials">
     <configuration name="LoginTest.successfulLogin_when_validCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
@@ -186,13 +152,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ManageVehiclesTests.updateExistingVehicleDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
+      <option name="METHOD_NAME" value="updateExistingVehicleDetails" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.successfulRegistration_when_validCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.RegistrationTest" />
+      <option name="METHOD_NAME" value="successfulRegistration_when_validCredentials" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomerProfileTests.filterCustomersByName" />
-        <item itemvalue="JUnit.CustomerProfileTests.browseAllCustomersProfiles" />
-        <item itemvalue="JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers" />
         <item itemvalue="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials" />
+        <item itemvalue="JUnit.ManageVehiclesTests.updateExistingVehicleDetails" />
+        <item itemvalue="JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers" />
         <item itemvalue="JUnit.LoginTest.successfulLogin_when_validCredentials" />
+        <item itemvalue="JUnit.RegistrationTest.successfulRegistration_when_validCredentials" />
       </list>
     </recent_temporary>
   </component>
@@ -321,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757592601355</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="initial commit of ManageVehiclesTests happy path tests">
+      <option name="closed" value="true" />
+      <created>1757775627560</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757775627560</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +359,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit of Vehicle Endpoints" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="initial commit of ManageVehiclesTests happy path tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit of ManageVehiclesTests happy path tests" />
   </component>
 </project>
