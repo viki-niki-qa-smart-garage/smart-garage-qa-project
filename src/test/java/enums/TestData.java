@@ -5,11 +5,12 @@ import lombok.Getter;
 @Getter
 public enum TestData {
 
-    CUSTOMER_USERNAME("testUser"),
-    CUSTOMER_PASSWORD("Jl2#M3-D-dGr"),
-
-    EMPLOYEE_USERNAME(""),
-    EMPLOYEE_PASSWORD("");
+    CUSTOMER_USERNAME_NIKI("testUser"),
+    CUSTOMER_PASSWORD_NIKI("Jl2#M3-D-dGr"),
+    CUSTOMER_USERNAME_VIKI("Mike"),
+    CUSTOMER_PASSWORD_VIKI("Testing123@"),
+    EMPLOYEE_USERNAME_VIKI("test"),
+    EMPLOYEE_PASSWORD_VIKI("Testing1@");
 
     TestData(String propName) {
         value = propName;

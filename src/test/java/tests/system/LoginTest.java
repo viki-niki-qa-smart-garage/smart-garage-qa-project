@@ -16,7 +16,7 @@ public class LoginTest extends SmartGarageBaseWebTest {
     @Test
     public void successfulLogin_when_validCredentials() {
 
-        loginPage.login(TestData.CUSTOMER_USERNAME.getValue(), TestData.CUSTOMER_PASSWORD.getValue());
+        loginPage.login(TestData.CUSTOMER_USERNAME_NIKI.getValue(), TestData.CUSTOMER_PASSWORD_NIKI.getValue());
 
         WebElement myDetails = loginPage.assertSuccessfulLogin();
         Assertions.assertTrue(myDetails.isDisplayed(), "You are not logged in");
