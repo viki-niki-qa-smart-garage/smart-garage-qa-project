@@ -10,7 +10,9 @@ public enum TestData {
     CUSTOMER_USERNAME_VIKI("Mike"),
     CUSTOMER_PASSWORD_VIKI("Testing123@"),
     EMPLOYEE_USERNAME_VIKI("test"),
-    EMPLOYEE_PASSWORD_VIKI("Testing1@");
+    EMPLOYEE_PASSWORD_VIKI("Testing1@"),
+    EMPLOYEE_USERNAME_NIKI("user"),
+    EMPLOYEE_PASSWORD_NIKI("Qwertyuiop1!");
 
     TestData(String propName) {
         value = propName;

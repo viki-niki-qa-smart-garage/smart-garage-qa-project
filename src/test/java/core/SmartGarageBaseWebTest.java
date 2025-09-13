@@ -1,9 +1,6 @@
 package core;
 
-import com.pages.AdminPanelPage;
-import com.pages.HomePage;
-import com.pages.LoginPage;
-import com.pages.MyDetailsPage;
+import com.pages.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import testframework.DriverManager;
@@ -14,6 +11,7 @@ public class SmartGarageBaseWebTest extends BaseWebTest {
     protected HomePage homePage;
     protected AdminPanelPage adminPanelPage;
     protected MyDetailsPage myDetailsPage;
+    protected ClientCarsPage clientCarsPage;
 
     @BeforeEach
     public void beforeTests() {
@@ -21,7 +19,7 @@ public class SmartGarageBaseWebTest extends BaseWebTest {
         homePage = new HomePage();
         adminPanelPage = new AdminPanelPage();
         myDetailsPage = new MyDetailsPage();
-
+        clientCarsPage = new ClientCarsPage();
     }
 
 //    @AfterEach
