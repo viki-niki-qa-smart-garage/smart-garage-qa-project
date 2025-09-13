@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit of Login and Registration happy path tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pages/UsersPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/CustomerProfileTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/VehiclePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/enums/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +32,12 @@
     &quot;assignee&quot;: &quot;viks99sp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git",
-    "accountId": "7e864bb5-6d8b-49b2-b41b-540d57279937"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git&quot;,
+    &quot;accountId&quot;: &quot;7e864bb5-6d8b-49b2-b41b-540d57279937&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -54,6 +53,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
+    "JUnit.CustomerProfileTests.browseAllCustomersProfiles.executor": "Run",
+    "JUnit.CustomerProfileTests.filterCustomersByName.executor": "Run",
     "JUnit.LoginTest.successfulLogin_when_validCredentials.executor": "Run",
     "JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers.executor": "Run",
     "JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials.executor": "Run",
@@ -104,7 +105,39 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers">
+  <component name="RunManager" selected="JUnit.CustomerProfileTests.filterCustomersByName">
+    <configuration name="CustomerProfileTests.browseAllCustomersProfiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
+      <option name="METHOD_NAME" value="browseAllCustomersProfiles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerProfileTests.filterCustomersByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
+      <option name="METHOD_NAME" value="filterCustomersByName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginTest.successfulLogin_when_validCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
@@ -153,45 +186,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderApiTests.getUserOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.OrderApiTests" />
-      <option name="METHOD_NAME" value="getUserOrders" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTest.successfulRegistration_when_validCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.system.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.system" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.RegistrationTest" />
-      <option name="METHOD_NAME" value="successfulRegistration_when_validCredentials" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomerProfileTests.filterCustomersByName" />
+        <item itemvalue="JUnit.CustomerProfileTests.browseAllCustomersProfiles" />
         <item itemvalue="JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers" />
         <item itemvalue="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials" />
         <item itemvalue="JUnit.LoginTest.successfulLogin_when_validCredentials" />
-        <item itemvalue="JUnit.RegistrationTest.successfulRegistration_when_validCredentials" />
-        <item itemvalue="JUnit.OrderApiTests.getUserOrders" />
       </list>
     </recent_temporary>
   </component>
