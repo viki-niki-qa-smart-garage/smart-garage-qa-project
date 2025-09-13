@@ -1,4 +1,7 @@
 package com.pages;
 
-public class VehiclePage {
+public class VehiclePage extends BasePage{
+    public VehiclePage() {
+        super("/vehicles");
+    }
 }

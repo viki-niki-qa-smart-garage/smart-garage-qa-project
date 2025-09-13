@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
+    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit of partial implementing MyDetailsPage and AdminPanelPage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/enums/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/VehiclePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/VehiclePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +217,7 @@
       <workItem from="1757503757152" duration="12389000" />
       <workItem from="1757586217985" duration="832000" />
       <workItem from="1757673178473" duration="2374000" />
+      <workItem from="1757755801479" duration="7023000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -317,7 +315,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757592601355</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="initial commit of partial implementing MyDetailsPage and AdminPanelPage">
+      <option name="closed" value="true" />
+      <created>1757696354018</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757696354018</updated>
+    </task>
+    <task id="LOCAL-00014" summary="initial commit of partial implementing MyDetailsPage and AdminPanelPage">
+      <option name="closed" value="true" />
+      <created>1757696525307</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1757696525307</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +363,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit of Vehicle Endpoints" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="initial commit of partial implementing MyDetailsPage and AdminPanelPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit of partial implementing MyDetailsPage and AdminPanelPage" />
   </component>
 </project>
