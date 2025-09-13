@@ -9,6 +9,9 @@ import java.util.List;
 public class ClientCarsPage extends BasePage {
     Select select;
     private final By editButton = By.id("edit-21");
+    private final By editVinInput = By.id("input-vin-21");
+    private final By editLicensePlateInput = By.id("input-licensePlate-21");
+    private final By saveButton = By.id("save-21");
     private final By searchBar = By.id("search");
     private final By sortByDropdown = By.id("sort-by");
     private final By orderByDropdown = By.id("order");
@@ -22,7 +25,7 @@ public class ClientCarsPage extends BasePage {
     private final By yearInput = By.id("yearOfCreation");
     private final By addClientCarButton = By.xpath("//button[@type='submit'and contains(text(), 'ADD CLIENT CAR')]");
     private final By thirdPageButton = By.xpath("//a[contains(text(), '3')]");
-    private final By vinAssertion = By.xpath("//div[@class='custom-car-list-container']//div[contains(text(), 'WAUZZZ8P4AA000100')]");
+    private final By vinAssertion = By.xpath("//div[@class='custom-car-list-container']//div[contains(text(), 'WAUZZZ8P4AA000099')]");
     private final By ErrorMessage = By.xpath("//div[@class='error-message']");
     private final By carList = By.cssSelector(".vehicle-item.custom-car-list-row");
 
@@ -75,4 +78,18 @@ public class ClientCarsPage extends BasePage {
     public List<WebElement> getCarList() {
        return driver().findElements(carList);
     }
+    public void updateCarDetails(String vin, String licensePlate) {
+        driver().findElement(editButton).click();
+
+        WebElement vinField = driver().findElement(editVinInput);
+        vinField.clear();
+        vinField.sendKeys(vin);
+
+        WebElement licensePlateField = driver().findElement(editLicensePlateInput);
+        licensePlateField.clear();
+        licensePlateField.sendKeys(licensePlate);
+
+        driver().findElement(saveButton).click();
+    }
+
 }
