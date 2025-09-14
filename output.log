@@ -1,9 +1,11 @@
-2025-09-14 12:32:55,680 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-14 12:33:06,347 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-14 12:33:06,629 INFO  [main] Finding element with locator: By.id: login-username
-2025-09-14 12:33:08,006 INFO  [main] Finding element with locator: By.id: login-password
-2025-09-14 12:33:08,139 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-09-14 12:33:10,301 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
-2025-09-14 12:33:13,729 INFO  [main] Finding element with locator: By.xpath: //input[@name='username']
-2025-09-14 12:33:13,931 INFO  [main] Finding element with locator: By.xpath: //button[@class='modern-button']
-2025-09-14 12:33:14,480 INFO  [main] Finding all element with locator: By.cssSelector: .user-list > .vehicle-item:not(.row)
+2025-09-14 13:56:11,663 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-14 13:56:14,553 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-14 13:56:15,019 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-14 13:56:15,174 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-14 13:56:15,273 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-14 13:56:15,371 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-14 13:56:16,901 INFO  [main] Finding element with locator: By.id: search
+2025-09-14 13:56:17,042 INFO  [main] Finding element with locator: By.id: sort-by
+2025-09-14 13:56:17,150 INFO  [main] Finding element with locator: By.xpath: //button[@class='modern-button']
+2025-09-14 13:56:17,221 INFO  [main] Finding all element with locator: By.cssSelector: .vehicle-item.custom-car-list-row
+2025-09-14 13:56:17,431 INFO  [main] Finding element with locator: By.cssSelector: .vehicle-item.white.custom-car-list-row

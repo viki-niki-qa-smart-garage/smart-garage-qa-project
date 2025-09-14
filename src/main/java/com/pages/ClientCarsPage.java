@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.time.Duration;
 import java.util.List;
 
 public class ClientCarsPage extends BasePage {
@@ -28,6 +29,9 @@ public class ClientCarsPage extends BasePage {
     private final By vinAssertion = By.xpath("//div[@class='custom-car-list-container']//div[contains(text(), 'WAUZZZ8P4AA000099')]");
     private final By ErrorMessage = By.xpath("//div[@class='error-message']");
     private final By carList = By.cssSelector(".vehicle-item.custom-car-list-row");
+    private final By vinField = By.cssSelector("#vin-21");
+    private final By plateField = By.cssSelector("#licensePlate-21");
+    private final By ownerField = By.cssSelector("div.custom-car-list-column:nth-of-type(3)");
 
     public ClientCarsPage() {
         super("/client-cars");
@@ -76,8 +80,9 @@ public class ClientCarsPage extends BasePage {
     }
 
     public List<WebElement> getCarList() {
-       return driver().findElements(carList);
+        return driver().findElements(carList);
     }
+
     public void updateCarDetails(String vin, String licensePlate) {
         driver().findElement(editButton).click();
 
@@ -90,6 +95,29 @@ public class ClientCarsPage extends BasePage {
         licensePlateField.sendKeys(licensePlate);
 
         driver().findElement(saveButton).click();
+        driverWait().withTimeout(Duration.ofSeconds(20));
     }
 
+    public String getCarVin(WebElement carRow) {
+        return carRow.findElement(vinField).getText();
+    }
+
+    public String getCarPlate(WebElement carRow) {
+        return carRow.findElement(plateField).getText();
+    }
+
+    public void filterByFirstName(String firstName) {
+        WebElement search = driver().findElement(searchBar);
+        search.sendKeys(firstName);
+        WebElement sortBy = driver().findElement(sortByDropdown);
+        select = new Select(sortBy);
+        select.selectByVisibleText("Owner First Name");
+        WebElement searchBtn = driver().findElement(searchButton);
+        searchBtn.click();
+    }
+
+    public WebElement getOwner() {
+        WebElement firstRow = driver().findElement(By.cssSelector(".vehicle-item.white.custom-car-list-row"));
+        return firstRow.findElement(ownerField);
+    }
 }

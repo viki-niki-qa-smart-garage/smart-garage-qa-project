@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit of UsersPage implementations and partial test made of CustomerProfileTests">
+    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +31,12 @@
     &quot;assignee&quot;: &quot;viks99sp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git",
-    "accountId": "696d0368-7a61-4ffd-bc26-93ac61440858"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git&quot;,
+    &quot;accountId&quot;: &quot;7e864bb5-6d8b-49b2-b41b-540d57279937&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -49,9 +52,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
-    "JUnit.CustomerProfileTests.filterCustomersByName.executor": "Run",
     "JUnit.LoginTest.successfulLogin_when_validCredentials.executor": "Run",
     "JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers.executor": "Run",
+    "JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName.executor": "Run",
     "JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials.executor": "Run",
     "JUnit.ManageVehiclesTests.updateExistingVehicleDetails.executor": "Run",
     "JUnit.OrderApiTests.downloadOrderPdf.executor": "Run",
@@ -101,23 +104,7 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerProfileTests.filterCustomersByName">
-    <configuration name="CustomerProfileTests.filterCustomersByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
-      <option name="METHOD_NAME" value="filterCustomersByName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName">
     <configuration name="LoginTest.successfulLogin_when_validCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
@@ -145,6 +132,22 @@
       <option name="PACKAGE_NAME" value="tests.system.employee" />
       <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
       <option name="METHOD_NAME" value="browseAllVehiclesLinkedToCustomers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManageVehiclesTests.filterVehiclesByOwnerFirstName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
+      <option name="METHOD_NAME" value="filterVehiclesByOwnerFirstName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -184,10 +187,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomerProfileTests.filterCustomersByName" />
-        <item itemvalue="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials" />
+        <item itemvalue="JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName" />
         <item itemvalue="JUnit.ManageVehiclesTests.updateExistingVehicleDetails" />
         <item itemvalue="JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers" />
+        <item itemvalue="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials" />
         <item itemvalue="JUnit.LoginTest.successfulLogin_when_validCredentials" />
       </list>
     </recent_temporary>
@@ -220,7 +223,7 @@
       <workItem from="1757503757152" duration="12389000" />
       <workItem from="1757586217985" duration="832000" />
       <workItem from="1757673178473" duration="2374000" />
-      <workItem from="1757841410982" duration="925000" />
+      <workItem from="1757841700091" duration="5306000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -326,15 +329,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757775627560</updated>
     </task>
-    <task id="LOCAL-00014" summary="initial commit of UsersPage implementations and partial test made of CustomerProfileTests">
+    <task id="LOCAL-00014" summary="initial commit of ManageVehiclesTests happy path tests">
       <option name="closed" value="true" />
-      <created>1757781388960</created>
+      <created>1757781156171</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1757781388960</updated>
+      <updated>1757781156171</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1757841753289</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1757841753289</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,9 +376,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit of Vehicle Endpoints" />
-    <MESSAGE value="initial commit" />
     <MESSAGE value="initial commit of ManageVehiclesTests happy path tests" />
-    <MESSAGE value="initial commit of UsersPage implementations and partial test made of CustomerProfileTests" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit of UsersPage implementations and partial test made of CustomerProfileTests" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
