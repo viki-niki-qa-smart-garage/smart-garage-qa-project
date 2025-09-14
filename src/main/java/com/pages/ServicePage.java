@@ -55,5 +55,6 @@ public class ServicePage extends BasePage {
 
     public List<WebElement> getServicePriceTable() {
         return driver().findElements(servicePriceTable);
+//        TEXT
     }
 }
