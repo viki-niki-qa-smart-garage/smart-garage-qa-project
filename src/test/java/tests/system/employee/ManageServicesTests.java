@@ -36,4 +36,13 @@ public class ManageServicesTests extends SmartGarageBaseWebTest {
         Assertions.assertTrue(servicesPrice.size() > 0, "Expected at least 1 service in the list");
         Assertions.assertNotNull(servicesPrice.get(0).getText(), "First service is not displayed");
     }
+
+    @Test
+    public void createService_when_validInput() {
+        homePage.clickServicesButton();
+        servicePage.clickEngineDiagnosticsContainer();
+        servicePage.addService("Engine Fault Fixing", "130");
+
+//        Assertions.assertEquals("Engine Fault Fixing",servicesPrice.get(6).getText(), "First service is not displayed");
+    }
 }

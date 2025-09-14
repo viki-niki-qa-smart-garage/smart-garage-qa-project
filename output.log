@@ -1,9 +1,12 @@
-2025-09-14 15:36:27,037 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-14 15:36:29,831 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-14 15:36:29,880 INFO  [main] Finding element with locator: By.id: login-username
-2025-09-14 15:36:30,355 INFO  [main] Finding element with locator: By.id: login-password
-2025-09-14 15:36:30,436 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-09-14 15:36:30,557 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
-2025-09-14 15:36:31,143 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
-2025-09-14 15:36:31,336 INFO  [main] Finding element with locator: By.xpath: //h3[@class='box-header']
-2025-09-14 15:36:31,401 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
+2025-09-14 18:12:49,493 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-14 18:12:52,395 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-14 18:12:52,816 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-14 18:12:52,960 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-14 18:12:53,080 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-14 18:12:53,550 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-14 18:12:53,875 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
+2025-09-14 18:12:54,094 INFO  [main] Finding element with locator: By.id: addServiceButton
+2025-09-14 18:12:54,202 INFO  [main] Finding element with locator: By.xpath: //input[@name='serviceName']
+2025-09-14 18:12:54,320 INFO  [main] Finding element with locator: By.xpath: //input[@name='servicePrice']
+2025-09-14 18:12:54,419 INFO  [main] Finding element with locator: By.xpath: //div[@class='row page-margin-top']//a[contains(text(), 'Save Service')]
+2025-09-14 18:12:54,505 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr

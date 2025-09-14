@@ -1,9 +1,12 @@
 package com.pages;
 
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.time.Duration;
 import java.util.List;
 
 public class ServicePage extends BasePage {
@@ -16,6 +19,11 @@ public class ServicePage extends BasePage {
     private final By servicesList = By.xpath("//div[@class='clearfix']//ul[@class='services-list clearfix padding-top-70']//h4");
     private final By overviewService = By.xpath("//h3[@class='box-header']");
     private final By servicePriceTable = By.cssSelector("#servicesTable tbody tr");
+    private final By addServiceButton = By.id("addServiceButton");
+    private final By serviceNameInput = By.xpath("//input[@name='serviceName']");
+    private final By servicePriceInput = By.xpath("//input[@name='servicePrice']");
+    private final By saveServiceButton = By.xpath("//div[@class='row page-margin-top']//a[contains(text(), 'Save Service')]");
+    private final By lastCreatedService = By.cssSelector("#servicesTable tbody tr:last-child");
 
     public ServicePage() {
         super("/services");
@@ -55,6 +63,25 @@ public class ServicePage extends BasePage {
 
     public List<WebElement> getServicePriceTable() {
         return driver().findElements(servicePriceTable);
-//        TEXT
+
+    }
+
+    public void addService(String serviceName, String servicePrice) {
+        driver().findElement(addServiceButton).click();
+        WebElement serviceField = driver().findElement(serviceNameInput);
+        serviceField.sendKeys(serviceName);
+
+        WebElement servicePriceField = driver().findElement(servicePriceInput);
+        servicePriceField.sendKeys(servicePrice);
+
+        WebElement saveButton = driver().findElement(saveServiceButton);
+        saveButton.click();
+        driverWait().withTimeout(Duration.ofSeconds(40));
+    }
+
+    public void getLastCreatedService() {
+        WebElement last = driver().findElement(lastCreatedService);
+        List<WebElement> cells = last.findElements(By.tagName("td"));
+
     }
 }
