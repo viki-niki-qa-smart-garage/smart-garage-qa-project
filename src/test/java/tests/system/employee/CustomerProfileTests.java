@@ -19,7 +19,7 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
     @Test
     public void browseAllCustomersProfiles() {
         homePage.clickAdminPanelButton();
-        adminPanelPage.clickAllUsersWindow();
+        adminPanelPage.clickAllUsersContainer();
         List<WebElement> users = usersPage.getUserList();
         Assertions.assertTrue(users.size() > 0, "Expected at least 1 user on the page.");
     }
@@ -27,7 +27,7 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
     @Test
     public void filterCustomersByName() {
         homePage.clickAdminPanelButton();
-        adminPanelPage.clickAllUsersWindow();
+        adminPanelPage.clickAllUsersContainer();
         usersPage.searchCustomerByName("Mi");
         usersPage.clickSearchButton();
         List<WebElement> users = usersPage.getUserList();

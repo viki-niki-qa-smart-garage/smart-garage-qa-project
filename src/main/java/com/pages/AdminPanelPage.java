@@ -4,23 +4,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class AdminPanelPage extends BasePage {
-    private final By allUsersWindow = By.xpath("//a[@title='All Users']");
-    private final By clientCarsWindow = By.xpath("//a[@title='Client Cars']");
-    private final By ordersWindow = By.xpath("//a[@title='Orders']");
+    private final By allUsersContainer = By.xpath("//a[@title='All Users']");
+    private final By clientCarsContainer = By.xpath("//a[@title='Client Cars']");
+    private final By ordersContainer = By.xpath("//a[@title='Orders']");
 
     public AdminPanelPage() {
         super("/admin-panel");
     }
 
-    public void clickAllUsersWindow() {
-        driverWait().until(ExpectedConditions.visibilityOfElementLocated(allUsersWindow)).click();
+    public void clickAllUsersContainer() {
+        driverWait().until(ExpectedConditions.visibilityOfElementLocated(allUsersContainer)).click();
     }
 
-    public void clickClientCarsWindow() {
-        driverWait().until(ExpectedConditions.visibilityOfElementLocated(clientCarsWindow)).click();
+    public void clickClientCarsContainer() {
+        driverWait().until(ExpectedConditions.visibilityOfElementLocated(clientCarsContainer)).click();
     }
 
-    public void clickOrdersWindow() {
-        driverWait().until(ExpectedConditions.visibilityOfElementLocated(ordersWindow)).click();
+    public void clickOrdersContainer() {
+        driverWait().until(ExpectedConditions.visibilityOfElementLocated(ordersContainer)).click();
     }
 }
