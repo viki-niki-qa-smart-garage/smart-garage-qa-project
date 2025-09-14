@@ -43,7 +43,27 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
     public void updateExistingVehicleDetails(){
         homePage.clickAdminPanelButton();
         adminPanelPage.clickClientCarsWindow();
-        clientCarsPage.updateCarDetails("WAUZZZ8P4AA000099", "EB4321KK");
+        clientCarsPage.updateCarDetails("WAUZZZ8P4AA000077", "EB1234KK");
 
+        List<WebElement> cars = clientCarsPage.getCarList();
+
+        String vin = clientCarsPage.getCarVin(cars.get(0));
+        String plate = clientCarsPage.getCarPlate(cars.get(0));
+
+        Assertions.assertEquals("WAUZZZ8P4AA000077", vin, "VIN not updated");
+        Assertions.assertEquals("EB1234KK", plate, "License Plate not updated");
+    }
+
+    @Test
+    public void filterVehiclesByOwnerFirstName() {
+        homePage.clickAdminPanelButton();
+        adminPanelPage.clickClientCarsWindow();
+        clientCarsPage.filterByFirstName("Alex");
+        WebElement owner = clientCarsPage.getOwner();
+
+        Assertions.assertTrue(
+                owner.getText().toLowerCase().contains("gosho"),
+                "Owner name does not match the expected result. Actual: " + owner.getText()
+        );
     }
 }
