@@ -26,12 +26,12 @@
     &quot;assignee&quot;: &quot;viks99sp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git",
-    "accountId": "7e864bb5-6d8b-49b2-b41b-540d57279937"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git&quot;,
+    &quot;accountId&quot;: &quot;7e864bb5-6d8b-49b2-b41b-540d57279937&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -44,55 +44,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
-    "JUnit.LoginTest.successfulLogin_when_validCredentials.executor": "Run",
-    "JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers.executor": "Run",
-    "JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials.executor": "Run",
-    "JUnit.ManageVehiclesTests.updateExistingVehicleDetails.executor": "Run",
-    "JUnit.OrderApiTests.downloadOrderPdf.executor": "Run",
-    "JUnit.OrderApiTests.getAllOrders.executor": "Run",
-    "JUnit.OrderApiTests.getOrderById.executor": "Run",
-    "JUnit.OrderApiTests.getOrderTotalPrice.executor": "Run",
-    "JUnit.OrderApiTests.getUserOrders.executor": "Run",
-    "JUnit.OrderApiTests.updateOrderStatus.executor": "Run",
-    "JUnit.RegistrationTest.successfulRegistration_when_validCredentials.executor": "Run",
-    "JUnit.UserApiSearchTests.getAllUsersByBrand.executor": "Run",
-    "JUnit.UserApiSearchTests.getAllUsersByBrandName.executor": "Run",
-    "JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor": "Run",
-    "JUnit.UserApiSearchTests.getAllUsersByPartialPhoneNumber.executor": "Run",
-    "JUnit.UserApiSearchTests.getAllUsersByUsernameKeyword.executor": "Run",
-    "JUnit.UserApiSearchTests.verifyUserBrandName.executor": "Run",
-    "JUnit.UserApiTests.createUser.executor": "Run",
-    "JUnit.UserApiTests.deleteUser.executor": "Run",
-    "JUnit.UserApiTests.getAllUsers.executor": "Run",
-    "JUnit.UserApiTests.getConcreteUser.executor": "Run",
-    "JUnit.UserApiTests.updateUser.executor": "Run",
-    "JUnit.VehicleApiTests.executor": "Run",
-    "JUnit.VehicleApiTests.getAllVehicles.executor": "Run",
-    "JUnit.VehicleApiTests.getCreatedVehicle.executor": "Run",
-    "JUnit.VehicleApiTests.updateVehicle.executor": "Run",
-    "JUnit.VehiclesApiTest.createVehicle.executor": "Run",
-    "JUnit.VehiclesApiTest.deleteVehicle.executor": "Run",
-    "JUnit.VehiclesApiTest.getAllVehicles.executor": "Run",
-    "JUnit.VehiclesApiTest.getConcreteVehicle.executor": "Run",
-    "JUnit.VehiclesApiTest.getCreatedVehicle.executor": "Run",
-    "JUnit.VehiclesApiTest.updateVehicle.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/User/smart-garage-qa-project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.ClientCarServicesApiTests.getClientCarServices.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoginTest.successfulLogin_when_validCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageVehiclesTests.updateExistingVehicleDetails.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderApiTests.downloadOrderPdf.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderApiTests.getAllOrders.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderApiTests.getOrderById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderApiTests.getOrderTotalPrice.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderApiTests.getUserOrders.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderApiTests.updateOrderStatus.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegistrationTest.successfulRegistration_when_validCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiSearchTests.getAllUsersByBrand.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiSearchTests.getAllUsersByBrandName.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiSearchTests.getAllUsersByPartialPhoneNumber.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiSearchTests.getAllUsersByUsernameKeyword.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiSearchTests.verifyUserBrandName.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiTests.createUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiTests.deleteUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiTests.getAllUsers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiTests.getConcreteUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserApiTests.updateUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VehicleApiTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VehicleApiTests.getAllVehicles.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VehicleApiTests.getCreatedVehicle.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VehicleApiTests.updateVehicle.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VehiclesApiTest.createVehicle.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VehiclesApiTest.deleteVehicle.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VehiclesApiTest.getAllVehicles.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VehiclesApiTest.getConcreteVehicle.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VehiclesApiTest.getCreatedVehicle.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VehiclesApiTest.updateVehicle.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/smart-garage-qa-project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\smart-garage-qa-project" />
