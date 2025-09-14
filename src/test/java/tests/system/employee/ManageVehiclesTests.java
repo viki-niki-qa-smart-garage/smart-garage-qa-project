@@ -20,7 +20,7 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
     @Test
     public void successfullyClientCarCreation_when_loginWithValidCredentials() {
         homePage.clickAdminPanelButton();
-        adminPanelPage.clickClientCarsWindow();
+        adminPanelPage.clickClientCarsContainer();
         clientCarsPage.addClientCar("WAUZZZ8P4AA000099", "A1112BC", "testUser", "A3", "1.4 TSI", "1999");
 
         clientCarsPage.clickThirdPageButton();
@@ -33,7 +33,7 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
     @Test
     public void browseAllVehiclesLinkedToCustomers() {
         homePage.clickAdminPanelButton();
-        adminPanelPage.clickClientCarsWindow();
+        adminPanelPage.clickClientCarsContainer();
         List<WebElement> cars = clientCarsPage.getCarList();
 
         Assertions.assertTrue(cars.size() > 0, "Expected at least 1 car on the page.");
@@ -42,7 +42,7 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
     @Test
     public void updateExistingVehicleDetails(){
         homePage.clickAdminPanelButton();
-        adminPanelPage.clickClientCarsWindow();
+        adminPanelPage.clickClientCarsContainer();
         clientCarsPage.updateCarDetails("WAUZZZ8P4AA000077", "EB1234KK");
 
         List<WebElement> cars = clientCarsPage.getCarList();
@@ -57,7 +57,7 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
     @Test
     public void filterVehiclesByOwnerFirstName() {
         homePage.clickAdminPanelButton();
-        adminPanelPage.clickClientCarsWindow();
+        adminPanelPage.clickClientCarsContainer();
         clientCarsPage.filterByFirstName("Alex");
         WebElement owner = clientCarsPage.getOwner();
 
