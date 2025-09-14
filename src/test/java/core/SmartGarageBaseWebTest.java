@@ -13,6 +13,7 @@ public class SmartGarageBaseWebTest extends BaseWebTest {
     protected MyDetailsPage myDetailsPage;
     protected ClientCarsPage clientCarsPage;
     protected UsersPage usersPage;
+    protected ServicePage servicePage;
 
     @BeforeEach
     public void beforeTests() {
@@ -22,6 +23,7 @@ public class SmartGarageBaseWebTest extends BaseWebTest {
         myDetailsPage = new MyDetailsPage();
         clientCarsPage = new ClientCarsPage();
         usersPage = new UsersPage();
+        servicePage = new ServicePage();
     }
 
 //    @AfterEach
