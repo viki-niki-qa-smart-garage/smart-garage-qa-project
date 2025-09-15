@@ -1,0 +1,1192 @@
+{
+	"info": {
+		"_postman_id": "668f9731-9397-43da-946c-a96447270c3b",
+		"name": "Smart Garage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46286648",
+		"_collection_link": "https://viktoriaspasova.postman.co/workspace/My-Workspace~472280a0-5aa0-46d5-84d8-5a9cb65330a3/collection/46286648-668f9731-9397-43da-946c-a96447270c3b?action=share&source=collection_link&creator=46286648"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User Search Operations",
+					"item": [
+						{
+							"name": "By Username",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"let responseData = pm.response.json();\r",
+											"let keyword = \"ha\";\r",
+											"\r",
+											"pm.test(\"All usernames contain the keyword\", function () {\r",
+											"    responseData.forEach(user => {\r",
+											"        pm.expect(user.username.toLowerCase()).to.include(keyword.toLowerCase());\r",
+											"    });\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users?username=ha&sortDirection=asc&page=0&size=50",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "ha"
+										},
+										{
+											"key": "sortDirection",
+											"value": "asc"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "By Email",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"let responseData = pm.response.json();\r",
+											"\r",
+											"let email = \"abv\";\r",
+											"\r",
+											"pm.test(\"All emails contain 'abv'\", function () {\r",
+											"    responseData.forEach(user => {\r",
+											"        pm.expect(user.email.toLowerCase()).to.include(email.toLowerCase());\r",
+											"    });\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users?email=gmail&sortDirection=asc&page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "gmail"
+										},
+										{
+											"key": "sortDirection",
+											"value": "asc"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "By Phone Number",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"let responseData = pm.response.json();\r",
+											"let number = \"06\";\r",
+											"\r",
+											"pm.test(\"All phone numbers contain '06'\", function () {\r",
+											"    responseData.forEach(user => {\r",
+											"        pm.expect(user.phoneNumber).to.include(number);\r",
+											"    });\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users?phoneNumber=06&sortDirection=asc&page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "06"
+										},
+										{
+											"key": "sortDirection",
+											"value": "asc"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "By Brand",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users?vehicleBrand=Volkswagen&sortDirection=asc&page=0&size=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "vehicleBrand",
+											"value": "Volkswagen"
+										},
+										{
+											"key": "sortDirection",
+											"value": "asc"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check user's vehicle brand",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"let responseData = pm.response.json();\r",
+											"let expectedBrandName = \"Volkswagen\";\r",
+											"\r",
+											"pm.test(\"Brand name is correct\", function () {\r",
+											"    pm.expect(responseData.brand.name).to.eql(expectedBrandName);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/vehicles/19",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"vehicles",
+										"19"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User CRUD Operations",
+					"item": [
+						{
+							"name": "Get all Users",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"let responseData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Response is an array\", function () {\r",
+											"    pm.expect(responseData).to.be.an(\"array\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"All fields are not null\", function () {\r",
+											"    pm.expect(responseData.id, \"id should not be null\").to.not.be.null;\r",
+											"    pm.expect(responseData.username, \"username should not be null\").to.not.be.null;\r",
+											"    pm.expect(responseData.firstName, \"firstName should not be null\").to.not.be.null;\r",
+											"    pm.expect(responseData.lastName, \"lastName should not be null\").to.not.be.null;\r",
+											"    pm.expect(responseData.email, \"email should not be null\").to.not.be.null;\r",
+											"    pm.expect(responseData.phoneNumber, \"phoneNumber should not be null\").to.not.be.null;\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users?page=0&size=50",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "50"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"let responseData = pm.response.json();\r",
+											"let expectedId = 24;\r",
+											"\r",
+											"pm.test(\"User id is incorrect\", function () {\r",
+											"    pm.expect(responseData.id).to.eql(expectedId);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"All fields are not null\", function () {\r",
+											"    pm.expect(responseData.username, \"username should not be null\").to.not.be.null;\r",
+											"    pm.expect(responseData.firstName, \"firstName should not be null\").to.not.be.null;\r",
+											"    pm.expect(responseData.lastName, \"lastName should not be null\").to.not.be.null;\r",
+											"    pm.expect(responseData.email, \"email should not be null\").to.not.be.null;\r",
+											"    pm.expect(responseData.phoneNumber, \"phoneNumber should not be null\").to.not.be.null;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users/24",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"24"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"let responseData = pm.response.json();\r",
+											"let expectedId = 30;\r",
+											"\r",
+											"pm.test(\"User id is incorrect\", function () {\r",
+											"    pm.expect(responseData.id).to.eql(expectedId);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Fields match the updated values\", function () {\r",
+											"    pm.expect(responseData.firstName, \"Incorrect firstName\").to.eql(\"Peter\");\r",
+											"    pm.expect(responseData.lastName, \"Incorrect lastName\").to.eql(\"Ivanov\");\r",
+											"    pm.expect(responseData.email, \"Incorrect email\").to.eql(\"ivanov@gmail.com\");\r",
+											"    pm.expect(responseData.phoneNumber, \"Incorrect phone number\").to.eql(\"0877235001\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"firstName\": \"Peter\",\r\n    \"lastName\": \"Ivanov\",\r\n    \"email\": \"ivanov@gmail.com\",\r\n    \"phoneNumber\": \"0877235001\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users/30",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"30"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Customer",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"All fields in response match the expected values\", function () {\r",
+											"    const expectedUsername = pm.variables.get(\"randomUserName\");\r",
+											"    const expectedEmail = pm.variables.get(\"randomEmail\");\r",
+											"    const expectedPhone = pm.variables.get(\"phoneNumber\");\r",
+											"\r",
+											"    const response = pm.response.json();\r",
+											"\r",
+											"    pm.expect(response.username).to.eql(expectedUsername);\r",
+											"    pm.expect(response.email).to.eql(expectedEmail);\r",
+											"    pm.expect(response.phoneNumber).to.eql(expectedPhone);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.variables.set(\"phoneNumber\", Math.floor(1000000000 + Math.random() * 9000000000).toString());\r",
+											"\r",
+											"pm.variables.set(\"randomUserName\", pm.variables.replaceIn(\"{{$randomUserName}}\"));\r",
+											"pm.variables.set(\"randomEmail\", pm.variables.replaceIn(\"{{$randomExampleEmail}}\"));\r",
+											"pm.variables.set(\"randomFirstName\", pm.variables.replaceIn(\"{{$randomFirstName}}\"));\r",
+											"pm.variables.set(\"randomLastName\", pm.variables.replaceIn(\"{{$randomLastName}}\"));\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"{{randomUserName}}\",\r\n  \"email\": \"{{randomEmail}}\",\r\n  \"phoneNumber\": \"{{phoneNumber}}\",\r\n  \"firstName\": \"{{randomFirstName}}\",\r\n  \"lastName\": \"{{randomLastName}}\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users/customers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200 or 404 for successfull deletion!\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);\r",
+											"});\r",
+											"\r",
+											"const jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Delete user returns correct message\", function () {\r",
+											"    pm.expect(jsonData.message).to.eql(\"User with id 37 not found.\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/users/37",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"37"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Client Car Services",
+			"item": [
+				{
+					"name": "Search, Filter and Sort",
+					"item": [
+						{
+							"name": "Get Services",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/client-cars/services",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client-cars",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Service History",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users/30/service-history",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"30",
+										"service-history"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Concrete Car Service",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Services array is not empty\", function () {\r",
+											"    let jsonData = pm.response.json();\r",
+											"\r",
+											"    pm.expect(jsonData.services).to.be.an(\"array\").that.is.not.empty;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/client-cars/9/services",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client-cars",
+										"9",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filter By Owner Acs",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/client-cars/filter-sort?searchTerm=er&sortBy=owner&sortDirection=asc",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client-cars",
+										"filter-sort"
+									],
+									"query": [
+										{
+											"key": "searchTerm",
+											"value": "er"
+										},
+										{
+											"key": "sortBy",
+											"value": "owner"
+										},
+										{
+											"key": "sortDirection",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Filtered user by keyword",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"let resposneData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"User id has the keyword 'er' in the username\", function () {\r",
+											"    pm.expect(resposneData.username).to.include('er');\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add a Service",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"\r",
+											"//The Response code in Swagger Docs is 200!!!\r",
+											"//Can not make assert with GET request, because there is a defect in the response code!\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/client-cars/9/services/11",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client-cars",
+										"9",
+										"services",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Added Service",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/client-cars/9/services",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client-cars",
+										"9",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a New Car",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"let responseData = pm.response.json();\r",
+											"\r",
+											"const expectedVin = pm.variables.get(\"randomVin\");\r",
+											"const expectedPlate = pm.variables.get(\"randomPlate\");\r",
+											"\r",
+											"pm.test(\"VIN in response matches the VIN we sent\", function () {\r",
+											"    pm.expect(responseData.vin).to.equal(expectedVin);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"License plate in response matches the one we sent\", function () {\r",
+											"    pm.expect(responseData.licensePlate).to.equal(expectedPlate);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Brand, model, year, and engineType match the request\", function () {\r",
+											"    pm.expect(responseData.vehicle.brand.name).to.equal(\"Porsche\");\r",
+											"    pm.expect(responseData.vehicle.model.name).to.equal(\"Volkswagen\");\r",
+											"    pm.expect(responseData.vehicle.year.year).to.equal(2015);\r",
+											"    pm.expect(responseData.vehicle.engineType.name).to.equal(\"3.0 V7\");\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"let randomVin = '';\r",
+											"const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';\r",
+											"for (let i = 0; i < 17; i++) {\r",
+											"    randomVin += chars.charAt(Math.floor(Math.random() * chars.length));\r",
+											"}\r",
+											"pm.variables.set(\"randomVin\", randomVin);\r",
+											"\r",
+											"const prefixes = [\"A\",\"B\",\"CH\",\"Y\",\"TX\",\"H\",\"CC\",\"PP\",\"T\",\"P\",\"BT\",\"EB\",\"CT\",\"X\",\"K\",\"CM\",\"PB\",\"OB\",\"EH\",\"PA\",\"E\",\"KH\",\"PK\",\"CA\",\"C\",\"CB\",\"CO\",\"BP\",\"M\",\"BH\"];\r",
+											"const suffixes = \"ABEKMHOPCTYX\";\r",
+											"\r",
+											"let plate = prefixes[Math.floor(Math.random()*prefixes.length)] +\r",
+											"            Math.floor(1000 + Math.random()*9000) +\r",
+											"            suffixes[Math.floor(Math.random()*suffixes.length)] +\r",
+											"            suffixes[Math.floor(Math.random()*suffixes.length)];\r",
+											"\r",
+											"pm.variables.set(\"randomPlate\", plate);\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"vin\": \"{{randomVin}}\",\r\n  \"license_plate\": \"{{randomPlate}}\",\r\n  \"brandName\": \"Porsche\",\r\n  \"modelName\": \"Volkswagen\",\r\n  \"year\": 2015,\r\n  \"engineType\": \"3.0 V7\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users/10/client-cars",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"10",
+										"client-cars"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Car Info",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"let responseData = pm.response.text(); \r",
+											"\r",
+											"pm.test(\"Client car successfully updated\", function () {\r",
+											"    pm.expect(responseData).to.not.be.null; \r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"vin\": \"INHAFDHGU7OM4FID4\",\r\n  \"license_plate\": \"PA5039BO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/client-cars/5",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"client-cars",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "There is no DELETE Request Option in Swagger Documentation."
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "Testing1@",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "test",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
