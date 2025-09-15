@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class CustomerProfileTests extends SmartGarageBaseWebTest {
@@ -30,7 +32,45 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
         adminPanelPage.clickAllUsersContainer();
         usersPage.searchCustomerByName("Mi");
         usersPage.clickSearchButton();
-        List<WebElement> users = usersPage.getUserList();
-        Assertions.assertTrue(users.size() > 0, "Expected at least 1 user on the page.");
+        List<WebElement> usernames = usersPage.getAllUsernamesList();
+
+        for (WebElement username : usernames) {
+            String usernameText = username.getText();
+            Assertions.assertTrue(usernameText.toLowerCase().contains("mi"), "User name do not contain 'Mi': " + usernameText);
+        }
+    }
+
+    @Test
+    public void filterCustomersByVehicle() {
+        homePage.clickAdminPanelButton();
+        adminPanelPage.clickAllUsersContainer();
+        usersPage.searchCustomerByVehicle();
+        List<WebElement> brands = usersPage.getAllUsersBrandsList();
+
+        for (WebElement brand : brands) {
+            String brandText = brand.getText();
+            Assertions.assertEquals("Porsche", brandText, "Usernames does not have brand cars 'Porsche': " + brandText);
+        }
+    }
+
+    @Test
+    public void filterCustomersByVisitedBeforeDate() {
+        String filterDate = "2023-08-20";
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate minDate = LocalDate.parse(filterDate, fmt);
+
+        homePage.clickAdminPanelButton();
+        adminPanelPage.clickAllUsersContainer();
+        usersPage.searchCustomerByVisitedAfter(filterDate);
+        List<WebElement> dates = usersPage.getAllDatesList();
+
+        for (WebElement date : dates) {
+            String dateText = date.getText().trim();
+            LocalDate actual = LocalDate.parse(dateText, fmt);
+            Assertions.assertFalse(
+                    actual.isBefore(minDate),
+                    "Service date " + actual + " is before the filter date " + minDate
+            );
+        }
     }
 }
