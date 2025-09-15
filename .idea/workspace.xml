@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
+    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit Manage Services Tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ServicePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/ServicePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +31,12 @@
     &quot;assignee&quot;: &quot;viks99sp&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git",
-    "accountId": "696d0368-7a61-4ffd-bc26-93ac61440858"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git&quot;,
+    &quot;accountId&quot;: &quot;7e864bb5-6d8b-49b2-b41b-540d57279937&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -53,6 +56,8 @@
     &quot;JUnit.ManageServicesTests.browseAllServices.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ManageServicesTests.browseSpecificService.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ManageServicesTests.createService_when_validInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageServicesTests.deleteService.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ManageServicesTests.updateServicePrice_when_validInput.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials.executor&quot;: &quot;Run&quot;,
@@ -104,7 +109,7 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ManageServicesTests.createService_when_validInput">
+  <component name="RunManager" selected="JUnit.ManageServicesTests.updateServicePrice_when_validInput">
     <configuration name="ManageServicesTests.browseAllServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
@@ -153,7 +158,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageVehiclesTests.filterVehiclesByOwnerFirstName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageServicesTests.deleteService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -162,14 +167,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
-      <option name="METHOD_NAME" value="filterVehiclesByOwnerFirstName" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="METHOD_NAME" value="deleteService" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageVehiclesTests.updateExistingVehicleDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageServicesTests.updateServicePrice_when_validInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -178,8 +183,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
-      <option name="METHOD_NAME" value="updateExistingVehicleDetails" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="METHOD_NAME" value="updateServicePrice_when_validInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -187,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ManageServicesTests.updateServicePrice_when_validInput" />
+        <item itemvalue="JUnit.ManageServicesTests.deleteService" />
         <item itemvalue="JUnit.ManageServicesTests.createService_when_validInput" />
         <item itemvalue="JUnit.ManageServicesTests.browseSpecificService" />
         <item itemvalue="JUnit.ManageServicesTests.browseAllServices" />
-        <item itemvalue="JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName" />
-        <item itemvalue="JUnit.ManageVehiclesTests.updateExistingVehicleDetails" />
       </list>
     </recent_temporary>
   </component>
@@ -224,8 +229,9 @@
       <workItem from="1757586217985" duration="832000" />
       <workItem from="1757673178473" duration="2374000" />
       <workItem from="1757841700091" duration="10578000" />
-      <workItem from="1757858977931" duration="4816000" />
-      <workItem from="1757926632045" duration="2596000" />
+      <workItem from="1757858977931" duration="5083000" />
+      <workItem from="1757926854991" duration="5797000" />
+      <workItem from="1757933218765" duration="1350000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -371,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757853587077</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="initial commit Manage Services Tests">
+      <option name="closed" value="true" />
+      <created>1757864071100</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1757864071100</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

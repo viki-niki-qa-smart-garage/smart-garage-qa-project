@@ -1,12 +1,8 @@
-2025-09-14 18:12:49,493 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-14 18:12:52,395 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-14 18:12:52,816 INFO  [main] Finding element with locator: By.id: login-username
-2025-09-14 18:12:52,960 INFO  [main] Finding element with locator: By.id: login-password
-2025-09-14 18:12:53,080 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-09-14 18:12:53,550 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
-2025-09-14 18:12:53,875 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
-2025-09-14 18:12:54,094 INFO  [main] Finding element with locator: By.id: addServiceButton
-2025-09-14 18:12:54,202 INFO  [main] Finding element with locator: By.xpath: //input[@name='serviceName']
-2025-09-14 18:12:54,320 INFO  [main] Finding element with locator: By.xpath: //input[@name='servicePrice']
-2025-09-14 18:12:54,419 INFO  [main] Finding element with locator: By.xpath: //div[@class='row page-margin-top']//a[contains(text(), 'Save Service')]
-2025-09-14 18:12:54,505 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
+2025-09-15 14:12:51,101 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-15 14:12:53,502 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-15 14:12:53,947 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-15 14:12:54,138 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-15 14:12:54,237 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-15 14:12:54,419 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-15 14:12:55,180 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
+2025-09-15 14:12:55,630 INFO  [main] Finding element with locator: By.id: save-2
