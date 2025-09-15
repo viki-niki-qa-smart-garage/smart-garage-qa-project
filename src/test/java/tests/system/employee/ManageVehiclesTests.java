@@ -21,7 +21,7 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
     public void successfullyClientCarCreation_when_loginWithValidCredentials() {
         homePage.clickAdminPanelButton();
         adminPanelPage.clickClientCarsContainer();
-        clientCarsPage.addClientCar("WAUZZZ8P4AA000099", "A1112BC", "testUser", "A3", "1.4 TSI", "1999");
+        clientCarsPage.addClientCar("WAUZZZ8P4AA000100", "A1112BC", "testUser", "A3", "1.4 TSI", "1999");
 
         clientCarsPage.clickThirdPageButton();
 
@@ -37,6 +37,7 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
         List<WebElement> cars = clientCarsPage.getCarList();
 
         Assertions.assertTrue(cars.size() > 0, "Expected at least 1 car on the page.");
+        // da premestq assertions v carspage
     }
 
     @Test
