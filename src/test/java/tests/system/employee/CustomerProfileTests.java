@@ -70,6 +70,7 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
             Assertions.assertFalse(
                     actual.isBefore(minDate),
                     "Service date " + actual + " is before the filter date " + minDate
+                    //Just Text
             );
         }
     }
