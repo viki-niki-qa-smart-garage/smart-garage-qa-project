@@ -16,20 +16,18 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
     public void setUp() {
         loginPage.navigate();
         loginPage.login(TestData.EMPLOYEE_USERNAME_VIKI.getValue(), TestData.EMPLOYEE_PASSWORD_VIKI.getValue());
+        homePage.clickAdminPanelButton();
+        adminPanelPage.clickAllUsersContainer();
     }
 
     @Test
     public void browseAllCustomersProfiles() {
-        homePage.clickAdminPanelButton();
-        adminPanelPage.clickAllUsersContainer();
         List<WebElement> users = usersPage.getUserList();
-        Assertions.assertTrue(users.size() > 0, "Expected at least 1 user on the page.");
+        Assertions.assertFalse(users.isEmpty(), "Expected at least 1 user on the page.");
     }
 
     @Test
     public void filterCustomersByName() {
-        homePage.clickAdminPanelButton();
-        adminPanelPage.clickAllUsersContainer();
         usersPage.searchCustomerByName("Mi");
         usersPage.clickSearchButton();
         List<WebElement> usernames = usersPage.getAllUsernamesList();
@@ -42,8 +40,6 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
 
     @Test
     public void filterCustomersByVehicle() {
-        homePage.clickAdminPanelButton();
-        adminPanelPage.clickAllUsersContainer();
         usersPage.searchCustomerByVehicle();
         List<WebElement> brands = usersPage.getAllUsersBrandsList();
 
@@ -59,19 +55,23 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate minDate = LocalDate.parse(filterDate, fmt);
 
-        homePage.clickAdminPanelButton();
-        adminPanelPage.clickAllUsersContainer();
         usersPage.searchCustomerByVisitedAfter(filterDate);
         List<WebElement> dates = usersPage.getAllDatesList();
 
         for (WebElement date : dates) {
-            String dateText = date.getText().trim();
-            LocalDate actual = LocalDate.parse(dateText, fmt);
-            Assertions.assertFalse(
-                    actual.isBefore(minDate),
-                    "Service date " + actual + " is before the filter date " + minDate
-                    //Just Text
-            );
+            String[] dateTexts = date.getText().trim().split("\\s+");
+            for (String dateText : dateTexts) {
+                if (!dateText.isEmpty()) {
+                    LocalDate actual = LocalDate.parse(dateText, fmt);
+                    System.out.println(actual);
+                    Assertions.assertFalse(
+                            actual.isBefore(minDate),
+                            "Service date " + actual + " is before the filter date " + minDate
+                    );
+                }
+            }
         }
     }
+
+
 }
