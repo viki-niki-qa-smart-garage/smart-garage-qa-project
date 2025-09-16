@@ -14,6 +14,7 @@ public class SmartGarageBaseWebTest extends BaseWebTest {
     protected ClientCarsPage clientCarsPage;
     protected UsersPage usersPage;
     protected ServicePage servicePage;
+    protected MyOrdersPage myOrdersPage;
 
     @BeforeEach
     public void beforeTests() {
@@ -24,10 +25,11 @@ public class SmartGarageBaseWebTest extends BaseWebTest {
         clientCarsPage = new ClientCarsPage();
         usersPage = new UsersPage();
         servicePage = new ServicePage();
+        myOrdersPage = new MyOrdersPage();
     }
 
-//    @AfterEach
-//    public void afterTests() {
-//        DriverManager.quitDriver();
-//    }
+    @AfterEach
+    public void afterTests() {
+        DriverManager.quitDriver();
+    }
 }

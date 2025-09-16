@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageDetailsTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageReportsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/MyDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/MyDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ServicePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/ServicePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/enums/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enums/BaseServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enums/BrandType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enums/RoleType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/MyOrdersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/MyOrdersPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/customer/ServiceHistoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/customer/ServiceHistoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/CustomerProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/CustomerProfileTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +58,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
+    "JUnit.CustomerProfileTests.browseAllCustomersProfiles.executor": "Run",
+    "JUnit.CustomerProfileTests.filterCustomersByVehicle.executor": "Run",
+    "JUnit.CustomerProfileTests.filterCustomersByVisitedBeforeDate.executor": "Run",
     "JUnit.LoginTest.successfulLogin_when_validCredentials.executor": "Run",
     "JUnit.ManageDetailsTests.changePassword.executor": "Run",
     "JUnit.ManageDetailsTests.forgotPassword.executor": "Run",
+    "JUnit.ManageReportsTests.viewDetailedReportOfACustomer.executor": "Run",
     "JUnit.ManageServicesTests.browseAllServices.executor": "Run",
     "JUnit.ManageServicesTests.browseSpecificService.executor": "Run",
     "JUnit.ManageServicesTests.createService_when_validInput.executor": "Run",
@@ -78,6 +81,8 @@
     "JUnit.OrderApiTests.getUserOrders.executor": "Run",
     "JUnit.OrderApiTests.updateOrderStatus.executor": "Run",
     "JUnit.RegistrationTest.successfulRegistration_when_validCredentials.executor": "Run",
+    "JUnit.ServiceHistoryTests.customerCanViewListOfTheirServices.executor": "Run",
+    "JUnit.ServiceHistoryTests.testServiceHistory.executor": "Run",
     "JUnit.UserApiSearchTests.getAllUsersByBrand.executor": "Run",
     "JUnit.UserApiSearchTests.getAllUsersByBrandName.executor": "Run",
     "JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor": "Run",
@@ -118,8 +123,8 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ManageDetailsTests.forgotPassword">
-    <configuration name="ManageDetailsTests.changePassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CustomerProfileTests.filterCustomersByVehicle">
+    <configuration name="CustomerProfileTests.browseAllCustomersProfiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -128,14 +133,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageDetailsTests" />
-      <option name="METHOD_NAME" value="changePassword" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
+      <option name="METHOD_NAME" value="browseAllCustomersProfiles" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageDetailsTests.forgotPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerProfileTests.filterCustomersByVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -144,14 +149,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageDetailsTests" />
-      <option name="METHOD_NAME" value="forgotPassword" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
+      <option name="METHOD_NAME" value="filterCustomersByVehicle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageServicesTests.deleteService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageReportsTests.viewDetailedReportOfACustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -160,40 +165,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
-      <option name="METHOD_NAME" value="deleteService" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageReportsTests" />
+      <option name="METHOD_NAME" value="viewDetailedReportOfACustomer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageServicesTests.updateServicePrice_when_validInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServiceHistoryTests.customerCanViewListOfTheirServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="PATTERN" value="tests.system.customer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
-      <option name="METHOD_NAME" value="updateServicePrice_when_validInput" />
+      <option name="PACKAGE_NAME" value="tests.system.customer" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.customer.ServiceHistoryTests" />
+      <option name="METHOD_NAME" value="customerCanViewListOfTheirServices" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServiceHistoryTests.testServiceHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="PATTERN" value="tests.system.customer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
-      <option name="METHOD_NAME" value="successfullyClientCarCreation_when_loginWithValidCredentials" />
+      <option name="PACKAGE_NAME" value="tests.system.customer" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.customer.ServiceHistoryTests" />
+      <option name="METHOD_NAME" value="testServiceHistory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -201,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ManageDetailsTests.forgotPassword" />
-        <item itemvalue="JUnit.ManageDetailsTests.changePassword" />
-        <item itemvalue="JUnit.ManageServicesTests.updateServicePrice_when_validInput" />
-        <item itemvalue="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials" />
-        <item itemvalue="JUnit.ManageServicesTests.deleteService" />
+        <item itemvalue="JUnit.CustomerProfileTests.filterCustomersByVehicle" />
+        <item itemvalue="JUnit.CustomerProfileTests.browseAllCustomersProfiles" />
+        <item itemvalue="JUnit.ServiceHistoryTests.customerCanViewListOfTheirServices" />
+        <item itemvalue="JUnit.ServiceHistoryTests.testServiceHistory" />
+        <item itemvalue="JUnit.ManageReportsTests.viewDetailedReportOfACustomer" />
       </list>
     </recent_temporary>
   </component>
