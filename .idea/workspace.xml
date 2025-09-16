@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit Manage Services Tests" />
+    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit of CustomerProfileTests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +31,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git&quot;,
-    &quot;accountId&quot;: &quot;7e864bb5-6d8b-49b2-b41b-540d57279937&quot;
+    &quot;accountId&quot;: &quot;696d0368-7a61-4ffd-bc26-93ac61440858&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -227,6 +229,7 @@
       <workItem from="1757858977931" duration="5083000" />
       <workItem from="1757926854991" duration="5797000" />
       <workItem from="1757933218765" duration="2697000" />
+      <workItem from="1758010807490" duration="4101000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -388,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757937251032</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="initial commit of CustomerProfileTests">
+      <option name="closed" value="true" />
+      <created>1757948379977</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1757948379977</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,6 +434,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="initial commit Manage Vehicles Tests" />
     <MESSAGE value="initial commit Manage Services Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit Manage Services Tests" />
+    <MESSAGE value="initial commit of CustomerProfileTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit of CustomerProfileTests" />
   </component>
 </project>
