@@ -2,6 +2,7 @@ package com.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
@@ -25,13 +26,20 @@ public class ClientCarsPage extends BasePage {
     private final By engineTypeInput = By.id("engineType");
     private final By yearInput = By.id("yearOfCreation");
     private final By addClientCarButton = By.xpath("//button[@type='submit'and contains(text(), 'ADD CLIENT CAR')]");
-    private final By thirdPageButton = By.xpath("//a[contains(text(), '3')]");
-    private final By vinAssertion = By.xpath("//div[@class='custom-car-list-container']//div[contains(text(), 'WAUZZZ8P4AA000099')]");
+     private final By lastPageButton = By.xpath("//div[@class='pagination']//a[contains(text(), '3')]");
+    private final By vinAssertion = By.xpath("//div[@class='custom-car-list-container']//div[contains(text(), 'WAUZZZ8P4AA000100')]");
     private final By ErrorMessage = By.xpath("//div[@class='error-message']");
     private final By carList = By.cssSelector(".vehicle-item.custom-car-list-row");
     private final By vinField = By.cssSelector("#vin-21");
     private final By plateField = By.cssSelector("#licensePlate-21");
     private final By ownerField = By.cssSelector("div.custom-car-list-column:nth-of-type(3)");
+
+    private final By listContainer = By.cssSelector("div.custom-car-list-items");
+    private final By vehicleRows = By.cssSelector("div.custom-car-list-items > div.vehicle-item");
+    private final By pagination = By.cssSelector("ul.pagination");
+    private final By lastCreatedVehicle = By.cssSelector("div.custom-car-list-items > div.vehicle-item:last-child");
+
+
 
     public ClientCarsPage() {
         super("/client-cars");
@@ -67,8 +75,22 @@ public class ClientCarsPage extends BasePage {
 
     }
 
-    public void clickThirdPageButton() {
-        driver().findElement(thirdPageButton).click();
+    public void navigateToLastPage() {
+        driver().findElement(lastPageButton).click();
+    }
+
+    public List<WebElement> getLastPageVehicles() {
+      return driverWait().until(ExpectedConditions.presenceOfAllElementsLocatedBy(listContainer));
+    }
+
+    private int getRowCount() {
+        return driver().findElements(vehicleRows).size();
+    }
+
+    private List<WebElement> getLastRowCells() {
+        driverWait().withTimeout(Duration.ofSeconds(10));
+        WebElement lastRow = driverWait().until(ExpectedConditions.visibilityOfElementLocated(lastCreatedVehicle));
+        return lastRow.findElements(By.cssSelector("div.custom-car-list-column"));
     }
 
     public WebElement getVin() {
