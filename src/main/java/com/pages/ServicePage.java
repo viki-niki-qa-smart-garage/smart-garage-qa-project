@@ -75,42 +75,36 @@ public class ServicePage extends BasePage {
 
     }
 
-    // helper
     private int getRowsCount() {
         return driver().findElements(rows).size();
     }
 
-    // Create service and wait for DOM update
+
     public String addService(String serviceName, String servicePrice) {
-        // Current number of rows
+
         int before = getRowsCount();
         WebElement oldTbody = driver().findElement(tbody);
 
-        // Fill the form
         driver().findElement(addServiceButton).click();
         driver().findElement(serviceNameInput).sendKeys(serviceName);
         driver().findElement(servicePriceInput).sendKeys(servicePrice);
 
-        // Click Save
         WebElement saveButton = driver().findElement(saveServiceButton);
         saveButton.click();
 
         driverWait().until(ExpectedConditions.stalenessOf(oldTbody));
 
-        // Wait until table size increases
         driverWait().until(d -> getRowsCount() > before);
         WebElement lastRow = driver().findElement(lastCreatedService);
         return lastRow.getAttribute("data-service-id");
     }
 
-    // Read last row cells
     private List<WebElement> getLastRowCells() {
         driverWait().withTimeout(Duration.ofSeconds(10));
         WebElement lastRow = driverWait().until(ExpectedConditions.visibilityOfElementLocated(lastCreatedService));
         return lastRow.findElements(By.tagName("td"));
     }
 
-    // Assertion for the last created service
     public void assertLastCreatedService(String expectedName, String expectedPrice) {
         List<WebElement> cells = getLastRowCells();
 
@@ -158,28 +152,23 @@ public class ServicePage extends BasePage {
     }
 
     public void updateFirstServicePrice(String newPrice) {
-        // find the first row and its id
+
         WebElement row = driverWait().until(ExpectedConditions.visibilityOfElementLocated(firstServiceRow));
         String serviceId = row.getAttribute("data-service-id");
 
-        // click Edit button (id="edit-{id}")
         WebElement editBtn = row.findElement(By.id("edit-" + serviceId));
         editBtn.click();
 
-        // wait for the price input to appear (assume name='servicePrice')
         WebElement priceInput = driverWait().until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//td[@id='service-price-2']/input[@type='number']"))
         );
 
-        // clear old value and type new one
         priceInput.clear();
         priceInput.sendKeys(newPrice);
 
-        // click Save (inside the edit form)
         WebElement saveBtn = driver().findElement(By.id("save-2"));
         saveBtn.click();
 
-        // wait for the row’s price cell to be updated
         driverWait().until(ExpectedConditions.textToBePresentInElement(
                 row.findElements(By.tagName("td")).get(1),
                 newPrice

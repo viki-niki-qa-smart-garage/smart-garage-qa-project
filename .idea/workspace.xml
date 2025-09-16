@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit of CustomerProfileTests">
+    <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/viki-niki-qa-smart-garage/smart-garage-qa-project.git&quot;,
-    &quot;accountId&quot;: &quot;696d0368-7a61-4ffd-bc26-93ac61440858&quot;
+    &quot;accountId&quot;: &quot;7e864bb5-6d8b-49b2-b41b-540d57279937&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -106,23 +108,7 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ManageServicesTests.updateServicePrice_when_validInput">
-    <configuration name="ManageServicesTests.browseAllServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
-      <option name="METHOD_NAME" value="browseAllServices" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials">
     <configuration name="ManageServicesTests.browseSpecificService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
@@ -187,13 +173,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
+      <option name="METHOD_NAME" value="successfullyClientCarCreation_when_loginWithValidCredentials" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials" />
         <item itemvalue="JUnit.ManageServicesTests.updateServicePrice_when_validInput" />
         <item itemvalue="JUnit.ManageServicesTests.deleteService" />
         <item itemvalue="JUnit.ManageServicesTests.createService_when_validInput" />
         <item itemvalue="JUnit.ManageServicesTests.browseSpecificService" />
-        <item itemvalue="JUnit.ManageServicesTests.browseAllServices" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +231,7 @@
       <workItem from="1757858977931" duration="5083000" />
       <workItem from="1757926854991" duration="5797000" />
       <workItem from="1757933218765" duration="2697000" />
-      <workItem from="1758010807490" duration="4101000" />
+      <workItem from="1757948140336" duration="2554000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -391,13 +393,13 @@
       <option name="project" value="LOCAL" />
       <updated>1757937251032</updated>
     </task>
-    <task id="LOCAL-00021" summary="initial commit of CustomerProfileTests">
+    <task id="LOCAL-00021" summary="initial commit">
       <option name="closed" value="true" />
-      <created>1757948379977</created>
+      <created>1757948173488</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1757948379977</updated>
+      <updated>1757948173488</updated>
     </task>
     <option name="localTasksCounter" value="22" />
     <servers />
@@ -431,10 +433,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit of Vehicle Endpoints" />
     <MESSAGE value="initial commit of ManageVehiclesTests happy path tests" />
-    <MESSAGE value="initial commit" />
     <MESSAGE value="initial commit Manage Vehicles Tests" />
     <MESSAGE value="initial commit Manage Services Tests" />
-    <MESSAGE value="initial commit of CustomerProfileTests" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit of CustomerProfileTests" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
