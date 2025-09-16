@@ -50,16 +50,19 @@ public class ManageServicesTests extends SmartGarageBaseWebTest {
         homePage.clickServicesButton();
         servicePage.clickEngineDiagnosticsContainer();
 
-        servicePage.createThenDeleteService("Engine Fault Fixing", "130");
+        servicePage.deleteCreatedService("Engine Fault Fixing", "130");
     }
 
     @Test
     public void updateServicePrice_when_validInput() {
         homePage.clickServicesButton();
         servicePage.clickEngineDiagnosticsContainer();
-        servicePage.updateFirstServicePrice("110");
+        servicePage.updateFirstServicePrice("120");
 
-        WebElement updatedPrice = servicePage.getUpdatedPrice();
-        Assertions.assertTrue(updatedPrice.getText().contains("110"), "Expected updatedPrice to be displayed");
+        String uiText = servicePage.getUpdatedPrice().getText();
+        int actualInt = servicePage.integerPart(uiText);
+        Assertions.assertEquals(120, actualInt);
     }
+
+
 }

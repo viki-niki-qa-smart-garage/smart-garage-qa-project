@@ -1,6 +1,7 @@
 package com.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class HomePage extends BasePage {
     public final By loginButton = By.xpath("//a[@class='social-login']");
@@ -10,6 +11,7 @@ public class HomePage extends BasePage {
     private final By myDetailsButton = By.xpath("//div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'My Details')]");
     private final By adminPanelButton = By.xpath("//div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]");
     private final By myOrdersButton = By.xpath("//div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'My Orders')]");
+
 
     public HomePage() {
         super("");

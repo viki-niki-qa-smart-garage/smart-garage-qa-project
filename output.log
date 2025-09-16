@@ -1,15 +1,7 @@
-2025-09-16 12:24:09,037 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-16 12:24:12,148 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-16 12:24:12,975 INFO  [main] Finding element with locator: By.id: login-username
-2025-09-16 12:24:13,073 INFO  [main] Finding element with locator: By.id: login-password
-2025-09-16 12:24:13,126 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-09-16 12:24:13,262 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
-2025-09-16 12:24:14,647 INFO  [main] Finding element with locator: By.id: vin
-2025-09-16 12:24:14,742 INFO  [main] Finding element with locator: By.id: licensePlate
-2025-09-16 12:24:14,812 INFO  [main] Finding element with locator: By.id: owner
-2025-09-16 12:24:14,887 INFO  [main] Finding element with locator: By.id: brand
-2025-09-16 12:24:15,001 INFO  [main] Finding element with locator: By.id: make
-2025-09-16 12:24:15,065 INFO  [main] Finding element with locator: By.id: engineType
-2025-09-16 12:24:15,140 INFO  [main] Finding element with locator: By.id: yearOfCreation
-2025-09-16 12:24:15,202 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'ADD CLIENT CAR')]
-2025-09-16 12:24:15,527 INFO  [main] Finding element with locator: By.xpath: //div[@class='pagination']//a[contains(text(), '3')]
+2025-09-16 15:54:20,669 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 15:54:24,055 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 15:54:24,753 INFO  [main] Finding element with locator: By.xpath: //a[@class='social-login']
+2025-09-16 15:54:25,182 INFO  [main] Finding element with locator: By.xpath: //a[@class='nounderline'and contains(text(), 'Forgot Password?')]
+2025-09-16 15:54:25,459 INFO  [main] Finding element with locator: By.id: email
+2025-09-16 15:54:25,781 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit']
+2025-09-16 15:54:26,104 INFO  [main] Finding element with locator: By.xpath: //div[@class='forgot-password-success-msg']//p[contains(text(), 'Your new password: ')]/b

@@ -8,7 +8,7 @@ public class LoginPage extends BasePage {
     private final By usernameField = By.id("login-username");
     private final By passwordField = By.id("login-password");
     private final By loginButton = By.xpath("//button[@type='submit'and contains(text(), 'Login')]");
-    private final By forgotPassword = By.xpath("//a[@class='nounderline']");
+    private final By forgotPassword = By.xpath("//a[@class='nounderline'and contains(text(), 'Forgot Password?')]");
     private final By registerTab = By.id("register-tab");
     private final By regUsernameField = By.id("reg-username");
     private final By regEmailField = By.id("reg-email");
@@ -20,6 +20,9 @@ public class LoginPage extends BasePage {
     private final By responseUsername = By.xpath("//div[@class='registration-success-mg']//p[contains(text(), 'Your username: ')]//b");
     private final By responsePassword = By.xpath("//div[@class='registration-success-mg']//p[contains(text(), 'Your password: ')]//b");
     private final By myDetails = By.xpath("//div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'My Details')]");
+    public final By generatedPassword = By.xpath("//div[@class='forgot-password-success-msg']//p[contains(text(), 'Your new password: ')]/b");
+    private final By changePasswordEmail = By.id("email");
+    private final By sendNewPassword = By.xpath("//button[@type='submit']");
 
     public LoginPage() {
         super("/auth/login");
@@ -59,8 +62,11 @@ public class LoginPage extends BasePage {
         registerBtn.click();
     }
 
-    public void forgotPassword() {
+    public void forgotPassword(String email) {
         driver().findElement(forgotPassword).click();
+        WebElement emailInput = driver().findElement(changePasswordEmail);
+        emailInput.sendKeys(email);
+        driver().findElement(sendNewPassword).click();
     }
 
     public WebElement getRegistrationMessage() {
@@ -77,5 +83,9 @@ public class LoginPage extends BasePage {
 
     public WebElement assertSuccessfulLogin() {
         return driverWait().until(ExpectedConditions.visibilityOfElementLocated(myDetails));
+    }
+
+    public WebElement getGeneratedPassword() {
+        return driver().findElement(generatedPassword);
     }
 }

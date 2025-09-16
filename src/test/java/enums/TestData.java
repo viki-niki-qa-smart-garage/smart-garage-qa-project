@@ -12,7 +12,12 @@ public enum TestData {
     EMPLOYEE_USERNAME_VIKI("test"),
     EMPLOYEE_PASSWORD_VIKI("Testing1@"),
     EMPLOYEE_USERNAME_NIKI("user"),
-    EMPLOYEE_PASSWORD_NIKI("Qwertyuiop1!");
+    EMPLOYEE_PASSWORD_NIKI("Qwertyuiop1@"),
+    EMPLOYEE2_USERNAME_NIKI("employee"),
+    EMPLOYEE2_PASSWORD_NIKI("Qwertyuiop1!"),
+    EMPLOYEE3_USERNAME_NIKI("testEmployee"),
+    EMPLOYEE3_PASSWORD_NIKI("Qwertyuiop1!");
+
 
     TestData(String propName) {
         value = propName;

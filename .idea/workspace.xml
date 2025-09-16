@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageDetailsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/MyDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/MyDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ServicePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/ServicePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,68 +56,70 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.ClientCarServicesApiTests.getClientCarServices.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LoginTest.successfulLogin_when_validCredentials.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ManageServicesTests.browseAllServices.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ManageServicesTests.browseSpecificService.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ManageServicesTests.createService_when_validInput.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ManageServicesTests.deleteService.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ManageServicesTests.updateServicePrice_when_validInput.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ManageVehiclesTests.updateExistingVehicleDetails.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.downloadOrderPdf.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.getAllOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.getOrderById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.getOrderTotalPrice.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.getUserOrders.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OrderApiTests.updateOrderStatus.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RegistrationTest.successfulRegistration_when_validCredentials.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByBrand.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByBrandName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByPartialPhoneNumber.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.getAllUsersByUsernameKeyword.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiSearchTests.verifyUserBrandName.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.createUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.deleteUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.getAllUsers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.getConcreteUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserApiTests.updateUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehicleApiTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehicleApiTests.getAllVehicles.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehicleApiTests.getCreatedVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehicleApiTests.updateVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.createVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.deleteVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.getAllVehicles.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.getConcreteVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.getCreatedVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiclesApiTest.updateVehicle.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/smart-garage-qa-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
+    "JUnit.LoginTest.successfulLogin_when_validCredentials.executor": "Run",
+    "JUnit.ManageDetailsTests.changePassword.executor": "Run",
+    "JUnit.ManageDetailsTests.forgotPassword.executor": "Run",
+    "JUnit.ManageServicesTests.browseAllServices.executor": "Run",
+    "JUnit.ManageServicesTests.browseSpecificService.executor": "Run",
+    "JUnit.ManageServicesTests.createService_when_validInput.executor": "Run",
+    "JUnit.ManageServicesTests.deleteService.executor": "Run",
+    "JUnit.ManageServicesTests.updateServicePrice_when_validInput.executor": "Run",
+    "JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers.executor": "Run",
+    "JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName.executor": "Run",
+    "JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials.executor": "Run",
+    "JUnit.ManageVehiclesTests.updateExistingVehicleDetails.executor": "Run",
+    "JUnit.OrderApiTests.downloadOrderPdf.executor": "Run",
+    "JUnit.OrderApiTests.getAllOrders.executor": "Run",
+    "JUnit.OrderApiTests.getOrderById.executor": "Run",
+    "JUnit.OrderApiTests.getOrderTotalPrice.executor": "Run",
+    "JUnit.OrderApiTests.getUserOrders.executor": "Run",
+    "JUnit.OrderApiTests.updateOrderStatus.executor": "Run",
+    "JUnit.RegistrationTest.successfulRegistration_when_validCredentials.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByBrand.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByBrandName.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByPartialPhoneNumber.executor": "Run",
+    "JUnit.UserApiSearchTests.getAllUsersByUsernameKeyword.executor": "Run",
+    "JUnit.UserApiSearchTests.verifyUserBrandName.executor": "Run",
+    "JUnit.UserApiTests.createUser.executor": "Run",
+    "JUnit.UserApiTests.deleteUser.executor": "Run",
+    "JUnit.UserApiTests.getAllUsers.executor": "Run",
+    "JUnit.UserApiTests.getConcreteUser.executor": "Run",
+    "JUnit.UserApiTests.updateUser.executor": "Run",
+    "JUnit.VehicleApiTests.executor": "Run",
+    "JUnit.VehicleApiTests.getAllVehicles.executor": "Run",
+    "JUnit.VehicleApiTests.getCreatedVehicle.executor": "Run",
+    "JUnit.VehicleApiTests.updateVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.createVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.deleteVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.getAllVehicles.executor": "Run",
+    "JUnit.VehiclesApiTest.getConcreteVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.getCreatedVehicle.executor": "Run",
+    "JUnit.VehiclesApiTest.updateVehicle.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/User/smart-garage-qa-project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials">
-    <configuration name="ManageServicesTests.browseSpecificService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ManageDetailsTests.forgotPassword">
+    <configuration name="ManageDetailsTests.changePassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -116,14 +128,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
-      <option name="METHOD_NAME" value="browseSpecificService" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageDetailsTests" />
+      <option name="METHOD_NAME" value="changePassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageServicesTests.createService_when_validInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageDetailsTests.forgotPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -132,8 +144,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
-      <option name="METHOD_NAME" value="createService_when_validInput" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageDetailsTests" />
+      <option name="METHOD_NAME" value="forgotPassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials" />
+        <item itemvalue="JUnit.ManageDetailsTests.forgotPassword" />
+        <item itemvalue="JUnit.ManageDetailsTests.changePassword" />
         <item itemvalue="JUnit.ManageServicesTests.updateServicePrice_when_validInput" />
+        <item itemvalue="JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials" />
         <item itemvalue="JUnit.ManageServicesTests.deleteService" />
-        <item itemvalue="JUnit.ManageServicesTests.createService_when_validInput" />
-        <item itemvalue="JUnit.ManageServicesTests.browseSpecificService" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +242,7 @@
       <workItem from="1757926854991" duration="5797000" />
       <workItem from="1757933218765" duration="2697000" />
       <workItem from="1757948140336" duration="3384000" />
-      <workItem from="1758010791254" duration="5451000" />
+      <workItem from="1758010791254" duration="16332000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -408,7 +420,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757954583787</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1758016372277</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1758016372277</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

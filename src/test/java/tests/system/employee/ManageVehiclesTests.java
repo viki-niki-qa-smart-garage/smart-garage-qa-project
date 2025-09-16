@@ -25,11 +25,9 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
 
         clientCarsPage.navigateToLastPage();
 
-//        WebElement vin = clientCarsPage.getVin();
-//        Assertions.assertEquals("WAUZZZ8P4AA000100", vin.getText(), "Client Car is not created");
-
-
-
+        WebElement vin = clientCarsPage.getVin();
+        Assertions.assertEquals("WAUZZZ8P4AA000100", vin.getText(), "Client Car is not created");
+        clientCarsPage.deleteCreatedClientCar();
     }
 
     @Test
