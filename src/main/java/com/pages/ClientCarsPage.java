@@ -35,9 +35,8 @@ public class ClientCarsPage extends BasePage {
     private final By ownerField = By.cssSelector("div.custom-car-list-column:nth-of-type(3)");
 
     private final By listContainer = By.cssSelector("div.custom-car-list-items");
-    private final By vehicleRows = By.cssSelector("div.custom-car-list-items > div.vehicle-item");
-    private final By pagination = By.cssSelector("ul.pagination");
     private final By lastCreatedVehicle = By.cssSelector("div.custom-car-list-items > div.vehicle-item:last-child");
+    private final By lastVehicleDeleteButton = By.cssSelector("div.custom-car-list-items > div.vehicle-item:last-child button[id^='delete-']");
 
 
 
@@ -76,21 +75,26 @@ public class ClientCarsPage extends BasePage {
     }
 
     public void navigateToLastPage() {
-        driver().findElement(lastPageButton).click();
+        driverWait().until(ExpectedConditions.visibilityOfElementLocated(lastPageButton)).click();
+
     }
 
     public List<WebElement> getLastPageVehicles() {
       return driverWait().until(ExpectedConditions.presenceOfAllElementsLocatedBy(listContainer));
     }
 
-    private int getRowCount() {
-        return driver().findElements(vehicleRows).size();
-    }
 
     private List<WebElement> getLastRowCells() {
         driverWait().withTimeout(Duration.ofSeconds(10));
         WebElement lastRow = driverWait().until(ExpectedConditions.visibilityOfElementLocated(lastCreatedVehicle));
-        return lastRow.findElements(By.cssSelector("div.custom-car-list-column"));
+        return lastRow.findElements(lastVehicleDeleteButton);
+    }
+
+    public void deleteCreatedClientCar() {
+    getLastPageVehicles();
+    List<WebElement> deleteButtons = getLastRowCells();
+    deleteButtons.get(0).click();
+
     }
 
     public WebElement getVin() {
