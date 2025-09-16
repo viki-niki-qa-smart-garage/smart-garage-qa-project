@@ -123,7 +123,7 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerProfileTests.filterCustomersByVehicle">
+  <component name="RunManager" selected="JUnit.system in SmartGarageTI">
     <configuration name="CustomerProfileTests.browseAllCustomersProfiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
@@ -151,22 +151,6 @@
       <option name="PACKAGE_NAME" value="tests.system.employee" />
       <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
       <option name="METHOD_NAME" value="filterCustomersByVehicle" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManageReportsTests.viewDetailedReportOfACustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageReportsTests" />
-      <option name="METHOD_NAME" value="viewDetailedReportOfACustomer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -204,13 +188,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="system in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/tests/system" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.system in SmartGarageTI" />
         <item itemvalue="JUnit.CustomerProfileTests.filterCustomersByVehicle" />
         <item itemvalue="JUnit.CustomerProfileTests.browseAllCustomersProfiles" />
         <item itemvalue="JUnit.ServiceHistoryTests.customerCanViewListOfTheirServices" />
         <item itemvalue="JUnit.ServiceHistoryTests.testServiceHistory" />
-        <item itemvalue="JUnit.ManageReportsTests.viewDetailedReportOfACustomer" />
       </list>
     </recent_temporary>
   </component>
