@@ -1,9 +1,11 @@
-2025-09-17 15:41:01,323 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-17 15:41:08,504 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-17 15:41:09,570 INFO  [main] Finding element with locator: By.id: login-username
-2025-09-17 15:41:09,800 INFO  [main] Finding element with locator: By.id: login-password
-2025-09-17 15:41:09,949 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-09-17 15:41:10,207 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
-2025-09-17 15:41:11,758 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
-2025-09-17 15:41:15,296 INFO  [main] Finding element with locator: By.cssSelector: #service-price-2 > span
-2025-09-17 15:41:15,384 INFO  [main] Quiting driver...
+2025-09-17 19:19:44,183 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-17 19:19:47,152 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-17 19:19:47,552 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-17 19:19:47,692 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-17 19:19:47,768 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-17 19:19:47,905 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-17 19:19:49,297 INFO  [main] Finding element with locator: By.id: search
+2025-09-17 19:19:49,373 INFO  [main] Finding element with locator: By.id: sort-by
+2025-09-17 19:19:49,498 INFO  [main] Finding element with locator: By.xpath: //button[@class='modern-button']
+2025-09-17 19:19:49,571 INFO  [main] Finding element with locator: By.cssSelector: .vehicle-item.white.custom-car-list-row
+2025-09-17 19:19:49,709 INFO  [main] Quiting driver...

@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/RepairServiceApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/RepairServiceApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +111,9 @@
     "JUnit.VehiclesApiTest.updateVehicle.executor": "Run",
     "JUnit.api in SmartGarageTI.executor": "Run",
     "JUnit.system in SmartGarageTI.executor": "Run",
+    "JUnit.tests.api in SmartGarageTI.executor": "Run",
+    "JUnit.tests.system.customer in SmartGarageTI.executor": "Run",
+    "JUnit.tests.system.employee in SmartGarageTI.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -132,86 +138,92 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RepairServiceApiTests.filterSortServices">
-    <configuration name="RepairServiceApiTests.deleteService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName">
+    <configuration name="CustomerProfileTests.browseAllCustomersProfiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.api.*" />
+          <option name="PATTERN" value="tests.system.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.RepairServiceApiTests" />
-      <option name="METHOD_NAME" value="deleteService" />
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
+      <option name="METHOD_NAME" value="browseAllCustomersProfiles" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepairServiceApiTests.filterSortServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerProfileTests.filterCustomersByVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.api.*" />
+          <option name="PATTERN" value="tests.system.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.RepairServiceApiTests" />
-      <option name="METHOD_NAME" value="filterSortServices" />
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
+      <option name="METHOD_NAME" value="filterCustomersByVehicle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehicleApiTests.createVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerProfileTests.filterCustomersByVisitedBeforeDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.api.*" />
+          <option name="PATTERN" value="tests.system.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.VehicleApiTests" />
-      <option name="METHOD_NAME" value="createVehicle" />
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
+      <option name="METHOD_NAME" value="filterCustomersByVisitedBeforeDate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehicleApiTests.updateVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageVehiclesTests.filterVehiclesByOwnerFirstName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.api.*" />
+          <option name="PATTERN" value="tests.system.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.VehicleApiTests" />
-      <option name="METHOD_NAME" value="updateVehicle" />
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
+      <option name="METHOD_NAME" value="filterVehiclesByOwnerFirstName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="api in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="tests.system.employee in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/tests/api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RepairServiceApiTests.filterSortServices" />
-        <item itemvalue="JUnit.VehicleApiTests.createVehicle" />
-        <item itemvalue="JUnit.VehicleApiTests.updateVehicle" />
-        <item itemvalue="JUnit.api in SmartGarageTI" />
-        <item itemvalue="JUnit.RepairServiceApiTests.deleteService" />
+        <item itemvalue="JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName" />
+        <item itemvalue="JUnit.CustomerProfileTests.filterCustomersByVisitedBeforeDate" />
+        <item itemvalue="JUnit.tests.system.employee in SmartGarageTI" />
+        <item itemvalue="JUnit.CustomerProfileTests.filterCustomersByVehicle" />
+        <item itemvalue="JUnit.CustomerProfileTests.browseAllCustomersProfiles" />
       </list>
     </recent_temporary>
   </component>
