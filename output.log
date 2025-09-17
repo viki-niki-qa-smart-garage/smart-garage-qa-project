@@ -1,45 +1,45 @@
-2025-09-17 19:31:31,380 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-17 19:31:38,275 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-17 19:31:39,557 INFO  [main] Finding element with locator: By.id: login-username
-2025-09-17 19:31:39,867 INFO  [main] Finding element with locator: By.id: login-password
-2025-09-17 19:31:40,017 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-09-17 19:31:40,182 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
-2025-09-17 19:31:41,962 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
-2025-09-17 19:31:43,469 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
-2025-09-17 19:31:43,527 INFO  [main] Finding element with locator: By.cssSelector: #servicesTable tbody
-2025-09-17 19:31:43,607 INFO  [main] Finding element with locator: By.id: addServiceButton
-2025-09-17 19:31:43,833 INFO  [main] Finding element with locator: By.xpath: //input[@name='serviceName']
-2025-09-17 19:31:44,026 INFO  [main] Finding element with locator: By.xpath: //input[@name='servicePrice']
-2025-09-17 19:31:44,167 INFO  [main] Finding element with locator: By.xpath: //div[@class='row page-margin-top']//a[contains(text(), 'Save Service')]
-2025-09-17 19:31:44,909 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
-2025-09-17 19:31:44,931 INFO  [main] Finding element with locator: By.cssSelector: #servicesTable tbody tr:last-child
-2025-09-17 19:31:45,129 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
-2025-09-17 19:31:45,146 INFO  [main] Finding element with locator: By.cssSelector: #servicesTable tbody
-2025-09-17 19:31:45,792 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
-2025-09-17 19:31:45,815 INFO  [main] Quiting driver...
-2025-09-17 19:31:46,703 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-17 19:31:50,083 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-17 19:31:51,071 INFO  [main] Finding element with locator: By.id: login-username
-2025-09-17 19:31:51,371 INFO  [main] Finding element with locator: By.id: login-password
-2025-09-17 19:31:51,536 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-09-17 19:31:51,851 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
-2025-09-17 19:31:53,293 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
-2025-09-17 19:31:53,865 INFO  [main] Finding element with locator: By.xpath: //h3[@class='box-header']
-2025-09-17 19:31:53,938 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
-2025-09-17 19:31:54,068 INFO  [main] Quiting driver...
-2025-09-17 19:31:55,240 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-17 19:31:58,663 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-17 19:31:59,883 INFO  [main] Finding element with locator: By.id: login-username
-2025-09-17 19:32:00,140 INFO  [main] Finding element with locator: By.id: login-password
-2025-09-17 19:32:00,290 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-09-17 19:32:00,530 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
-2025-09-17 19:32:02,273 INFO  [main] Quiting driver...
-2025-09-17 19:32:03,216 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-17 19:32:06,482 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-17 19:32:07,611 INFO  [main] Finding element with locator: By.id: login-username
-2025-09-17 19:32:07,953 INFO  [main] Finding element with locator: By.id: login-password
-2025-09-17 19:32:08,143 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-09-17 19:32:08,726 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
-2025-09-17 19:32:10,493 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
-2025-09-17 19:32:12,679 INFO  [main] Finding element with locator: By.cssSelector: #service-price-2 > span
-2025-09-17 19:32:12,741 INFO  [main] Quiting driver...
+2025-09-17 19:34:49,604 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-17 19:34:52,249 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-17 19:34:52,601 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-17 19:34:52,759 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-17 19:34:52,846 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-17 19:34:52,984 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-17 19:34:53,544 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
+2025-09-17 19:34:53,758 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
+2025-09-17 19:34:53,783 INFO  [main] Finding element with locator: By.cssSelector: #servicesTable tbody
+2025-09-17 19:34:53,816 INFO  [main] Finding element with locator: By.id: addServiceButton
+2025-09-17 19:34:53,914 INFO  [main] Finding element with locator: By.xpath: //input[@name='serviceName']
+2025-09-17 19:34:54,032 INFO  [main] Finding element with locator: By.xpath: //input[@name='servicePrice']
+2025-09-17 19:34:54,115 INFO  [main] Finding element with locator: By.xpath: //div[@class='row page-margin-top']//a[contains(text(), 'Save Service')]
+2025-09-17 19:34:54,749 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
+2025-09-17 19:34:54,783 INFO  [main] Finding element with locator: By.cssSelector: #servicesTable tbody tr:last-child
+2025-09-17 19:34:55,002 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
+2025-09-17 19:34:55,012 INFO  [main] Finding element with locator: By.cssSelector: #servicesTable tbody
+2025-09-17 19:34:55,260 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
+2025-09-17 19:34:55,277 INFO  [main] Quiting driver...
+2025-09-17 19:34:55,572 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-17 19:34:57,082 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-17 19:34:57,490 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-17 19:34:57,631 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-17 19:34:57,720 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-17 19:34:57,832 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-17 19:34:58,437 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
+2025-09-17 19:34:58,646 INFO  [main] Finding element with locator: By.xpath: //h3[@class='box-header']
+2025-09-17 19:34:58,679 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
+2025-09-17 19:34:58,724 INFO  [main] Quiting driver...
+2025-09-17 19:34:58,992 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-17 19:35:00,522 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-17 19:35:00,887 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-17 19:35:01,034 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-17 19:35:01,150 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-17 19:35:01,279 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-17 19:35:02,330 INFO  [main] Quiting driver...
+2025-09-17 19:35:02,622 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-17 19:35:04,311 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-17 19:35:04,750 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-17 19:35:04,944 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-17 19:35:05,072 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-17 19:35:05,260 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-17 19:35:06,169 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
+2025-09-17 19:35:07,682 INFO  [main] Finding element with locator: By.cssSelector: #service-price-2 > span
+2025-09-17 19:35:07,759 INFO  [main] Quiting driver...
