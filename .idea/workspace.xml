@@ -7,7 +7,9 @@
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageDetailsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageDetailsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +72,7 @@
     "JUnit.ManageServicesTests.executor": "Run",
     "JUnit.ManageServicesTests.updateServicePrice_when_validInput.executor": "Run",
     "JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers.executor": "Run",
+    "JUnit.ManageVehiclesTests.executor": "Run",
     "JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName.executor": "Run",
     "JUnit.ManageVehiclesTests.successfullyClientCarCreation_when_loginWithValidCredentials.executor": "Run",
     "JUnit.ManageVehiclesTests.updateExistingVehicleDetails.executor": "Run",
@@ -138,8 +141,8 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ManageServicesTests">
-    <configuration name="ManageServicesTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ManageDetailsTests.changePassword">
+    <configuration name="ManageDetailsTests.changePassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -148,13 +151,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageDetailsTests" />
+      <option name="METHOD_NAME" value="changePassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManageVehiclesTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageServicesTests.createAndDeleteService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageVehiclesTests.filterVehiclesByOwnerFirstName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -163,14 +182,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
-      <option name="METHOD_NAME" value="createAndDeleteService" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
+      <option name="METHOD_NAME" value="filterVehiclesByOwnerFirstName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageServicesTests.createService_when_validInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageVehiclesTests.updateExistingVehicleDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -179,17 +198,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
-      <option name="METHOD_NAME" value="createService_when_validInput" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageVehiclesTests" />
+      <option name="METHOD_NAME" value="updateExistingVehicleDetails" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="customer in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/tests/system/customer" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -204,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ManageServicesTests" />
-        <item itemvalue="JUnit.ManageServicesTests.createAndDeleteService" />
-        <item itemvalue="JUnit.ManageServicesTests.createService_when_validInput" />
+        <item itemvalue="JUnit.ManageDetailsTests.changePassword" />
         <item itemvalue="JUnit.employee in SmartGarageTI" />
-        <item itemvalue="JUnit.customer in SmartGarageTI" />
+        <item itemvalue="JUnit.ManageVehiclesTests.updateExistingVehicleDetails" />
+        <item itemvalue="JUnit.ManageVehiclesTests" />
+        <item itemvalue="JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName" />
       </list>
     </recent_temporary>
   </component>
@@ -487,7 +498,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758124437719</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1758126759071</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1758126759071</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

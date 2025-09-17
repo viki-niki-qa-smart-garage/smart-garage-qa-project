@@ -11,16 +11,26 @@ public class ManageDetailsTests extends SmartGarageBaseWebTest {
 
     @Test
     public void changePassword() {
-        loginPage.login(TestData.EMPLOYEE2_USERNAME.getValue(), TestData.EMPLOYEE2_PASSWORD.getValue());
+        String username = TestData.EMPLOYEE2_USERNAME.getValue();
+        String oldPassword = TestData.EMPLOYEE2_PASSWORD.getValue();
+        String newPassword = "Qwertyuiop1#";
+
+        loginPage.login(username, oldPassword);
         homePage.clickMyDetailsButton();
         myDetailsPage.clickChangePasswordButton();
-        myDetailsPage.changePassword("Qwertyuiop1@", "Qwertyuiop1#", "Qwertyuiop1#");
+        myDetailsPage.changePassword(oldPassword, newPassword, newPassword);
         myDetailsPage.clickLogoutButton();
+
         homePage.clickLoginButton();
-        loginPage.login(TestData.EMPLOYEE2_USERNAME.getValue(), TestData.EMPLOYEE2_PASSWORD.getValue());
+        loginPage.login(username, newPassword);
 
         WebElement button = myDetailsPage.getLoginButton();
         Assertions.assertTrue(button.isDisplayed(), "Not successfully logged in");
+
+        homePage.clickMyDetailsButton();
+        myDetailsPage.clickChangePasswordButton();
+        myDetailsPage.changePassword(newPassword, oldPassword, oldPassword);
+        myDetailsPage.clickLogoutButton();
     }
 
     @Test

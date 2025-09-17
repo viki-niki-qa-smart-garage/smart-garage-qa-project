@@ -11,10 +11,8 @@ public enum TestData {
     EMPLOYEE2_USERNAME("ian_black"),
     EMPLOYEE2_PASSWORD("Qwertyuiop1@");
 
-
     TestData(String propName) {
         value = propName;
     }
-
     final String value;
 }
