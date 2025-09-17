@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/RepairServiceApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/RepairServiceApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +64,10 @@
     "JUnit.ManageReportsTests.viewDetailedReportOfACustomer.executor": "Run",
     "JUnit.ManageServicesTests.browseAllServices.executor": "Run",
     "JUnit.ManageServicesTests.browseSpecificService.executor": "Run",
+    "JUnit.ManageServicesTests.createAndDeleteService.executor": "Run",
     "JUnit.ManageServicesTests.createService_when_validInput.executor": "Run",
     "JUnit.ManageServicesTests.deleteService.executor": "Run",
+    "JUnit.ManageServicesTests.executor": "Run",
     "JUnit.ManageServicesTests.updateServicePrice_when_validInput.executor": "Run",
     "JUnit.ManageVehiclesTests.browseAllVehiclesLinkedToCustomers.executor": "Run",
     "JUnit.ManageVehiclesTests.filterVehiclesByOwnerFirstName.executor": "Run",
@@ -107,6 +111,8 @@
     "JUnit.VehiclesApiTest.getCreatedVehicle.executor": "Run",
     "JUnit.VehiclesApiTest.updateVehicle.executor": "Run",
     "JUnit.api in SmartGarageTI.executor": "Run",
+    "JUnit.customer in SmartGarageTI.executor": "Run",
+    "JUnit.employee in SmartGarageTI.executor": "Run",
     "JUnit.system in SmartGarageTI.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -132,86 +138,77 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RepairServiceApiTests.filterSortServices">
-    <configuration name="RepairServiceApiTests.deleteService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ManageServicesTests">
+    <configuration name="ManageServicesTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.api.*" />
+          <option name="PATTERN" value="tests.system.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.RepairServiceApiTests" />
-      <option name="METHOD_NAME" value="deleteService" />
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManageServicesTests.createAndDeleteService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="METHOD_NAME" value="createAndDeleteService" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepairServiceApiTests.filterSortServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageServicesTests.createService_when_validInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.api.*" />
+          <option name="PATTERN" value="tests.system.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.RepairServiceApiTests" />
-      <option name="METHOD_NAME" value="filterSortServices" />
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="METHOD_NAME" value="createService_when_validInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehicleApiTests.createVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.VehicleApiTests" />
-      <option name="METHOD_NAME" value="createVehicle" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VehicleApiTests.updateVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.VehicleApiTests" />
-      <option name="METHOD_NAME" value="updateVehicle" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="api in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="customer in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/tests/api" />
+      <dir value="$PROJECT_DIR$/src/test/java/tests/system/customer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="employee in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/tests/system/employee" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RepairServiceApiTests.filterSortServices" />
-        <item itemvalue="JUnit.VehicleApiTests.createVehicle" />
-        <item itemvalue="JUnit.VehicleApiTests.updateVehicle" />
-        <item itemvalue="JUnit.api in SmartGarageTI" />
-        <item itemvalue="JUnit.RepairServiceApiTests.deleteService" />
+        <item itemvalue="JUnit.ManageServicesTests" />
+        <item itemvalue="JUnit.ManageServicesTests.createAndDeleteService" />
+        <item itemvalue="JUnit.ManageServicesTests.createService_when_validInput" />
+        <item itemvalue="JUnit.employee in SmartGarageTI" />
+        <item itemvalue="JUnit.customer in SmartGarageTI" />
       </list>
     </recent_temporary>
   </component>
@@ -482,7 +479,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758124158673</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1758124437719</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1758124437719</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
