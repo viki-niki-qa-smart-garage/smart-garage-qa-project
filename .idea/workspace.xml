@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageReportsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enums/BaseServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enums/BrandType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enums/RoleType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/MyOrdersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/MyOrdersPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/customer/ServiceHistoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/customer/ServiceHistoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/CustomerProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/CustomerProfileTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +104,6 @@
     "JUnit.VehiclesApiTest.getConcreteVehicle.executor": "Run",
     "JUnit.VehiclesApiTest.getCreatedVehicle.executor": "Run",
     "JUnit.VehiclesApiTest.updateVehicle.executor": "Run",
-    "JUnit.tests.system in SmartGarageTI.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -116,7 +123,7 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.tests.system in SmartGarageTI">
+  <component name="RunManager" selected="JUnit.system in SmartGarageTI">
     <configuration name="CustomerProfileTests.browseAllCustomersProfiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
@@ -181,23 +188,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tests.system in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="system in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.system.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.system" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/tests/system" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.tests.system in SmartGarageTI" />
+        <item itemvalue="JUnit.system in SmartGarageTI" />
         <item itemvalue="JUnit.CustomerProfileTests.filterCustomersByVehicle" />
         <item itemvalue="JUnit.CustomerProfileTests.browseAllCustomersProfiles" />
         <item itemvalue="JUnit.ServiceHistoryTests.customerCanViewListOfTheirServices" />
