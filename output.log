@@ -1,9 +1,161 @@
-2025-09-16 19:22:12,556 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-16 19:22:19,968 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-16 19:22:21,283 INFO  [main] Finding element with locator: By.id: login-username
-2025-09-16 19:22:21,580 INFO  [main] Finding element with locator: By.id: login-password
-2025-09-16 19:22:21,769 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-09-16 19:22:22,173 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
-2025-09-16 19:22:25,780 INFO  [main] Finding element with locator: By.xpath: //select[@name='vehicleBrand']
-2025-09-16 19:22:26,147 INFO  [main] Finding element with locator: By.xpath: //button[@class='modern-button']
-2025-09-16 19:22:27,944 INFO  [main] Finding all element with locator: By.xpath: //div[contains(@class,'user-list')]//div[contains(@class,'vehicle-item')]//div[contains(@class,'column-1-6')]//li[contains(text(), 'Porsche')]
+2025-09-16 19:37:22,479 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:37:26,316 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:37:26,928 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:37:27,219 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:37:27,383 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:37:27,552 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-16 19:37:27,738 INFO  [main] Quiting driver...
+2025-09-16 19:37:28,243 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:37:29,923 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:37:30,397 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:37:30,534 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:37:30,633 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:37:30,936 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-16 19:37:30,970 INFO  [main] Quiting driver...
+2025-09-16 19:37:31,247 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:37:32,814 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:37:33,216 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:37:33,360 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:37:33,455 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:37:33,585 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-16 19:37:33,763 INFO  [main] Quiting driver...
+2025-09-16 19:37:34,113 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:37:35,755 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:37:36,328 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:37:36,472 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:37:36,575 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:37:36,708 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-16 19:37:36,848 INFO  [main] Quiting driver...
+2025-09-16 19:37:37,178 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:37:38,763 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:37:38,802 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:37:39,378 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:37:39,472 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:37:39,571 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-16 19:37:39,732 INFO  [main] Quiting driver...
+2025-09-16 19:37:40,022 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:37:41,506 INFO  [main] Navigating to page: http://localhost:8081
+2025-09-16 19:37:42,224 INFO  [main] Finding element with locator: By.xpath: //a[@class='social-login']
+2025-09-16 19:37:42,532 INFO  [main] Finding element with locator: By.id: register-tab
+2025-09-16 19:37:42,638 INFO  [main] Finding element with locator: By.id: reg-username
+2025-09-16 19:37:42,805 INFO  [main] Finding element with locator: By.id: reg-email
+2025-09-16 19:37:42,927 INFO  [main] Finding element with locator: By.id: reg-first-name
+2025-09-16 19:37:43,011 INFO  [main] Finding element with locator: By.id: reg-last-name
+2025-09-16 19:37:43,093 INFO  [main] Finding element with locator: By.id: reg-phone
+2025-09-16 19:37:43,182 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Register')]
+2025-09-16 19:37:43,558 INFO  [main] Finding element with locator: By.xpath: //div[@class='registration-success-msg']//strong[contains(text(), 'Registration successful!')]
+2025-09-16 19:37:43,678 INFO  [main] Finding element with locator: By.xpath: //div[@class='registration-success-mg']//p[contains(text(), 'Your username: ')]//b
+2025-09-16 19:37:43,711 INFO  [main] Finding element with locator: By.xpath: //div[@class='registration-success-mg']//p[contains(text(), 'Your password: ')]//b
+2025-09-16 19:37:43,744 INFO  [main] Quiting driver...
+2025-09-16 19:37:43,988 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:37:45,520 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:37:46,033 INFO  [main] Finding element with locator: By.xpath: //a[@class='social-login']
+2025-09-16 19:37:46,349 INFO  [main] Finding element with locator: By.xpath: //a[@class='nounderline'and contains(text(), 'Forgot Password?')]
+2025-09-16 19:37:46,548 INFO  [main] Finding element with locator: By.id: email
+2025-09-16 19:37:46,689 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit']
+2025-09-16 19:37:46,887 INFO  [main] Finding element with locator: By.xpath: //div[@class='forgot-password-success-msg']//p[contains(text(), 'Your new password: ')]/b
+2025-09-16 19:37:47,011 INFO  [main] Quiting driver...
+2025-09-16 19:37:47,380 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:37:48,965 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:37:49,043 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:37:49,599 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:37:49,703 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:37:49,891 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'My Details')]
+2025-09-16 19:37:50,953 INFO  [main] Finding element with locator: By.id: old-password
+2025-09-16 19:37:51,063 INFO  [main] Finding element with locator: By.id: new-password
+2025-09-16 19:37:51,153 INFO  [main] Finding element with locator: By.id: confirm-password
+2025-09-16 19:37:51,244 INFO  [main] Finding element with locator: By.xpath: //button[@class='more']
+2025-09-16 19:37:51,772 INFO  [main] Finding element with locator: By.xpath: //a[@class='social-login']
+2025-09-16 19:37:52,028 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:37:52,138 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:37:52,235 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:37:52,365 INFO  [main] Finding element with locator: By.xpath: //a[@class='social-login']
+2025-09-16 19:37:52,490 INFO  [main] Quiting driver...
+2025-09-16 19:37:52,785 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:37:54,171 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:37:54,238 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:37:54,881 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:37:55,002 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:37:55,369 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'My Orders')]
+2025-09-16 19:37:55,409 INFO  [main] Quiting driver...
+2025-09-16 19:37:55,951 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:37:57,445 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:37:57,488 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:37:58,048 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:37:58,150 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:37:58,292 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-16 19:37:58,749 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
+2025-09-16 19:37:59,155 INFO  [main] Finding element with locator: By.xpath: //h3[@class='box-header']
+2025-09-16 19:37:59,194 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
+2025-09-16 19:37:59,271 INFO  [main] Quiting driver...
+2025-09-16 19:37:59,568 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:38:00,874 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:38:01,316 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:38:01,442 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:38:01,532 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:38:01,668 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-16 19:38:02,329 INFO  [main] Quiting driver...
+2025-09-16 19:38:02,586 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:38:03,992 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:38:04,044 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:38:04,701 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:38:04,835 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:38:05,278 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-16 19:38:05,752 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
+2025-09-16 19:38:06,136 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
+2025-09-16 19:38:06,154 INFO  [main] Finding element with locator: By.cssSelector: #servicesTable tbody
+2025-09-16 19:38:06,189 INFO  [main] Finding element with locator: By.id: addServiceButton
+2025-09-16 19:38:06,209 INFO  [main] Quiting driver...
+2025-09-16 19:38:06,485 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:38:07,986 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:38:08,478 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:38:08,627 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:38:08,730 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:38:08,888 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-16 19:38:09,284 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
+2025-09-16 19:38:09,585 INFO  [main] Finding all element with locator: By.cssSelector: #servicesTable tbody tr
+2025-09-16 19:38:09,616 INFO  [main] Finding element with locator: By.cssSelector: #servicesTable tbody
+2025-09-16 19:38:09,651 INFO  [main] Finding element with locator: By.id: addServiceButton
+2025-09-16 19:38:09,669 INFO  [main] Quiting driver...
+2025-09-16 19:38:09,982 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:38:11,315 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:38:11,722 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:38:11,882 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:38:11,979 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:38:12,118 INFO  [main] Finding element with locator: By.xpath: //ul[@class='sf-menu']//a[@title='Services']
+2025-09-16 19:38:12,504 INFO  [main] Finding element with locator: By.xpath: //h4[@class='box-header']//a[@title='Engine Diagnostics']
+2025-09-16 19:38:12,869 INFO  [main] Quiting driver...
+2025-09-16 19:38:13,177 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:38:14,566 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:38:14,622 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:38:15,119 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:38:15,244 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:38:15,409 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-16 19:38:15,526 INFO  [main] Quiting driver...
+2025-09-16 19:38:15,863 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:38:17,330 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:38:17,370 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:38:17,929 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:38:18,051 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:38:18,192 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-16 19:38:18,327 INFO  [main] Quiting driver...
+2025-09-16 19:38:18,695 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:38:20,072 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:38:20,116 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:38:20,840 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:38:20,920 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:38:21,125 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-16 19:38:21,150 INFO  [main] Quiting driver...
+2025-09-16 19:38:21,434 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:38:22,738 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:38:22,779 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:38:27,202 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:38:27,269 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:38:27,460 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-09-16 19:38:27,618 INFO  [main] Quiting driver...
+2025-09-16 19:38:27,881 INFO  [main] Starting Chrome browser in normal mode...
+2025-09-16 19:38:29,068 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-09-16 19:38:29,096 INFO  [main] Finding element with locator: By.id: login-username
+2025-09-16 19:38:29,516 INFO  [main] Finding element with locator: By.id: login-password
+2025-09-16 19:38:29,596 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-09-16 19:38:38,229 INFO  [main] Quiting driver...
