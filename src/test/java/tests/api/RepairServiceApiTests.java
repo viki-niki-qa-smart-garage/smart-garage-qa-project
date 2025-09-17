@@ -87,4 +87,3 @@ public class RepairServiceApiTests extends BaseApiTest {
                         .extract().response();
     }
 }
-

@@ -126,4 +126,3 @@ public class ClientCarServicesApiTests extends BaseApiTest {
                         .extract().response();
     }
 }
-

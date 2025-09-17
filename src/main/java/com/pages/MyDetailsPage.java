@@ -48,4 +48,3 @@ public class MyDetailsPage extends BasePage {
         return driver().findElement(loginButton);
     }
 }
-

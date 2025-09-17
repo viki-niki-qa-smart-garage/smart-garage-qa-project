@@ -23,7 +23,6 @@ public class PropertiesManager {
 
         return properties;
     }
-
     public static Properties getConfigProperties() {
         return loadProperties(CONFIG_PROPERTIES);
     }

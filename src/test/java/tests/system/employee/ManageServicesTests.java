@@ -54,6 +54,4 @@ public class ManageServicesTests extends SmartGarageBaseWebTest {
         int actualInt = servicePage.integerPart(uiText);
         Assertions.assertEquals(130, actualInt);
     }
-
-
 }

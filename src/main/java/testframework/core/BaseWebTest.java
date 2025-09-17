@@ -13,5 +13,4 @@ public abstract class BaseWebTest {
     public static WebDriverWait driverWait() {
         return driver().getDriverWait();
     }
-
 }

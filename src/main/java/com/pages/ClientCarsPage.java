@@ -37,7 +37,6 @@ public class ClientCarsPage extends BasePage {
     private final By lastCreatedVehicle = By.cssSelector("div.custom-car-list-items > div.vehicle-item:last-child");
     private final By lastVehicleDeleteButton = By.cssSelector("div.custom-car-list-items > div.vehicle-item:last-child button[id^='delete-']");
 
-
     public ClientCarsPage() {
         super("/client-cars");
     }
@@ -136,7 +135,7 @@ public class ClientCarsPage extends BasePage {
     }
 
     public WebElement getOwner() {
-        WebElement firstRow = driver().findElement(By.cssSelector(".vehicle-item.white.custom-car-list-row"));
+        WebElement firstRow = driverWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".vehicle-item.white.custom-car-list-row")));
         return firstRow.findElement(ownerField);
     }
 }

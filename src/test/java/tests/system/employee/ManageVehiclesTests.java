@@ -43,7 +43,6 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
     public void browseAllVehiclesLinkedToCustomers() {
         List<WebElement> cars = clientCarsPage.getCarList();
         Assertions.assertTrue(cars.size() > 0, "Expected at least 1 car on the page.");
-        // da premestq assertions v carspage
     }
 
     @Test

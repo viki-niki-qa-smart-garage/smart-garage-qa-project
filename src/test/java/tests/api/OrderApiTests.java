@@ -119,10 +119,7 @@ public class OrderApiTests extends BaseApiTest {
                         .extract().response();
 
         double total = response.as(Double.class);
-
-        Assertions.assertAll("total price validation",
-                () -> Assertions.assertTrue(total >= 0, "Total price must be non-negative")
-        );
+        Assertions.assertTrue(total >= 0, "Total price must be non-negative");
     }
 
     @Test
@@ -210,10 +207,3 @@ public class OrderApiTests extends BaseApiTest {
         );
     }
 }
-
-
-
-
-
-
-
