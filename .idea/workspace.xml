@@ -109,7 +109,6 @@
     "JUnit.VehiclesApiTest.updateVehicle.executor": "Run",
     "JUnit.api in SmartGarageTI.executor": "Run",
     "JUnit.system in SmartGarageTI.executor": "Run",
-    "JUnit.tests.api in SmartGarageTI.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -134,7 +133,23 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VehicleApiTests.deleteVehicle">
+  <component name="RunManager" selected="JUnit.VehicleApiTests.createVehicle">
+    <configuration name="RepairServiceApiTests.deleteService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.RepairServiceApiTests" />
+      <option name="METHOD_NAME" value="deleteService" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RepairServiceApiTests.filterSortServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
@@ -151,7 +166,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehicleApiTests.deleteVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehicleApiTests.createVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -161,7 +176,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
       <option name="MAIN_CLASS_NAME" value="tests.api.VehicleApiTests" />
-      <option name="METHOD_NAME" value="deleteVehicle" />
+      <option name="METHOD_NAME" value="createVehicle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -191,27 +206,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tests.api in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VehicleApiTests.deleteVehicle" />
+        <item itemvalue="JUnit.VehicleApiTests.createVehicle" />
         <item itemvalue="JUnit.VehicleApiTests.updateVehicle" />
-        <item itemvalue="JUnit.tests.api in SmartGarageTI" />
         <item itemvalue="JUnit.api in SmartGarageTI" />
         <item itemvalue="JUnit.RepairServiceApiTests.filterSortServices" />
+        <item itemvalue="JUnit.RepairServiceApiTests.deleteService" />
       </list>
     </recent_temporary>
   </component>
@@ -466,7 +467,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758115488466</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1758123286870</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1758123286870</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

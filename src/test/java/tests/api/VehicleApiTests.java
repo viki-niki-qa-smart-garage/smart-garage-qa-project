@@ -123,7 +123,7 @@ public class VehicleApiTests extends BaseApiTest {
     @Test
     void updateVehicle() {
         Vehicles vehicles = new Vehicles("Porsche", "GT3", 2010, "2.0 Boxer");
-        final int id = 38;
+        final int id = 61;
 
         Response response =
                 given()
@@ -140,7 +140,7 @@ public class VehicleApiTests extends BaseApiTest {
 
     @Test
     void deleteVehicle() {
-        final int id = 40;
+        final int id = 70;
 
         Response response =
                 given()
