@@ -2,6 +2,7 @@ package tests.system.employee;
 
 import core.SmartGarageBaseWebTest;
 import enums.TestData;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -36,16 +37,12 @@ public class ManageServicesTests extends SmartGarageBaseWebTest {
     }
 
     @Test
-    public void createService_when_validInput() {
+    public void createAndDeleteService() {
+        String randomServiceName = RandomStringUtils.randomAlphabetic(10).toLowerCase();
         servicePage.clickEngineDiagnosticsContainer();
-        servicePage.addService("Engine Fault Fixing1", "130");
-        servicePage.assertLastCreatedService("Engine Fault Fixing", "130");
-    }
-
-    @Test
-    public void deleteService() {
-        servicePage.clickEngineDiagnosticsContainer();
-        servicePage.deleteCreatedService("Engine Fault Fixing", "130");
+        String serviceId = servicePage.addService(randomServiceName, "130");
+        servicePage.assertLastCreatedService(randomServiceName, "130");
+        servicePage.deleteService(serviceId);
     }
 
     @Test
