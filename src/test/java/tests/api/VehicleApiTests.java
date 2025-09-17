@@ -66,7 +66,6 @@ public class VehicleApiTests extends BaseApiTest {
         Assertions.assertEquals(vehicleId, response.jsonPath().getInt("id"), "Incorrect id");
     }
 
-
     @Test
     void createVehicle() {
         String randomModelName = RandomStringUtils.randomAlphabetic(5).toLowerCase();
@@ -91,21 +90,17 @@ public class VehicleApiTests extends BaseApiTest {
         vehicleId = response.jsonPath().getInt("id");
         boolean deleted = response.jsonPath().getBoolean("deleted");
 
-
         Assertions.assertEquals("Volkswagen", brandName, "Incorrect brandName");
         Assertions.assertEquals(randomModelName, modelName, "Incorrect modelName");
         Assertions.assertEquals(2008, year, "Incorrect year");
         Assertions.assertEquals("1.4 TSI", engineType, "Incorrect engine type");
         Assertions.assertTrue(vehicleId != null && vehicleId > 0, "Generated id should be > 0");
         Assertions.assertFalse(deleted, "New vehicle should not be deleted");
-
-
     }
 
     @Test
     void getCreatedVehicle() {
 
-//        final int vehicleId = 50;
         Response response =
                 given()
                         .contentType("application/json")
@@ -152,8 +147,5 @@ public class VehicleApiTests extends BaseApiTest {
                         .log().all()
                         .statusCode(SC_OK)
                         .extract().response();
-
     }
 }
-
-

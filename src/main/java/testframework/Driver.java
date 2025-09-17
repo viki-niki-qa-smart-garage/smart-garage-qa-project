@@ -120,11 +120,4 @@ public class Driver implements WebDriver {
     public Options manage() {
         return webDriver.manage();
     }
-
-    // Add custom Driver methods
-    public void scrollToElement(By locator) {
-        actions.scrollToElement(webDriver.findElement(locator)).perform();
-    }
-
-
 }

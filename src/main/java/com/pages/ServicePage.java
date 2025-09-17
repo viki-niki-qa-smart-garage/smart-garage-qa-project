@@ -15,11 +15,6 @@ import java.util.regex.Pattern;
 
 public class ServicePage extends BasePage {
     private final By engineDiagnosticsContainer = By.xpath("//h4[@class='box-header']//a[@title='Engine Diagnostics']");
-    private final By lubeOilAndFiltersContainer = By.xpath("//h4[@class='box-header']//a[@title='Lube, Oil and Filters']");
-    private final By beltsAndHosesContainer = By.xpath("//h4[@class='box-header']//a[@title='Belts and Hoses']");
-    private final By airConditioningContainer = By.xpath("//h4[@class='box-header']//a[@title='Air Conditioning']");
-    private final By brakeRepairContainer = By.xpath("//h4[@class='box-header']//a[@title='Brake Repair']");
-    private final By tireAndWheelServicesContainer = By.xpath("//h4[@class='box-header']//a[@title='Tire and Wheel Services']");
     private final By servicesList = By.xpath("//div[@class='clearfix']//ul[@class='services-list clearfix padding-top-70']//h4");
     private final By overviewService = By.xpath("//h3[@class='box-header']");
     private final By servicePriceTable = By.cssSelector("#servicesTable tbody tr");
@@ -31,7 +26,6 @@ public class ServicePage extends BasePage {
     private final By serviceNameInput = By.xpath("//input[@name='serviceName']");
     private final By servicePriceInput = By.xpath("//input[@name='servicePrice']");
     private final By saveServiceButton = By.xpath("//div[@class='row page-margin-top']//a[contains(text(), 'Save Service')]");
-    private final By assertUpdatedPrice = By.xpath("//td[@id='service-price-2']/span");
 
     public ServicePage() {
         super("/services");
@@ -41,46 +35,23 @@ public class ServicePage extends BasePage {
         driver().findElement(engineDiagnosticsContainer).click();
     }
 
-    public void clickLubeOilAndFiltersContainer() {
-        driver().findElement(lubeOilAndFiltersContainer).click();
-    }
-
-    public void clickBeltsAndHosesContainer() {
-        driver().findElement(beltsAndHosesContainer).click();
-    }
-
-    public void clickAirConditioningContainer() {
-        driver().findElement(airConditioningContainer).click();
-    }
-
-    public void clickBrakeRepairContainer() {
-        driver().findElement(brakeRepairContainer).click();
-    }
-
-    public void clickTireAndWheelServicesContainer() {
-        driver().findElement(tireAndWheelServicesContainer).click();
-    }
-
     public List<WebElement> getServicesList() {
         return driverWait().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(servicesList));
     }
 
     public WebElement getServiceOverview() {
-        return driver().findElement(overviewService);
+        return driverWait().until(ExpectedConditions.visibilityOfElementLocated(overviewService));
     }
 
     public List<WebElement> getServicePriceTable() {
-        return driver().findElements(servicePriceTable);
-
+        return driverWait().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(servicePriceTable));
     }
 
     private int getRowsCount() {
-        return driver().findElements(rows).size();
+        return driverWait().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(rows)).size();
     }
 
-
     public String addService(String serviceName, String servicePrice) {
-
         int before = getRowsCount();
         WebElement oldTbody = driver().findElement(tbody);
 
@@ -106,7 +77,6 @@ public class ServicePage extends BasePage {
 
     public void assertLastCreatedService(String expectedName, String expectedPrice) {
         List<WebElement> cells = getLastRowCells();
-
 
         String actualName = cells.get(0).getText().trim();
         String actualPrice = cells.get(1).getText().trim();
@@ -135,18 +105,6 @@ public class ServicePage extends BasePage {
         driverWait().until(ExpectedConditions.invisibilityOfElementLocated(rowById));
         driverWait().until(d -> getRowsCount() == before - 1);
     }
-
-    public void deleteCreatedService(String name, String pricePart) {
-        String id = addService(name, pricePart);
-        assertLastCreatedService(name, pricePart);
-        driverWait().withTimeout(Duration.ofSeconds(11));
-        deleteService(id);
-
-        List<WebElement> serviceIsDeleted = driver().findElements(
-                By.cssSelector("#servicesTable tbody tr[data-service-id='" + id + "']"));
-        Assertions.assertTrue(serviceIsDeleted.isEmpty(), "Service row with id=" + id + " still exists after delete.");
-    }
-
 
     public void updateFirstServicePrice(String newPrice) {
         WebElement row = driverWait().until(

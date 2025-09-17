@@ -33,7 +33,8 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
 
         for (WebElement username : usernames) {
             String usernameText = username.getText();
-            Assertions.assertTrue(usernameText.toLowerCase().contains("mi"), "User name do not contain 'Mi': " + usernameText);
+            Assertions.assertTrue(usernameText.toLowerCase().contains("mi"),
+                    "User name does not contain 'Mi': " + usernameText);
         }
     }
 
@@ -44,7 +45,8 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
 
         for (WebElement brand : brands) {
             String brandText = brand.getText();
-            Assertions.assertEquals("Porsche", brandText, "Usernames does not have brand cars 'Porsche': " + brandText);
+            Assertions.assertEquals("Porsche", brandText,
+                    "Usernames does not have brand cars 'Porsche': " + brandText);
         }
     }
 
@@ -70,6 +72,4 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
             }
         }
     }
-
-
 }
