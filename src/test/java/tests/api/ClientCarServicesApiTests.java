@@ -3,25 +3,17 @@ package tests.api;
 import com.api.Endpoints;
 import com.api.Vehicles;
 import core.BaseApiTest;
-import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
-
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class ClientCarServicesApiTests extends BaseApiTest {
     Vehicles vehicles;
-    @BeforeEach
-    void setUp() {
-        RestAssured.authentication = RestAssured.preemptive().basic("test", "Testing1@");
-    }
 
     @Test
     void filterClientCarsByOwner() {
@@ -63,7 +55,7 @@ public class ClientCarServicesApiTests extends BaseApiTest {
                 given()
                         .contentType("application/json")
                         .when()
-                        .pathParam("clientCarId", 8)
+                        .pathParam("clientCarId", 9)
                         .pathParam("serviceId", 11)
                         .post(Endpoints.ADD_SERVICE)
                         .then()
@@ -75,14 +67,14 @@ public class ClientCarServicesApiTests extends BaseApiTest {
     }
 
     @Test
-    void createANewClientCar() {
-         vehicles = new Vehicles("Audi", "Volkswagen", 2021, "3.0 TDI", "G35OCC63R3T8KNFZT", "C2999BA" );
+    void createNewClientCar() {
+         vehicles = new Vehicles("Audi", "Volkswagen", 2021, "3.0 TDI", "G45OCC63R3T8KNFZT", "C0999BA" );
         Response response =
                 given()
                         .contentType("application/json")
                         .body(vehicles)
                         .when()
-                        .pathParam("userId", 24)
+                        .pathParam("userId", 10)
                         .post(Endpoints.CREATE_NEW_CLIENT_CAR)
                         .then()
                         .log().all()
@@ -107,7 +99,7 @@ public class ClientCarServicesApiTests extends BaseApiTest {
                         .contentType("application/json")
                         .body(vehicles)
                         .when()
-                        .pathParam("clientCarId", 24)
+                        .pathParam("clientCarId", 5)
                         .put(Endpoints.UPDATE_CAR_DETAILS)
                         .then()
                         .log().all()

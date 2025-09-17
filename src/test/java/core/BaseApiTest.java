@@ -9,5 +9,6 @@ public class BaseApiTest {
     @BeforeAll
     static void setup() {
         RestAssured.baseURI = BASE_URL;
+        RestAssured.authentication = RestAssured.preemptive().basic("hannah_white", "password123%D");
     }
 }

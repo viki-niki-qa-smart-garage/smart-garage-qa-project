@@ -3,29 +3,15 @@ package tests.api;
 import com.api.Endpoints;
 import com.api.Vehicles;
 import core.BaseApiTest;
-import io.restassured.RestAssured;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static io.restassured.RestAssured.given;
-
 import io.restassured.response.Response;
-
 import java.util.List;
-
 import static org.apache.http.HttpStatus.SC_OK;
 
-
 public class VehicleApiTests extends BaseApiTest {
-
     private static Integer vehicleId;
-
-    @BeforeEach
-    public void before() {
-        RestAssured.authentication = RestAssured.preemptive().basic("user", "Qwertyuiop1!");
-    }
-
 
     @Test
     void getAllVehicles() {
@@ -40,13 +26,10 @@ public class VehicleApiTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
-
-        // Response is array and not empty
         List<?> items = response.jsonPath().getList("$");
         Assertions.assertNotNull(items, "Response is not an array");
         Assertions.assertFalse(items.isEmpty(), "Expected at least one vehicle");
 
-        // Extract fields from first vehicle
         int firstVehicleId = response.jsonPath().getInt("[0].id");
         String brandName = response.jsonPath().getString("[0].brand.name");
         String modelName = response.jsonPath().getString("[0].model.name");
@@ -54,7 +37,6 @@ public class VehicleApiTests extends BaseApiTest {
         String engineTypeName = response.jsonPath().getString("[0].engineType.name");
         boolean deleted = response.jsonPath().getBoolean("[0].deleted");
 
-        // Presence-only validation (not null, not empty)
         Assertions.assertAll("first vehicle details",
                 () -> Assertions.assertNotNull(firstVehicleId, "Vehicle id must not be null"),
                 () -> Assertions.assertNotNull(brandName, "Brand name must not be null"),
@@ -63,14 +45,11 @@ public class VehicleApiTests extends BaseApiTest {
                 () -> Assertions.assertNotNull(engineTypeName, "Engine type must not be null"),
                 () -> Assertions.assertNotNull(deleted, "Deleted flag must not be null")
         );
-
     }
 
     @Test
     void getConcreteVehicle() {
-
         final int vehicleId = 34;
-
 
         Response response =
                 given()
@@ -84,8 +63,6 @@ public class VehicleApiTests extends BaseApiTest {
                         .extract().response();
 
         Assertions.assertEquals(vehicleId, response.jsonPath().getInt("id"), "Incorrect id");
-
-
     }
 
 
@@ -127,7 +104,6 @@ public class VehicleApiTests extends BaseApiTest {
     void getCreatedVehicle() {
 
 //        final int vehicleId = 50;
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -144,14 +120,13 @@ public class VehicleApiTests extends BaseApiTest {
 
     @Test
     void updateVehicle() {
-
         Vehicles vehicles = new Vehicles("Porsche", "GT3", 2010, "2.0 Boxer");
-
+        final int id = 38;
 
         Response response =
                 given()
                         .contentType("application/json")
-                        .pathParam("vehicleId", vehicleId)
+                        .pathParam("vehicleId", id)
                         .body(vehicles)
                         .when()
                         .put(Endpoints.UPDATE_VEHICLE)
@@ -162,15 +137,14 @@ public class VehicleApiTests extends BaseApiTest {
 
     }
 
-
     @Test
     void deleteVehicle() {
-
+        final int id = 40;
 
         Response response =
                 given()
                         .contentType("application/json")
-                        .pathParam("vehicleId", vehicleId)
+                        .pathParam("vehicleId", id)
                         .when()
                         .delete(Endpoints.DELETE_VEHICLE)
                         .then()

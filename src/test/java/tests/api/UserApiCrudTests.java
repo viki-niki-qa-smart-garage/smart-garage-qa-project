@@ -3,10 +3,8 @@ package tests.api;
 import com.api.Endpoints;
 import com.api.User;
 import core.BaseApiTest;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
@@ -18,10 +16,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class UserApiCrudTests extends BaseApiTest {
     User user;
-    @BeforeEach
-    void setUp() {
-        RestAssured.authentication = RestAssured.preemptive().basic("test", "Testing1@");
-    }
 
     @Test
     void getAllUsers() {
@@ -54,7 +48,7 @@ public class UserApiCrudTests extends BaseApiTest {
 
     @Test
     void getConcreteUser() {
-        final int user = 30;
+        final int user = 15;
         Response response =
                 given()
                         .contentType("application/json")
@@ -85,7 +79,7 @@ public class UserApiCrudTests extends BaseApiTest {
 
     @Test
     void updateUser() {
-        user = new User("Tom", "Smith", "tom@abv.bg", "0877998844");
+        user = new User("Tom", "Smith", "tom@abv.bg", "0807998844");
         final int userID = 30;
         Response response =
                 given()
@@ -113,7 +107,7 @@ public class UserApiCrudTests extends BaseApiTest {
 
     @Test
     void deleteUser() {
-        final int userId = 60;
+        final int userId = 37;
         Response response =
                 given()
                         .pathParam("id", userId)
@@ -130,13 +124,13 @@ public class UserApiCrudTests extends BaseApiTest {
             Assertions.assertEquals("User is deleted successfully.", message, "User is not deleted");
         } else if (statusCode == SC_NOT_FOUND) {
             String message = response.jsonPath().getString("message");
-            Assertions.assertEquals("User with id 60 not found.", message, "User is not deleted");
+            Assertions.assertEquals("User with id 37 not found.", message, "User is not deleted");
         }
     }
 
     @Test
     void createCustomer() {
-        user = new User("afgd123", "Anna", "Petrova", "anafgaab@abv.bg", "8008532211");
+        user = new User("an12", "Anna", "Petrova", "an12@abv.bg", "3008532211");
         Response response =
                 given()
                         .contentType("application/json")
@@ -152,9 +146,9 @@ public class UserApiCrudTests extends BaseApiTest {
         String email = response.jsonPath().getString("email");
         String phoneNumber = response.jsonPath().getString("phoneNumber");
 
-        Assertions.assertEquals("afgd123", username, "Username does not match");
-        Assertions.assertEquals("anafgaab@abv.bg", email, "Email does not match");
-        Assertions.assertEquals("8888532211", phoneNumber, "Phone number does not match");
+        Assertions.assertEquals("an12", username, "Username does not match");
+        Assertions.assertEquals("an12@abv.bg", email, "Email does not match");
+        Assertions.assertEquals("3008532211", phoneNumber, "Phone number does not match");
 
         String password = response.jsonPath().getString("password");
         assertNotNull(password, "Password should be generated");
