@@ -14,8 +14,7 @@ import java.util.List;
 public class CustomerProfileTests extends SmartGarageBaseWebTest {
     @BeforeEach
     public void setUp() {
-        loginPage.navigate();
-        loginPage.login(TestData.EMPLOYEE_USERNAME_VIKI.getValue(), TestData.EMPLOYEE_PASSWORD_VIKI.getValue());
+        loginPage.login(TestData.EMPLOYEE_USERNAME.getValue(), TestData.EMPLOYEE_PASSWORD.getValue());
         homePage.clickAdminPanelButton();
         adminPanelPage.clickAllUsersContainer();
     }
@@ -63,7 +62,6 @@ public class CustomerProfileTests extends SmartGarageBaseWebTest {
             for (String dateText : dateTexts) {
                 if (!dateText.isEmpty()) {
                     LocalDate actual = LocalDate.parse(dateText, fmt);
-                    System.out.println(actual);
                     Assertions.assertFalse(
                             actual.isBefore(minDate),
                             "Service date " + actual + " is before the filter date " + minDate

@@ -3,7 +3,6 @@ package com.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
 import java.util.List;
 
 public class UsersPage extends BasePage {
@@ -19,8 +18,6 @@ public class UsersPage extends BasePage {
     private final By allUsernames = By.xpath("//div[contains(@class,'user-list')]//div[contains(@class,'vehicle-item')]//div[contains(@class,'column-1-6')]/a");
     private final By allUsersBrands = By.xpath("//div[contains(@class,'user-list')]//div[contains(@class,'vehicle-item')]//div[contains(@class,'column-1-6')]//li[contains(text(), 'Porsche')]");
     private final By allDates = By.xpath("//div[contains(@class,'user-list')]//div[contains(@class,'vehicle-item')]//div[contains(@class,'column-1-6')][last()]//li");
-
-
 
     public UsersPage() {
         super("/users");

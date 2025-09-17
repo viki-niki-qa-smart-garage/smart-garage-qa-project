@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class MyDetailsPage extends BasePage {
     private final By editInfoButton = By.id("edit-info-button");
     private final By changePasswordButton = By.xpath("//a[@class='custom-button' and contains(text(), 'Change Password')]");
-
     private final By oldPasswordField = By.id("old-password");
     private final By newPasswordField = By.id("new-password");
     private final By confirmPasswordField = By.id("confirm-password");

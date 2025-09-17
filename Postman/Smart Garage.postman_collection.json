@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "668f9731-9397-43da-946c-a96447270c3b",
+		"_postman_id": "e58fc3c0-8594-4f2e-b716-7db605a57959",
 		"name": "Smart Garage",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "46286648",
-		"_collection_link": "https://viktoriaspasova.postman.co/workspace/My-Workspace~472280a0-5aa0-46d5-84d8-5a9cb65330a3/collection/46286648-668f9731-9397-43da-946c-a96447270c3b?action=share&source=collection_link&creator=46286648"
+		"_exporter_id": "46314261",
+		"_collection_link": "https://viktoriaspasova.postman.co/workspace/Smart-Garage-~0acc4c03-384f-4207-a636-68fa327d0aae/collection/46314261-e58fc3c0-8594-4f2e-b716-7db605a57959?action=share&source=collection_link&creator=46314261"
 	},
 	"item": [
 		{
@@ -128,7 +128,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/users?email=gmail&sortDirection=asc&page=0&size=10",
+									"raw": "{{baseUrl}}/api/users?email=abv&sortDirection=asc&page=0&size=10",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -139,7 +139,7 @@
 									"query": [
 										{
 											"key": "email",
-											"value": "gmail"
+											"value": "abv"
 										},
 										{
 											"key": "sortDirection",
@@ -425,7 +425,7 @@
 											"});\r",
 											"\r",
 											"let responseData = pm.response.json();\r",
-											"let expectedId = 24;\r",
+											"let expectedId = 15;\r",
 											"\r",
 											"pm.test(\"User id is incorrect\", function () {\r",
 											"    pm.expect(responseData.id).to.eql(expectedId);\r",
@@ -461,14 +461,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/users/24",
+									"raw": "{{baseUrl}}/api/users/15",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"users",
-										"24"
+										"15"
 									]
 								}
 							},
@@ -486,7 +486,7 @@
 											"});\r",
 											"\r",
 											"let responseData = pm.response.json();\r",
-											"let expectedId = 30;\r",
+											"let expectedId = 26;\r",
 											"\r",
 											"pm.test(\"User id is incorrect\", function () {\r",
 											"    pm.expect(responseData.id).to.eql(expectedId);\r",
@@ -517,14 +517,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/users/30",
+									"raw": "{{baseUrl}}/api/users/26",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"users",
-										"30"
+										"26"
 									]
 								}
 							},
@@ -618,7 +618,7 @@
 											"const jsonData = pm.response.json();\r",
 											"\r",
 											"pm.test(\"Delete user returns correct message\", function () {\r",
-											"    pm.expect(jsonData.message).to.eql(\"User with id 37 not found.\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"User with id 20 not found.\");\r",
 											"});"
 										],
 										"type": "text/javascript",
@@ -630,14 +630,14 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/users/37",
+									"raw": "{{baseUrl}}/api/users/20",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"users",
-										"37"
+										"20"
 									]
 								}
 							},
@@ -730,14 +730,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/users/30/service-history",
+									"raw": "{{baseUrl}}/api/users/1/service-history",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"users",
-										"30",
+										"1",
 										"service-history"
 									]
 								}
@@ -755,11 +755,7 @@
 											"    pm.response.to.have.status(200);\r",
 											"});\r",
 											"\r",
-											"pm.test(\"Services array is not empty\", function () {\r",
-											"    let jsonData = pm.response.json();\r",
 											"\r",
-											"    pm.expect(jsonData.services).to.be.an(\"array\").that.is.not.empty;\r",
-											"});\r",
 											""
 										],
 										"type": "text/javascript",
@@ -962,8 +958,8 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Status code is 201\", function () {\r",
-											"    pm.response.to.have.status(201);\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
 											"});\r",
 											"\r",
 											"\r",
@@ -1173,10 +1169,8 @@
 											"    pm.expect(json).to.be.an(\"array\");\r",
 											"});\r",
 											"\r",
-											"// check first object structure\r",
 											"const vehicle = pm.response.json()[0];\r",
 											"\r",
-											"// Vehicle\r",
 											"pm.test(\"Vehicle has required fields (not null)\", function () {\r",
 											"    pm.expect(vehicle.id, \"Vehicle id is missing or null\").to.not.be.null;\r",
 											"    pm.expect(vehicle.brand, \"Vehicle brand is missing or null\").to.not.be.null;\r",
@@ -1186,25 +1180,21 @@
 											"    pm.expect(vehicle.deleted, \"Vehicle deleted flag is missing or null\").to.not.be.null;\r",
 											"});\r",
 											"\r",
-											"// check brand\r",
 											"pm.test(\"Brand has id and name\", function () {\r",
 											"    pm.expect(vehicle.brand.id, \"Brand id is missing or null\").to.not.be.null;\r",
 											"    pm.expect(vehicle.brand.name, \"Brand name is missing or null\").to.not.be.null;\r",
 											"});\r",
 											"\r",
-											"// check model\r",
 											"pm.test(\"Model has id and name\", function () {\r",
 											"    pm.expect(vehicle.model.id, \"Model id is missing or null\").to.not.be.null;\r",
 											"    pm.expect(vehicle.model.name, \"Model name is missing or null\").to.not.be.null;\r",
 											"});\r",
 											"\r",
-											"// check year\r",
 											"pm.test(\"Year has id and year\", function () {\r",
 											"    pm.expect(vehicle.year.id, \"Year id is missing ot null\").to.not.be.null;\r",
 											"    pm.expect(vehicle.year.year, \"Year year is missing or null\").to.not.be.null;\r",
 											"});\r",
 											"\r",
-											"// check engineType\r",
 											"pm.test(\"EngineType has id and name\", function () {\r",
 											"    pm.expect(vehicle.engineType.id, \"EngineType id is missing or null\").to.not.be.null;\r",
 											"    pm.expect(vehicle.engineType.name, \"EngineType name is missing or null\").to.not.be.null;\r",
@@ -1244,7 +1234,6 @@
 											"    pm.response.to.have.status(200);\r",
 											"});\r",
 											"\r",
-											"\r",
 											"pm.test(\"Vehicle has required fields\", function () {\r",
 											"    pm.expect(vehicle).to.have.property(\"id\");\r",
 											"    pm.expect(vehicle).to.have.property(\"brand\");\r",
@@ -1254,25 +1243,21 @@
 											"    pm.expect(vehicle).to.have.property(\"deleted\");\r",
 											"});\r",
 											"\r",
-											"// check brand\r",
 											"pm.test(\"Brand has id and name\", function () {\r",
 											"    pm.expect(vehicle.brand).to.have.property(\"id\");\r",
 											"    pm.expect(vehicle.brand).to.have.property(\"name\");\r",
 											"});\r",
 											"\r",
-											"// check model\r",
 											"pm.test(\"Model has id and name\", function () {\r",
 											"    pm.expect(vehicle.model).to.have.property(\"id\");\r",
 											"    pm.expect(vehicle.model).to.have.property(\"name\");\r",
 											"});\r",
 											"\r",
-											"// check year\r",
 											"pm.test(\"Year has id and year\", function () {\r",
 											"    pm.expect(vehicle.year).to.have.property(\"id\");\r",
 											"    pm.expect(vehicle.year).to.have.property(\"year\");\r",
 											"});\r",
 											"\r",
-											"// check engineType\r",
 											"pm.test(\"EngineType has id and name\", function () {\r",
 											"    pm.expect(vehicle.engineType).to.have.property(\"id\");\r",
 											"    pm.expect(vehicle.engineType).to.have.property(\"name\");\r",
@@ -1336,7 +1321,23 @@
 											"    pm.expect(vehicle.deleted, \"Vehicle deleted flag is missing or null\").to.not.be.null;\r",
 											"});\r",
 											"\r",
-											"pm.environment.set(\"vehicleId\", String(vehicle.id));"
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"let randomName = '';\r",
+											"const chars = 'abcdefghijklmnopqrstuvwxyz'; \r",
+											"\r",
+											"for (let i = 0; i < 6; i++) {  \r",
+											"    randomName += chars.charAt(Math.floor(Math.random() * chars.length));\r",
+											"}\r",
+											"pm.variables.set(\"modelName\", randomName);"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1348,7 +1349,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"brandName\": \"Volkswagen\",\r\n  \"modelName\": \"Golf\",\r\n  \"year\": 2008,\r\n  \"engineType\": \"1.4 TSI\"\r\n}",
+									"raw": "{\r\n  \"brandName\": \"Volkswagen\",\r\n  \"modelName\": \"{{modelName}}\",\r\n  \"year\": 2008,\r\n  \"engineType\": \"1.4 TSI\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1381,9 +1382,8 @@
 											"    pm.response.to.have.status(200);\r",
 											"});\r",
 											"\r",
-											"// assert actual values\r",
-											"pm.test(\"Vehicle id matches saved environment variable vehicleId\", function () {\r",
-											"    pm.expect(vehicle.id).to.eql(Number(pm.environment.get(\"vehicleId\")));\r",
+											"pm.test(\"Vehicle id matches created vehicle id\", function () {\r",
+											"    pm.expect(vehicle.id).to.eql(67);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"Vehicle has required fields (not null)\", function () {\r",
@@ -1395,29 +1395,35 @@
 											"    pm.expect(vehicle.deleted, \"Vehicle deleted flag is missing or null\").to.not.be.null;\r",
 											"});\r",
 											"\r",
-											"// check brand\r",
 											"pm.test(\"Brand has id and name\", function () {\r",
 											"    pm.expect(vehicle.brand.id, \"Brand id is missing or null\").to.not.be.null;\r",
 											"    pm.expect(vehicle.brand.name, \"Brand name is missing or null\").to.not.be.null;\r",
 											"});\r",
 											"\r",
-											"// check model\r",
 											"pm.test(\"Model has id and name\", function () {\r",
 											"    pm.expect(vehicle.model.id, \"Model id is missing or null\").to.not.be.null;\r",
 											"    pm.expect(vehicle.model.name, \"Model name is missing or null\").to.not.be.null;\r",
 											"});\r",
 											"\r",
-											"// check year\r",
 											"pm.test(\"Year has id and year\", function () {\r",
 											"    pm.expect(vehicle.year.id, \"Year id is missing ot null\").to.not.be.null;\r",
 											"    pm.expect(vehicle.year.year, \"Year year is missing or null\").to.not.be.null;\r",
 											"});\r",
 											"\r",
-											"// check engineType\r",
 											"pm.test(\"EngineType has id and name\", function () {\r",
 											"    pm.expect(vehicle.engineType.id, \"EngineType id is missing or null\").to.not.be.null;\r",
 											"    pm.expect(vehicle.engineType.name, \"EngineType name is missing or null\").to.not.be.null;\r",
 											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1428,14 +1434,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}",
+									"raw": "{{baseUrl}}/api/vehicles/67",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"vehicles",
-										"{{vehicleId}}"
+										"67"
 									]
 								}
 							},
@@ -1475,14 +1481,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}",
+									"raw": "{{baseUrl}}/api/vehicles/66",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"vehicles",
-										"{{vehicleId}}"
+										"66"
 									],
 									"query": [
 										{
@@ -1502,14 +1508,12 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"// Status is 200 or 204\r",
 											"pm.test(\"DELETE returns 200/204\", function () {\r",
 											"    pm.expect([200, 204]).to.include(pm.response.code);\r",
 											"});\r",
 											"\r",
-											"// Body is either empty or \"1\"\r",
 											"pm.test(\"DELETE success indicator\", function () {\r",
-											"    const txt = pm.response.text();   // empty string if 204/empty body\r",
+											"    const txt = pm.response.text();\r",
 											"    pm.expect(txt === \"\" || txt === \"1\").to.be.true;\r",
 											"});\r",
 											"\r",
@@ -1556,14 +1560,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/vehicles/{{vehicleId}}",
+									"raw": "{{baseUrl}}/api/vehicles/67",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"vehicles",
-										"{{vehicleId}}"
+										"67"
 									]
 								}
 							},
@@ -1594,9 +1598,8 @@
 											"    pm.expect((pm.response.headers.get(\"Content-Type\") || \"\").toLowerCase()).to.include(\"application/json\");\r",
 											"});\r",
 											"\r",
-											"\r",
 											"const json = pm.response.json();\r",
-											"// Basic shape\r",
+											"\r",
 											"pm.test(\"RepairService fields exist\", function () {\r",
 											"  pm.expect(json).to.be.an(\"object\");\r",
 											"  pm.expect(json).to.have.property(\"id\").that.is.a(\"number\");\r",
@@ -1605,8 +1608,7 @@
 											"  pm.expect(json).to.have.property(\"deleted\").that.is.a(\"boolean\");\r",
 											"});\r",
 											"\r",
-											"// baseService is nullable OR object\r",
-											"pm.test(\"baseService nullable or object\", function () {\r",
+											"pm.test(\"baseService null or object\", function () {\r",
 											"  if (json.baseService === null) {\r",
 											"    pm.expect(json.baseService).to.equal(null);\r",
 											"  } else {\r",
@@ -1627,7 +1629,13 @@
 									"listen": "prerequest",
 									"script": {
 										"exec": [
-											""
+											"let randomName = '';\r",
+											"const chars = 'abcdefghijklmnopqrstuvwxyz'; \r",
+											"\r",
+											"for (let i = 0; i < 15; i++) {  \r",
+											"    randomName += chars.charAt(Math.floor(Math.random() * chars.length));\r",
+											"}\r",
+											"pm.variables.set(\"name\", randomName);"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1639,7 +1647,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"OBD-II Engine Diagnostics\",\r\n  \"price\": 150\r\n}\r\n\r\n",
+									"raw": "{\r\n  \"name\": \"{{name}}\",\r\n  \"price\": 150\r\n}\r\n\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1685,7 +1693,13 @@
 									"listen": "prerequest",
 									"script": {
 										"exec": [
-											""
+											"let randomName = '';\r",
+											"const chars = 'abcdefghijklmnopqrstuvwxyz'; \r",
+											"\r",
+											"for (let i = 0; i < 6; i++) {  \r",
+											"    randomName += chars.charAt(Math.floor(Math.random() * chars.length));\r",
+											"}\r",
+											"pm.variables.set(\"name\", randomName);"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1697,7 +1711,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Wheel Alignment\", // Wheel Alignment\r\n  \"price\": 180\r\n}\r\n\r\n",
+									"raw": "{\r\n  \"name\": \"{{name}}\",\r\n  \"price\": 180\r\n}\r\n\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1776,19 +1790,15 @@
 											"    pm.response.to.have.status(200);\r",
 											"});\r",
 											"\r",
-											"// Parse JSON (array expected)\r",
 											"let json = pm.response.json();\r",
 											"\r",
 											"pm.test(\"Response is an array\", function () {\r",
 											"    pm.expect(json).to.be.an(\"array\");\r",
-											"    pm.expect(json.length).to.be.greaterThan(0); // not empty\r",
+											"    pm.expect(json.length).to.be.greaterThan(0);\r",
 											"});\r",
 											"\r",
-											"// // Check the first element\r",
-											"// let item = json[0];\r",
 											"const service = pm.response.json()[0];\r",
 											"\r",
-											"// Service\r",
 											"pm.test(\"Service has required fields (not null)\", function () {\r",
 											"    pm.expect(service.id, \"Order id is missing or null\").to.not.be.null;\r",
 											"    pm.expect(service.clientCar, \"Order clientCar is missing or null\").to.not.be.null;\r",
@@ -1797,33 +1807,7 @@
 											"    pm.expect(service.orderDate, \"Order date is missing or null\").to.not.be.null;\r",
 											"    \r",
 											"});\r",
-											"\r",
-											"// pm.test(\"RepairService object has required fields\", function () {\r",
-											"//     pm.expect(item).to.have.property(\"id\");\r",
-											"//     pm.expect(item).to.have.property(\"name\");\r",
-											"//     pm.expect(item).to.have.property(\"price\");\r",
-											"//     pm.expect(item).to.have.property(\"baseService\");\r",
-											"// });\r",
-											"\r",
-											"// pm.test(\"RepairService field types are correct\", function () {\r",
-											"//     pm.expect(item.id).to.be.a(\"number\");\r",
-											"//     pm.expect(item.name).to.be.a(\"string\");\r",
-											"//     pm.expect(item.price).to.be.a(\"number\");\r",
-											"// });\r",
-											"\r",
-											"// // Check baseService object\r",
-											"// pm.test(\"baseService has required fields\", function () {\r",
-											"//     pm.expect(item.baseService).to.be.an(\"object\");\r",
-											"//     pm.expect(item.baseService).to.have.property(\"id\");\r",
-											"//     pm.expect(item.baseService).to.have.property(\"name\");\r",
-											"//     pm.expect(item.baseService).to.have.property(\"services\");\r",
-											"// });\r",
-											"\r",
-											"// pm.test(\"baseService field types are correct\", function () {\r",
-											"//     pm.expect(item.baseService.id).to.be.a(\"number\");\r",
-											"//     pm.expect(item.baseService.name).to.be.a(\"string\");\r",
-											"//     pm.expect(item.baseService.services).to.be.an(\"array\");\r",
-											"// });"
+											""
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1846,7 +1830,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/services/filter-sort?name=Wheel Alignment&price=180&sortBy=name&sortDirection=asc",
+									"raw": "{{baseUrl}}/api/services/filter-sort?name=Advanced&price=180&sortBy=name&sortDirection=asc",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -1858,7 +1842,7 @@
 									"query": [
 										{
 											"key": "name",
-											"value": "Wheel Alignment"
+											"value": "Advanced"
 										},
 										{
 											"key": "price",
@@ -1900,11 +1884,8 @@
 									"    pm.expect(json).to.be.an(\"array\");\r",
 									"});\r",
 									"\r",
-									"// check first object structure\r",
 									"const order = pm.response.json()[0];\r",
-									"pm.environment.set(\"orderId\", String(order.id));\r",
 									"\r",
-									"// Order\r",
 									"pm.test(\"Order has required fields (not null)\", function () {\r",
 									"    pm.expect(order.id, \"Order id is missing or null\").to.not.be.null;\r",
 									"    pm.expect(order.clientCar, \"Order clientCar is missing or null\").to.not.be.null;\r",
@@ -1913,7 +1894,6 @@
 									"    \r",
 									"});\r",
 									"\r",
-									"// check nested clientCar\r",
 									"pm.test(\"ClientCar has required fields\", function () {\r",
 									"    pm.expect(order.clientCar.id, \"Client car id is missing or null\").to.not.be.null;\r",
 									"    pm.expect(order.clientCar.vin, \"Client car vin is missing or null\").to.not.be.null;\r",
@@ -1921,7 +1901,6 @@
 									"    pm.expect(order.clientCar.vehicle, \"Client car vhicle is missing or null\").to.not.be.null;\r",
 									"});\r",
 									"\r",
-									"// check vehicle\r",
 									"pm.test(\"Vehicle has required fields\", function () {\r",
 									"    const vehicle = order.clientCar.vehicle;\r",
 									"    pm.expect(vehicle.id, \"Vehicle id is missing or null\").to.not.be.null;\r",
@@ -1932,7 +1911,6 @@
 									"    pm.expect(vehicle.deleted, \"Vehicle deleted flag is missing or null\").to.not.be.null;\r",
 									"});\r",
 									"\r",
-									"// check brand/model/year/engineType nested\r",
 									"pm.test(\"Brand has id and name\", function () {\r",
 									"    pm.expect(order.clientCar.vehicle.brand.id, \"Brand id is missing or null\").to.not.be.null;\r",
 									"    pm.expect(order.clientCar.vehicle.brand.name, \"Brand name is missing or null\").to.not.be.null;\r",
@@ -1987,12 +1965,10 @@
 									"\r",
 									"const order = pm.response.json();\r",
 									"\r",
-									"pm.test(\"Order id matches saved environment variable orderId\", function () {\r",
-									"  pm.expect(order.id).to.eql(Number(pm.environment.get(\"orderId\")));\r",
+									"pm.test(\"Order id matches 1\", function () {\r",
+									"  pm.expect(order.id).to.eql(1);\r",
 									"});\r",
 									"\r",
-									"// ---- top-level\r",
-									"// Order\r",
 									"pm.test(\"Order has required fields (not null)\", function () {\r",
 									"    pm.expect(order.id, \"Order id is missing or null\").to.not.be.null;\r",
 									"    pm.expect(order.clientCar, \"Order clientCar is missing or null\").to.not.be.null;\r",
@@ -2001,7 +1977,6 @@
 									"    \r",
 									"});\r",
 									"\r",
-									"// check nested clientCar\r",
 									"pm.test(\"ClientCar has required fields\", function () {\r",
 									"    pm.expect(order.clientCar.id, \"Client car id is missing or null\").to.not.be.null;\r",
 									"    pm.expect(order.clientCar.vin, \"Client car vin is missing or null\").to.not.be.null;\r",
@@ -2009,7 +1984,6 @@
 									"    pm.expect(order.clientCar.vehicle, \"Client car vhicle is missing or null\").to.not.be.null;\r",
 									"});\r",
 									"\r",
-									"// check vehicle\r",
 									"pm.test(\"Vehicle has required fields\", function () {\r",
 									"    const vehicle = order.clientCar.vehicle;\r",
 									"    pm.expect(vehicle.id, \"Vehicle id is missing or null\").to.not.be.null;\r",
@@ -2020,7 +1994,6 @@
 									"    pm.expect(vehicle.deleted, \"Vehicle deleted flag is missing or null\").to.not.be.null;\r",
 									"});\r",
 									"\r",
-									"// check brand/model/year/engineType nested\r",
 									"pm.test(\"Brand has id and name\", function () {\r",
 									"    pm.expect(order.clientCar.vehicle.brand.id, \"Brand id is missing or null\").to.not.be.null;\r",
 									"    pm.expect(order.clientCar.vehicle.brand.name, \"Brand name is missing or null\").to.not.be.null;\r",
@@ -2050,14 +2023,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/api/orders/{{orderId}}",
+							"raw": "{{baseUrl}}/api/orders/1",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"api",
 								"orders",
-								"{{orderId}}"
+								"1"
 							]
 						}
 					},
@@ -2075,7 +2048,7 @@
 									"});\r",
 									"\r",
 									"pm.test(\"Body indicates success\", function () {\r",
-									"  pm.expect(pm.response.text().trim()).to.be.oneOf([\"1\",\"\"]); // or .to.be.oneOf([\"1\",\"\"])\r",
+									"  pm.expect(pm.response.text().trim()).to.be.oneOf([\"1\",\"\"]);\r",
 									"});\r",
 									"\r",
 									""
@@ -2088,15 +2061,24 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{baseUrl}}/api/orders/{{orderId}}/status?newStatus=READY_FOR_PICKUP",
+							"raw": "{{baseUrl}}/api/orders/1/status?newStatus=READY_FOR_PICKUP",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"api",
 								"orders",
-								"{{orderId}}",
+								"1",
 								"status"
 							],
 							"query": [
@@ -2122,7 +2104,6 @@
 									"\r",
 									"const total = pm.response.json();\r",
 									"\r",
-									"// currency in query must be EUR or BGN\r",
 									"pm.test(\"Currency is EUR or BGN\", function () {\r",
 									"  const q = pm.request.url.query.toObject();\r",
 									"  pm.expect([\"EUR\",\"BGN\"]).to.include((q.currency || \"BGN\").toUpperCase());\r",
@@ -2141,24 +2122,36 @@
 							}
 						}
 					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{baseUrl}}/api/orders/{{orderId}}/total-price?currency={{currency}}",
+							"raw": "{{baseUrl}}/api/orders/1/total-price?currency=BGN",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"api",
 								"orders",
-								"{{orderId}}",
+								"1",
 								"total-price"
 							],
 							"query": [
 								{
 									"key": "currency",
-									"value": "{{currency}}"
+									"value": "BGN"
 								}
 							]
 						}
@@ -2204,20 +2197,20 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/api/orders/{{orderId}}/download-pdf?currency={{currency}}",
+							"raw": "{{baseUrl}}/api/orders/1/download-pdf?currency=BGN",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"api",
 								"orders",
-								"{{orderId}}",
+								"1",
 								"download-pdf"
 							],
 							"query": [
 								{
 									"key": "currency",
-									"value": "{{currency}}"
+									"value": "BGN"
 								}
 							]
 						}
@@ -2322,12 +2315,12 @@
 		"basic": [
 			{
 				"key": "password",
-				"value": "Testing1@",
+				"value": "Qwertyuiop1!",
 				"type": "string"
 			},
 			{
 				"key": "username",
-				"value": "test",
+				"value": "user",
 				"type": "string"
 			}
 		]

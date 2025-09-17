@@ -2,24 +2,15 @@ package tests.api;
 
 import com.api.Endpoints;
 import core.BaseApiTest;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
 import java.util.Map;
-
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class OrderApiTests extends BaseApiTest {
-
-    @BeforeEach
-    public void before() {
-        RestAssured.authentication = RestAssured.preemptive().basic("user", "Qwertyuiop1!");
-    }
 
     @Test
     void getAllOrders() {
@@ -73,7 +64,6 @@ public class OrderApiTests extends BaseApiTest {
         Map<String, Object> clientCar = response.jsonPath().getMap("clientCar");
         String status = response.jsonPath().getString("status");
         String orderDate = response.jsonPath().getString("orderDate");
-
 
         Assertions.assertAll("order details",
                 () -> Assertions.assertEquals(orderId, id, "Order id mismatch"),
@@ -131,9 +121,7 @@ public class OrderApiTests extends BaseApiTest {
         double total = response.as(Double.class);
 
         Assertions.assertAll("total price validation",
-
                 () -> Assertions.assertTrue(total >= 0, "Total price must be non-negative")
-
         );
     }
 
@@ -187,21 +175,17 @@ public class OrderApiTests extends BaseApiTest {
                         .statusCode(SC_OK)
                         .extract().response();
 
-
         List<?> items = response.jsonPath().getList("$");
         Assertions.assertNotNull(items, "Response is not an array");
         Assertions.assertFalse(items.isEmpty(), "Expected at least one order for the user");
-
 
         int orderId = response.jsonPath().getInt("[0].id");
         String status = response.jsonPath().getString("[0].status");
         String orderDate = response.jsonPath().getString("[0].orderDate");
 
-
         Integer clientCarId = response.jsonPath().getInt("[0].clientCar.id");
         String vin = response.jsonPath().getString("[0].clientCar.vin");
         String licensePlate = response.jsonPath().getString("[0].clientCar.licensePlate");
-
 
         Integer vehicleId = response.jsonPath().getInt("[0].clientCar.vehicle.id");
         String brandName = response.jsonPath().getString("[0].clientCar.vehicle.brand.name");

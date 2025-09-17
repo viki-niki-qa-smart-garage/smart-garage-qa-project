@@ -3,14 +3,13 @@ package tests.api;
 import com.api.Endpoints;
 import com.api.Vehicles;
 import core.BaseApiTest;
-import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_CREATED;
@@ -18,10 +17,6 @@ import static org.apache.http.HttpStatus.SC_OK;
 
 public class ClientCarServicesApiTests extends BaseApiTest {
     Vehicles vehicles;
-    @BeforeEach
-    void setUp() {
-        RestAssured.authentication = RestAssured.preemptive().basic("test", "Testing1@");
-    }
 
     @Test
     void filterClientCarsByOwner() {
@@ -35,9 +30,6 @@ public class ClientCarServicesApiTests extends BaseApiTest {
                         .log().all()
                         .statusCode(SC_OK)
                         .extract().response();
-
-        List<Integer> usersId = response.jsonPath().getList("id");
-        System.out.println(usersId);
     }
 
     @Test
@@ -63,7 +55,7 @@ public class ClientCarServicesApiTests extends BaseApiTest {
                 given()
                         .contentType("application/json")
                         .when()
-                        .pathParam("clientCarId", 8)
+                        .pathParam("clientCarId", 9)
                         .pathParam("serviceId", 11)
                         .post(Endpoints.ADD_SERVICE)
                         .then()
@@ -75,14 +67,24 @@ public class ClientCarServicesApiTests extends BaseApiTest {
     }
 
     @Test
-    void createANewClientCar() {
-         vehicles = new Vehicles("Audi", "Volkswagen", 2021, "3.0 TDI", "G35OCC63R3T8KNFZT", "C2999BA" );
+    void createNewClientCar() {
+        String[] regionPrefixes = { "A","B","CH","Y","TX","H","CC","PP","T","P",
+                "BT","EB","CT","X","K","CM","PB","OB","EH","PA",
+                "E","KH","PK","CA","C","CB","CO","BP","M","BH" };
+        String bgLetters = "ABEKMHOPCTYX";
+        String randomPlate =
+                regionPrefixes[ThreadLocalRandom.current().nextInt(regionPrefixes.length)] +
+                        RandomStringUtils.randomNumeric(4) +
+                        RandomStringUtils.random(2, bgLetters);
+        String randomVin = RandomStringUtils.randomAlphabetic(10).toUpperCase() + RandomStringUtils.randomNumeric(7);
+
+         vehicles = new Vehicles("Audi", "Volkswagen", 2021, "3.0 TDI", randomVin, randomPlate);
         Response response =
                 given()
                         .contentType("application/json")
                         .body(vehicles)
                         .when()
-                        .pathParam("userId", 24)
+                        .pathParam("userId", 10)
                         .post(Endpoints.CREATE_NEW_CLIENT_CAR)
                         .then()
                         .log().all()
@@ -95,19 +97,28 @@ public class ClientCarServicesApiTests extends BaseApiTest {
         Assertions.assertEquals("Volkswagen", json.getString("vehicle.model.name"), "Model does not match");
         Assertions.assertEquals(2021, json.getInt("vehicle.year.year"), "Year does not match");
         Assertions.assertEquals("3.0 TDI", json.getString("vehicle.engineType.name"), "Engine type does not match");
-        Assertions.assertEquals("G35OCC63R3T8KNFZT", json.getString("vin"), "VIN does not match");
-        Assertions.assertEquals("C2999BA", json.getString("licensePlate"), "License plate does not match");
+        Assertions.assertEquals(randomVin, json.getString("vin"), "VIN does not match");
+        Assertions.assertEquals(randomPlate, json.getString("licensePlate"), "License plate does not match");
     }
 
     @Test
     void updateClientCarDetails() {
-        vehicles = new Vehicles("G45OCC63R3T8KNFZT", "C3999BA");
+        String[] regionPrefixes = { "A","B","CH","Y","TX","H","CC","PP","T","P",
+                "BT","EB","CT","X","K","CM","PB","OB","EH","PA",
+                "E","KH","PK","CA","C","CB","CO","BP","M","BH" };
+        String bgLetters = "ABEKMHOPCTYX";
+        String randomPlate =
+                regionPrefixes[ThreadLocalRandom.current().nextInt(regionPrefixes.length)] +
+                        RandomStringUtils.randomNumeric(4) +
+                        RandomStringUtils.random(2, bgLetters);
+        String randomVin = RandomStringUtils.randomAlphabetic(10).toUpperCase() + RandomStringUtils.randomNumeric(7);
+        vehicles = new Vehicles(randomVin, randomPlate);
         Response response =
                 given()
                         .contentType("application/json")
                         .body(vehicles)
                         .when()
-                        .pathParam("clientCarId", 24)
+                        .pathParam("clientCarId", 5)
                         .put(Endpoints.UPDATE_CAR_DETAILS)
                         .then()
                         .log().all()

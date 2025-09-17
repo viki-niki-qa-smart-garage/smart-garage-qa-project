@@ -12,7 +12,6 @@ public class HomePage extends BasePage {
     private final By adminPanelButton = By.xpath("//div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]");
     private final By myOrdersButton = By.xpath("//div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'My Orders')]");
 
-
     public HomePage() {
         super("");
     }

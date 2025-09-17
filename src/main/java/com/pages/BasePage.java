@@ -4,7 +4,6 @@ import testframework.PropertiesManager;
 import testframework.core.BaseWebPage;
 
 public class BasePage extends BaseWebPage {
-
     public BasePage(String pageSpecificUrl) {
         super(pageSpecificUrl);
     }

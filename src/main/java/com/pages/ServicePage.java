@@ -124,11 +124,9 @@ public class ServicePage extends BasePage {
         int before = getRowsCount();
         WebElement oldTbody = driver().findElement(tbody);
 
-
         WebElement deleteBtn = row.findElement(By.id("delete-" + serviceId));
         driverWait().withTimeout(Duration.ofSeconds(11));
         deleteBtn.click();
-
 
         driverWait().until(ExpectedConditions.alertIsPresent()).accept();
 
@@ -144,7 +142,6 @@ public class ServicePage extends BasePage {
         driverWait().withTimeout(Duration.ofSeconds(11));
         deleteService(id);
 
-
         List<WebElement> serviceIsDeleted = driver().findElements(
                 By.cssSelector("#servicesTable tbody tr[data-service-id='" + id + "']"));
         Assertions.assertTrue(serviceIsDeleted.isEmpty(), "Service row with id=" + id + " still exists after delete.");
@@ -152,7 +149,6 @@ public class ServicePage extends BasePage {
 
 
     public void updateFirstServicePrice(String newPrice) {
-
         WebElement row = driverWait().until(
                 ExpectedConditions.visibilityOfElementLocated(firstServiceRow));
         String serviceId = row.getAttribute("data-service-id");
@@ -192,7 +188,6 @@ public class ServicePage extends BasePage {
     }
 
     public int integerPart(String value) {
-
         Matcher match = Pattern.compile("([0-9]+)([\\.,][0-9]{1,2})?").matcher(value);
         if (!match.find()) throw new IllegalArgumentException("No numeric value in: " + value);
         return Integer.parseInt(match.group(1));

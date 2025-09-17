@@ -12,13 +12,12 @@ import java.util.List;
 public class ManageServicesTests extends SmartGarageBaseWebTest {
     @BeforeEach
     public void setUp() {
-        loginPage.navigate();
-        loginPage.login(TestData.EMPLOYEE_USERNAME_NIKI.getValue(), TestData.EMPLOYEE_PASSWORD_NIKI.getValue());
+        loginPage.login(TestData.EMPLOYEE_USERNAME.getValue(), TestData.EMPLOYEE_PASSWORD.getValue());
+        homePage.clickServicesButton();
     }
 
     @Test
     public void browseAllServices() {
-        homePage.clickServicesButton();
         List<WebElement> numberOfServices = servicePage.getServicesList();
 
         Assertions.assertTrue(numberOfServices.size() > 0, "Expected at least 1 service in the list");
@@ -27,7 +26,6 @@ public class ManageServicesTests extends SmartGarageBaseWebTest {
 
     @Test
     public void browseSpecificService() {
-        homePage.clickServicesButton();
         servicePage.clickEngineDiagnosticsContainer();
         WebElement overview = servicePage.getServiceOverview();
         List<WebElement> servicesPrice = servicePage.getServicePriceTable();
@@ -39,29 +37,25 @@ public class ManageServicesTests extends SmartGarageBaseWebTest {
 
     @Test
     public void createService_when_validInput() {
-        homePage.clickServicesButton();
         servicePage.clickEngineDiagnosticsContainer();
-        servicePage.addService("Engine Fault Fixing", "130");
+        servicePage.addService("Engine Fault Fixing1", "130");
         servicePage.assertLastCreatedService("Engine Fault Fixing", "130");
     }
 
     @Test
     public void deleteService() {
-        homePage.clickServicesButton();
         servicePage.clickEngineDiagnosticsContainer();
-
         servicePage.deleteCreatedService("Engine Fault Fixing", "130");
     }
 
     @Test
     public void updateServicePrice_when_validInput() {
-        homePage.clickServicesButton();
         servicePage.clickEngineDiagnosticsContainer();
-        servicePage.updateFirstServicePrice("120");
+        servicePage.updateFirstServicePrice("130");
 
         String uiText = servicePage.getUpdatedPrice().getText();
         int actualInt = servicePage.integerPart(uiText);
-        Assertions.assertEquals(120, actualInt);
+        Assertions.assertEquals(130, actualInt);
     }
 
 
