@@ -3,6 +3,7 @@ package tests.api;
 import com.api.Endpoints;
 import com.api.Vehicles;
 import core.BaseApiTest;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
@@ -68,7 +69,8 @@ public class VehicleApiTests extends BaseApiTest {
 
     @Test
     void createVehicle() {
-        Vehicles vehicles = new Vehicles("Volkswagen", "Polo", 2008, "1.4 TSI");
+        String randomModelName = RandomStringUtils.randomAlphabetic(5).toLowerCase();
+        Vehicles vehicles = new Vehicles("Volkswagen", randomModelName, 2008, "1.4 TSI");
 
         Response response =
                 given()
@@ -91,7 +93,7 @@ public class VehicleApiTests extends BaseApiTest {
 
 
         Assertions.assertEquals("Volkswagen", brandName, "Incorrect brandName");
-        Assertions.assertEquals("Polo", modelName, "Incorrect modelName");
+        Assertions.assertEquals(randomModelName, modelName, "Incorrect modelName");
         Assertions.assertEquals(2008, year, "Incorrect year");
         Assertions.assertEquals("1.4 TSI", engineType, "Incorrect engine type");
         Assertions.assertTrue(vehicleId != null && vehicleId > 0, "Generated id should be > 0");
@@ -134,7 +136,6 @@ public class VehicleApiTests extends BaseApiTest {
                         .log().all()
                         .statusCode(SC_OK)
                         .extract().response();
-
     }
 
     @Test

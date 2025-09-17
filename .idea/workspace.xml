@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/Services.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/api/RepairServiceApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/core/BaseApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/core/BaseApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/Endpoints.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/ClientCarServicesApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/ClientCarServicesApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/OrderApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/OrderApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/UserApiCrudTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/UserApiCrudTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/UserApiSearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/UserApiSearchTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/VehicleApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/VehicleApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +54,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ClientCarServicesApiTests.createNewClientCar.executor": "Run",
     "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
+    "JUnit.ClientCarServicesApiTests.updateClientCarDetails.executor": "Run",
     "JUnit.CustomerProfileTests.browseAllCustomersProfiles.executor": "Run",
     "JUnit.CustomerProfileTests.executor": "Run",
     "JUnit.CustomerProfileTests.filterCustomersByVehicle.executor": "Run",
@@ -80,8 +82,14 @@
     "JUnit.OrderApiTests.getUserOrders.executor": "Run",
     "JUnit.OrderApiTests.updateOrderStatus.executor": "Run",
     "JUnit.RegistrationTest.successfulRegistration_when_validCredentials.executor": "Run",
+    "JUnit.RepairServiceApiTests.createService.executor": "Run",
+    "JUnit.RepairServiceApiTests.deleteService.executor": "Run",
+    "JUnit.RepairServiceApiTests.filterSortServices.executor": "Run",
+    "JUnit.RepairServiceApiTests.updateService.executor": "Run",
     "JUnit.ServiceHistoryTests.customerCanViewListOfTheirServices.executor": "Run",
     "JUnit.ServiceHistoryTests.testServiceHistory.executor": "Run",
+    "JUnit.UserApiCrudTests.createCustomer.executor": "Run",
+    "JUnit.UserApiCrudTests.updateUser.executor": "Run",
     "JUnit.UserApiSearchTests.getAllUsersByBrand.executor": "Run",
     "JUnit.UserApiSearchTests.getAllUsersByBrandName.executor": "Run",
     "JUnit.UserApiSearchTests.getAllUsersByEmailKeyword.executor": "Run",
@@ -93,6 +101,7 @@
     "JUnit.UserApiTests.getAllUsers.executor": "Run",
     "JUnit.UserApiTests.getConcreteUser.executor": "Run",
     "JUnit.UserApiTests.updateUser.executor": "Run",
+    "JUnit.VehicleApiTests.createVehicle.executor": "Run",
     "JUnit.VehicleApiTests.executor": "Run",
     "JUnit.VehicleApiTests.getAllVehicles.executor": "Run",
     "JUnit.VehicleApiTests.getCreatedVehicle.executor": "Run",
@@ -130,65 +139,65 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.api in SmartGarageTI">
-    <configuration name="ManageServicesTests.browseSpecificService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepairServiceApiTests.createService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="PATTERN" value="tests.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
-      <option name="METHOD_NAME" value="browseSpecificService" />
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.RepairServiceApiTests" />
+      <option name="METHOD_NAME" value="createService" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageServicesTests.createService_when_validInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepairServiceApiTests.deleteService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="PATTERN" value="tests.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
-      <option name="METHOD_NAME" value="createService_when_validInput" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManageServicesTests.deleteService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SmartGarageTI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.RepairServiceApiTests" />
       <option name="METHOD_NAME" value="deleteService" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageServicesTests.updateServicePrice_when_validInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepairServiceApiTests.filterSortServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="PATTERN" value="tests.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
-      <option name="METHOD_NAME" value="updateServicePrice_when_validInput" />
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.RepairServiceApiTests" />
+      <option name="METHOD_NAME" value="filterSortServices" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RepairServiceApiTests.updateService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SmartGarageTI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.RepairServiceApiTests" />
+      <option name="METHOD_NAME" value="updateService" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -205,10 +214,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.api in SmartGarageTI" />
-        <item itemvalue="JUnit.ManageServicesTests.updateServicePrice_when_validInput" />
-        <item itemvalue="JUnit.ManageServicesTests.deleteService" />
-        <item itemvalue="JUnit.ManageServicesTests.createService_when_validInput" />
-        <item itemvalue="JUnit.ManageServicesTests.browseSpecificService" />
+        <item itemvalue="JUnit.RepairServiceApiTests.filterSortServices" />
+        <item itemvalue="JUnit.RepairServiceApiTests.deleteService" />
+        <item itemvalue="JUnit.RepairServiceApiTests.updateService" />
+        <item itemvalue="JUnit.RepairServiceApiTests.createService" />
       </list>
     </recent_temporary>
   </component>
@@ -455,7 +464,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758113438050</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1758115488466</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1758115488466</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

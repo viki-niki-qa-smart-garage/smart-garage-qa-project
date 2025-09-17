@@ -4,6 +4,7 @@ import com.api.Endpoints;
 import com.api.User;
 import core.BaseApiTest;
 import io.restassured.response.Response;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
@@ -79,8 +80,12 @@ public class UserApiCrudTests extends BaseApiTest {
 
     @Test
     void updateUser() {
-        user = new User("Tom", "Smith", "tom@abv.bg", "0807998844");
-        final int userID = 30;
+        String randomFirstName = RandomStringUtils.randomAlphabetic(10).toLowerCase();
+        String randomLastName = RandomStringUtils.randomAlphabetic(15).toLowerCase();
+        String randomEmail = RandomStringUtils.randomAlphabetic(10).toLowerCase() + "@abv.bg";
+        String randomNumber = RandomStringUtils.randomNumeric(10);
+        user = new User(randomFirstName, randomLastName, randomEmail, randomNumber);
+        final int userID = 8;
         Response response =
                 given()
                         .contentType("application/json")
@@ -98,10 +103,10 @@ public class UserApiCrudTests extends BaseApiTest {
         String phoneNumber = response.jsonPath().getString("phoneNumber");
 
         Assertions.assertAll("user details changed",
-                () -> assertEquals("Tom", firstName, "First name was not updated"),
-                () -> assertEquals("Smith", lastName, "Last name was not updated"),
-                () -> assertEquals("tom@abv.bg", email, "Email was not updated"),
-                () -> assertEquals("0877998844", phoneNumber, "Phone number was not updated")
+                () -> assertEquals(randomFirstName, firstName, "First name was not updated"),
+                () -> assertEquals(randomLastName, lastName, "Last name was not updated"),
+                () -> assertEquals(randomEmail, email, "Email was not updated"),
+                () -> assertEquals(randomNumber, phoneNumber, "Phone number was not updated")
         );
     }
 
@@ -130,7 +135,10 @@ public class UserApiCrudTests extends BaseApiTest {
 
     @Test
     void createCustomer() {
-        user = new User("an12", "Anna", "Petrova", "an12@abv.bg", "3008532211");
+        String randomUsername = RandomStringUtils.randomAlphabetic(10).toLowerCase();
+        String randomEmail = RandomStringUtils.randomAlphabetic(10).toLowerCase() + "@abv.bg";
+        String randomNumber = RandomStringUtils.randomNumeric(10);
+        user = new User(randomUsername, "Anna", "Petrova", randomEmail, randomNumber);
         Response response =
                 given()
                         .contentType("application/json")
@@ -146,9 +154,9 @@ public class UserApiCrudTests extends BaseApiTest {
         String email = response.jsonPath().getString("email");
         String phoneNumber = response.jsonPath().getString("phoneNumber");
 
-        Assertions.assertEquals("an12", username, "Username does not match");
-        Assertions.assertEquals("an12@abv.bg", email, "Email does not match");
-        Assertions.assertEquals("3008532211", phoneNumber, "Phone number does not match");
+        Assertions.assertEquals(randomUsername, username, "Username does not match");
+        Assertions.assertEquals(randomEmail, email, "Email does not match");
+        Assertions.assertEquals(randomNumber, phoneNumber, "Phone number does not match");
 
         String password = response.jsonPath().getString("password");
         assertNotNull(password, "Password should be generated");

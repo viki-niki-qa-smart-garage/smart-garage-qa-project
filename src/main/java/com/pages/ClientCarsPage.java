@@ -33,11 +33,9 @@ public class ClientCarsPage extends BasePage {
     private final By vinField = By.cssSelector("#vin-21");
     private final By plateField = By.cssSelector("#licensePlate-21");
     private final By ownerField = By.cssSelector("div.custom-car-list-column:nth-of-type(3)");
-
     private final By listContainer = By.cssSelector("div.custom-car-list-items");
     private final By lastCreatedVehicle = By.cssSelector("div.custom-car-list-items > div.vehicle-item:last-child");
     private final By lastVehicleDeleteButton = By.cssSelector("div.custom-car-list-items > div.vehicle-item:last-child button[id^='delete-']");
-
 
 
     public ClientCarsPage() {
@@ -45,8 +43,6 @@ public class ClientCarsPage extends BasePage {
     }
 
     public void addClientCar(String vin, String licensePlate, String owner, String make, String engineType, String year) {
-
-
         WebElement vinField = driver().findElement(vinInput);
         vinField.sendKeys(vin);
 
@@ -71,12 +67,10 @@ public class ClientCarsPage extends BasePage {
 
         WebElement addClientCarBtn = driver().findElement(addClientCarButton);
         addClientCarBtn.click();
-
     }
 
     public void navigateToLastPage() {
         driverWait().until(ExpectedConditions.visibilityOfElementLocated(lastPageButton)).click();
-
     }
 
     public List<WebElement> getLastPageVehicles() {
@@ -94,7 +88,6 @@ public class ClientCarsPage extends BasePage {
     getLastPageVehicles();
     List<WebElement> deleteButtons = getLastRowCells();
     deleteButtons.get(0).click();
-
     }
 
     public WebElement getVin() {
