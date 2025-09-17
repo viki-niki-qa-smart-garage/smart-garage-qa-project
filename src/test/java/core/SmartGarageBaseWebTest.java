@@ -26,6 +26,8 @@ public class SmartGarageBaseWebTest extends BaseWebTest {
         usersPage = new UsersPage();
         servicePage = new ServicePage();
         myOrdersPage = new MyOrdersPage();
+
+        loginPage.navigate();
     }
 
     @AfterEach

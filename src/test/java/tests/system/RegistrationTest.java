@@ -7,16 +7,10 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
 
 public class RegistrationTest extends SmartGarageBaseWebTest {
-    @BeforeEach
-    public void setUp() {
-        homePage.navigate();
-    }
 
     @Test
     public void successfulRegistration_when_validCredentials() {
-
-        homePage.clickLoginButton();
-        loginPage.register("testUser", "testUser@mail.com", "Ivan", "Ivanov", "1234567899");
+        loginPage.register("testUser5", "testUser5@mail.com", "Ivan", "Ivanov", "7055567899");
 
         WebElement message = loginPage.getRegistrationMessage();
         Assertions.assertEquals("Registration successful!", message.getText(), "Not Successfully Registered!");

@@ -13,27 +13,23 @@ import java.util.List;
 public class ManageVehiclesTests extends SmartGarageBaseWebTest {
     @BeforeEach
     public void setUp() {
-        loginPage.navigate();
-        loginPage.login(TestData.EMPLOYEE_USERNAME_NIKI.getValue(), TestData.EMPLOYEE_PASSWORD_NIKI.getValue());
+        loginPage.login(TestData.EMPLOYEE_USERNAME.getValue(), TestData.EMPLOYEE_PASSWORD.getValue());
+        homePage.clickAdminPanelButton();
+        adminPanelPage.clickClientCarsContainer();
     }
 
     @Test
     public void successfullyClientCarCreation_when_loginWithValidCredentials() {
-        homePage.clickAdminPanelButton();
-        adminPanelPage.clickClientCarsContainer();
-        clientCarsPage.addClientCar("WAUZZZ8P4AA000100", "A1112BC", "testCustomer", "A3", "1.4 TSI", "1999");
-
+        clientCarsPage.addClientCar("WAUZZZ8P4AA000104", "A0332BC", "diana_smith", "A3", "1.4 TSI", "1999");
         clientCarsPage.navigateToLastPage();
 
         WebElement vin = clientCarsPage.getVin();
-        Assertions.assertEquals("WAUZZZ8P4AA000100", vin.getText(), "Client Car is not created");
+        Assertions.assertEquals("WAUZZZ8P4AA000104", vin.getText(), "Client Car is not created");
         clientCarsPage.deleteCreatedClientCar();
     }
 
     @Test
     public void browseAllVehiclesLinkedToCustomers() {
-        homePage.clickAdminPanelButton();
-        adminPanelPage.clickClientCarsContainer();
         List<WebElement> cars = clientCarsPage.getCarList();
 
         Assertions.assertTrue(cars.size() > 0, "Expected at least 1 car on the page.");
@@ -42,23 +38,18 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
 
     @Test
     public void updateExistingVehicleDetails(){
-        homePage.clickAdminPanelButton();
-        adminPanelPage.clickClientCarsContainer();
-        clientCarsPage.updateCarDetails("WAUZZZ8P4AA000077", "EB1234KK");
-
+        clientCarsPage.updateCarDetails("WAUZZZ8P4AA000078", "EB8234KK");
         List<WebElement> cars = clientCarsPage.getCarList();
 
         String vin = clientCarsPage.getCarVin(cars.get(0));
         String plate = clientCarsPage.getCarPlate(cars.get(0));
 
-        Assertions.assertEquals("WAUZZZ8P4AA000077", vin, "VIN not updated");
-        Assertions.assertEquals("EB1234KK", plate, "License Plate not updated");
+        Assertions.assertEquals("WAUZZZ8P4AA000078", vin, "VIN not updated");
+        Assertions.assertEquals("EB8234KK", plate, "License Plate not updated");
     }
 
     @Test
     public void filterVehiclesByOwnerFirstName() {
-        homePage.clickAdminPanelButton();
-        adminPanelPage.clickClientCarsContainer();
         clientCarsPage.filterByFirstName("Alex");
         WebElement owner = clientCarsPage.getOwner();
 

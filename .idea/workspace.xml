@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd99a23e-3266-421e-ac56-5bdcc0b6deda" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageReportsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.log" beforeDir="false" afterPath="$PROJECT_DIR$/output.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enums/BaseServices.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enums/BrandType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/enums/RoleType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/MyOrdersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/MyOrdersPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pages/ClientCarsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/core/SmartGarageBaseWebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enums/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enums/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/RegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/customer/ServiceHistoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/customer/ServiceHistoryTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/CustomerProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/CustomerProfileTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageDetailsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageDetailsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageReportsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageReportsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageServicesTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/system/employee/ManageVehiclesTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +62,12 @@
   "keyToString": {
     "JUnit.ClientCarServicesApiTests.getClientCarServices.executor": "Run",
     "JUnit.CustomerProfileTests.browseAllCustomersProfiles.executor": "Run",
+    "JUnit.CustomerProfileTests.executor": "Run",
     "JUnit.CustomerProfileTests.filterCustomersByVehicle.executor": "Run",
     "JUnit.CustomerProfileTests.filterCustomersByVisitedBeforeDate.executor": "Run",
     "JUnit.LoginTest.successfulLogin_when_validCredentials.executor": "Run",
     "JUnit.ManageDetailsTests.changePassword.executor": "Run",
+    "JUnit.ManageDetailsTests.executor": "Run",
     "JUnit.ManageDetailsTests.forgotPassword.executor": "Run",
     "JUnit.ManageReportsTests.viewDetailedReportOfACustomer.executor": "Run",
     "JUnit.ManageServicesTests.browseAllServices.executor": "Run",
@@ -104,6 +109,7 @@
     "JUnit.VehiclesApiTest.getConcreteVehicle.executor": "Run",
     "JUnit.VehiclesApiTest.getCreatedVehicle.executor": "Run",
     "JUnit.VehiclesApiTest.updateVehicle.executor": "Run",
+    "JUnit.system in SmartGarageTI.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -116,6 +122,11 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -123,8 +134,8 @@
       <recent name="C:\Users\User\smart-garage-qa-project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.system in SmartGarageTI">
-    <configuration name="CustomerProfileTests.browseAllCustomersProfiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ManageServicesTests.updateServicePrice_when_validInput">
+    <configuration name="ManageServicesTests.browseAllServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -133,14 +144,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
-      <option name="METHOD_NAME" value="browseAllCustomersProfiles" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="METHOD_NAME" value="browseAllServices" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerProfileTests.filterCustomersByVehicle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageServicesTests.browseSpecificService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
@@ -149,60 +160,68 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.system.employee" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.employee.CustomerProfileTests" />
-      <option name="METHOD_NAME" value="filterCustomersByVehicle" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="METHOD_NAME" value="browseSpecificService" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceHistoryTests.customerCanViewListOfTheirServices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageServicesTests.createService_when_validInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.system.customer.*" />
+          <option name="PATTERN" value="tests.system.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.system.customer" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.customer.ServiceHistoryTests" />
-      <option name="METHOD_NAME" value="customerCanViewListOfTheirServices" />
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="METHOD_NAME" value="createService_when_validInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceHistoryTests.testServiceHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageServicesTests.deleteService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.system.customer.*" />
+          <option name="PATTERN" value="tests.system.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.system.customer" />
-      <option name="MAIN_CLASS_NAME" value="tests.system.customer.ServiceHistoryTests" />
-      <option name="METHOD_NAME" value="testServiceHistory" />
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="METHOD_NAME" value="deleteService" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="system in SmartGarageTI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageServicesTests.updateServicePrice_when_validInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SmartGarageTI" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/tests/system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.system.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.system.employee" />
+      <option name="MAIN_CLASS_NAME" value="tests.system.employee.ManageServicesTests" />
+      <option name="METHOD_NAME" value="updateServicePrice_when_validInput" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.system in SmartGarageTI" />
-        <item itemvalue="JUnit.CustomerProfileTests.filterCustomersByVehicle" />
-        <item itemvalue="JUnit.CustomerProfileTests.browseAllCustomersProfiles" />
-        <item itemvalue="JUnit.ServiceHistoryTests.customerCanViewListOfTheirServices" />
-        <item itemvalue="JUnit.ServiceHistoryTests.testServiceHistory" />
+        <item itemvalue="JUnit.ManageServicesTests.updateServicePrice_when_validInput" />
+        <item itemvalue="JUnit.ManageServicesTests.deleteService" />
+        <item itemvalue="JUnit.ManageServicesTests.createService_when_validInput" />
+        <item itemvalue="JUnit.ManageServicesTests.browseSpecificService" />
+        <item itemvalue="JUnit.ManageServicesTests.browseAllServices" />
       </list>
     </recent_temporary>
   </component>
@@ -425,7 +444,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758016372277</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="initial commit of ServiceHistoryTests, MyOrdersPage, ManageReportsTests">
+      <option name="closed" value="true" />
+      <created>1758039848061</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1758039848062</updated>
+    </task>
+    <task id="LOCAL-00025" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1758045767037</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1758045767037</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,6 +494,7 @@
     <MESSAGE value="initial commit of ManageVehiclesTests happy path tests" />
     <MESSAGE value="initial commit Manage Vehicles Tests" />
     <MESSAGE value="initial commit Manage Services Tests" />
+    <MESSAGE value="initial commit of ServiceHistoryTests, MyOrdersPage, ManageReportsTests" />
     <MESSAGE value="initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>

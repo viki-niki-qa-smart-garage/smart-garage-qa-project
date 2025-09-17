@@ -11,8 +11,7 @@ import org.openqa.selenium.WebElement;
 public class ManageReportsTests extends SmartGarageBaseWebTest {
     @BeforeEach
     public void setUp() {
-        loginPage.navigate();
-        loginPage.login(TestData.EMPLOYEE_USERNAME_VIKI.getValue(), TestData.EMPLOYEE_PASSWORD_VIKI.getValue());
+        loginPage.login(TestData.EMPLOYEE_USERNAME.getValue(), TestData.EMPLOYEE_PASSWORD.getValue());
     }
 
     @Test
