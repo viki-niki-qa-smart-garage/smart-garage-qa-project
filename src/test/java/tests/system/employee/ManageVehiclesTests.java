@@ -2,15 +2,12 @@ package tests.system.employee;
 
 import core.SmartGarageBaseWebTest;
 import enums.TestData;
-import io.restassured.internal.common.assertion.Assertion;
-import org.apache.commons.lang3.RandomStringUtils;
+import utils.TestDataGeneration;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
-
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class ManageVehiclesTests extends SmartGarageBaseWebTest {
     @BeforeEach
@@ -22,15 +19,8 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
 
     @Test
     public void successfullyClientCarCreation_when_loginWithValidCredentials() {
-        String[] regionPrefixes = { "A","B","CH","Y","TX","H","CC","PP","T","P",
-                "BT","EB","CT","X","K","CM","PB","OB","EH","PA",
-                "E","KH","PK","CA","C","CB","CO","BP","M","BH" };
-        String bgLetters = "ABEKMHOPCTYX";
-        String randomPlate =
-                regionPrefixes[ThreadLocalRandom.current().nextInt(regionPrefixes.length)] +
-                        RandomStringUtils.randomNumeric(4) +
-                        RandomStringUtils.random(2, bgLetters);
-        String randomVin = RandomStringUtils.randomAlphabetic(10).toUpperCase() + RandomStringUtils.randomNumeric(7);
+        String randomVin = TestDataGeneration.randomVin();
+        String randomPlate = TestDataGeneration.randomPlate();
         clientCarsPage.addClientCar(randomVin, randomPlate, "diana_smith", "A3", "1.4 TSI", "1999");
         clientCarsPage.navigateToLastPage();
 
@@ -47,15 +37,8 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
 
     @Test
     public void updateExistingVehicleDetails(){
-        String[] regionPrefixes = { "A","B","CH","Y","TX","H","CC","PP","T","P",
-                "BT","EB","CT","X","K","CM","PB","OB","EH","PA",
-                "E","KH","PK","CA","C","CB","CO","BP","M","BH" };
-        String bgLetters = "ABEKMHOPCTYX";
-        String randomPlate =
-                regionPrefixes[ThreadLocalRandom.current().nextInt(regionPrefixes.length)] +
-                        RandomStringUtils.randomNumeric(4) +
-                        RandomStringUtils.random(2, bgLetters);
-        String randomVin = RandomStringUtils.randomAlphabetic(10).toUpperCase() + RandomStringUtils.randomNumeric(7);
+        String randomVin = TestDataGeneration.randomVin();
+        String randomPlate = TestDataGeneration.randomPlate();
         clientCarsPage.updateCarDetails(randomVin, randomPlate);
         List<WebElement> cars = clientCarsPage.getCarList();
 

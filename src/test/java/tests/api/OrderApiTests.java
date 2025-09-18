@@ -14,7 +14,6 @@ public class OrderApiTests extends BaseApiTest {
 
     @Test
     void getAllOrders() {
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -48,7 +47,6 @@ public class OrderApiTests extends BaseApiTest {
     @Test
     void getOrderById() {
         int orderId = 1;
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -105,7 +103,6 @@ public class OrderApiTests extends BaseApiTest {
     void getOrderTotalPrice() {
         int orderId = 1;
         String currency = "BGN"; // or "EUR"
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -126,7 +123,6 @@ public class OrderApiTests extends BaseApiTest {
     void downloadOrderPdf() {
         int orderId = 1;
         String currency = "BGN"; // or "EUR"
-
         Response response =
                 given()
                         .contentType("application/json")
@@ -156,11 +152,9 @@ public class OrderApiTests extends BaseApiTest {
         );
     }
 
-
     @Test
     void getUserOrders() {
         int userId = 1;
-
         Response response =
                 given()
                         .contentType("application/json")

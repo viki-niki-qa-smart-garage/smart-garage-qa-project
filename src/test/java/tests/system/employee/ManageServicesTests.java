@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
+import utils.TestDataGeneration;
 
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class ManageServicesTests extends SmartGarageBaseWebTest {
 
     @Test
     public void createAndDeleteService() {
-        String randomServiceName = RandomStringUtils.randomAlphabetic(10).toLowerCase();
+        String randomServiceName = TestDataGeneration.randomServiceName();
         servicePage.clickEngineDiagnosticsContainer();
         String serviceId = servicePage.addService(randomServiceName, "130");
         servicePage.assertLastCreatedService(randomServiceName, "130");

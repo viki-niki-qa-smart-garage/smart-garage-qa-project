@@ -1,21 +1,20 @@
 package tests.system;
 
 import core.SmartGarageBaseWebTest;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
+import utils.TestDataGeneration;
 
 public class RegistrationTest extends SmartGarageBaseWebTest {
 
     @Test
     public void successfulRegistration_when_validCredentials() {
-        String randomUsername = RandomStringUtils.randomAlphabetic(7).toLowerCase();
-        String randomEmail = RandomStringUtils.randomAlphabetic(10).toLowerCase() + "@abv.bg";
-        String randomFirstName = RandomStringUtils.randomAlphabetic(10).toLowerCase();
-        String randomLastName = RandomStringUtils.randomAlphabetic(10).toLowerCase();
-        String randomNumber = RandomStringUtils.randomNumeric(10);
+        String randomUsername = TestDataGeneration.randomUsername();
+        String randomEmail = TestDataGeneration.randomEmail();
+        String randomFirstName = TestDataGeneration.randomFirstName();
+        String randomLastName = TestDataGeneration.randomLastName();
+        String randomNumber = TestDataGeneration.randomNumber();
         
         loginPage.register(randomUsername, randomEmail, randomFirstName, randomLastName, randomNumber);
 
