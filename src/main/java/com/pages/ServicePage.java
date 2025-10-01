@@ -59,7 +59,7 @@ public class ServicePage extends BasePage {
         driver().findElement(serviceNameInput).sendKeys(serviceName);
         driver().findElement(servicePriceInput).sendKeys(servicePrice);
 
-        WebElement saveButton = driver().findElement(saveServiceButton);
+        WebElement saveButton = driverWait().until(ExpectedConditions.visibilityOfElementLocated(saveServiceButton));
         saveButton.click();
 
         driverWait().until(ExpectedConditions.stalenessOf(oldTbody));
@@ -149,5 +149,21 @@ public class ServicePage extends BasePage {
         Matcher match = Pattern.compile("([0-9]+)([\\.,][0-9]{1,2})?").matcher(value);
         if (!match.find()) throw new IllegalArgumentException("No numeric value in: " + value);
         return Integer.parseInt(match.group(1));
+    }
+
+    public void assertSpecificServiceInfo() {
+        WebElement overview = getServiceOverview();
+        List<WebElement> servicesPrice = getServicePriceTable();
+
+        Assertions.assertTrue(overview.isDisplayed(), "Service Overview is not displayed");
+        Assertions.assertFalse(servicesPrice.isEmpty(), "Expected at least 1 service in the list");
+        Assertions.assertNotNull(servicesPrice.get(0).getText(), "First service is not displayed");
+    }
+
+    public void assertAllServicesInfo() {
+        List<WebElement> numberOfServices = getServicesList();
+
+        Assertions.assertFalse(numberOfServices.isEmpty(), "Expected at least 1 service in the list");
+        Assertions.assertTrue(numberOfServices.get(0).isDisplayed(), "First service is not displayed");
     }
 }

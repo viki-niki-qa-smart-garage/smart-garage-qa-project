@@ -20,39 +20,34 @@ public class ManageServicesTests extends SmartGarageBaseWebTest {
 
     @Test
     public void browseAllServices() {
-        List<WebElement> numberOfServices = servicePage.getServicesList();
-
-        Assertions.assertTrue(numberOfServices.size() > 0, "Expected at least 1 service in the list");
-        Assertions.assertTrue(numberOfServices.get(0).isDisplayed(), "First service is not displayed");
+        servicePage.assertAllServicesInfo();
     }
 
     @Test
     public void browseSpecificService() {
         servicePage.clickEngineDiagnosticsContainer();
-        WebElement overview = servicePage.getServiceOverview();
-        List<WebElement> servicesPrice = servicePage.getServicePriceTable();
-
-        Assertions.assertTrue(overview.isDisplayed(), "Service Overview is not displayed");
-        Assertions.assertTrue(servicesPrice.size() > 0, "Expected at least 1 service in the list");
-        Assertions.assertNotNull(servicesPrice.get(0).getText(), "First service is not displayed");
+        servicePage.assertSpecificServiceInfo();
     }
 
     @Test
     public void createAndDeleteService() {
         String randomServiceName = TestDataGeneration.randomServiceName();
+        String randomPrice = TestDataGeneration.randomPrice();
         servicePage.clickEngineDiagnosticsContainer();
-        String serviceId = servicePage.addService(randomServiceName, "130");
-        servicePage.assertLastCreatedService(randomServiceName, "130");
+        String serviceId = servicePage.addService(randomServiceName, randomPrice);
+        servicePage.assertLastCreatedService(randomServiceName, randomPrice);
         servicePage.deleteService(serviceId);
     }
 
     @Test
     public void updateServicePrice_when_validInput() {
+        String randomPrice = TestDataGeneration.randomPrice();
+        int price = Integer.parseInt(randomPrice);
         servicePage.clickEngineDiagnosticsContainer();
-        servicePage.updateFirstServicePrice("130");
+        servicePage.updateFirstServicePrice(randomPrice);
 
         String uiText = servicePage.getUpdatedPrice().getText();
         int actualInt = servicePage.integerPart(uiText);
-        Assertions.assertEquals(130, actualInt);
+        Assertions.assertEquals(price, actualInt);
     }
 }

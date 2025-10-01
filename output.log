@@ -1,12 +1,10 @@
-2025-09-18 15:50:42,542 INFO  [main] Starting Chrome browser in normal mode...
-2025-09-18 15:50:49,126 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-09-18 15:50:49,413 INFO  [main] Finding element with locator: By.id: register-tab
-2025-09-18 15:50:50,531 INFO  [main] Finding element with locator: By.id: reg-username
-2025-09-18 15:50:50,741 INFO  [main] Finding element with locator: By.id: reg-email
-2025-09-18 15:50:50,922 INFO  [main] Finding element with locator: By.id: reg-first-name
-2025-09-18 15:50:51,141 INFO  [main] Finding element with locator: By.id: reg-last-name
-2025-09-18 15:50:51,271 INFO  [main] Finding element with locator: By.id: reg-phone
-2025-09-18 15:50:51,420 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Register')]
-2025-09-18 15:50:51,882 INFO  [main] Finding element with locator: By.xpath: //div[@class='registration-success-msg']//strong[contains(text(), 'Registration successful!')]
-2025-09-18 15:50:52,320 INFO  [main] Finding element with locator: By.xpath: //div[@class='registration-success-mg']//p[contains(text(), 'Your username: ')]//b
-2025-09-18 15:50:52,395 INFO  [main] Finding element with locator: By.xpath: //div[@class='registration-success-mg']//p[contains(text(), 'Your password: ')]//b
+2025-10-01 14:32:39,744 INFO  [main] Starting Chrome browser in normal mode...
+2025-10-01 14:32:45,973 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-10-01 14:32:46,968 INFO  [main] Finding element with locator: By.id: login-username
+2025-10-01 14:32:47,285 INFO  [main] Finding element with locator: By.id: login-password
+2025-10-01 14:32:47,467 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-10-01 14:32:48,612 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-10-01 14:32:51,720 INFO  [main] Finding element with locator: By.id: search
+2025-10-01 14:32:51,964 INFO  [main] Finding element with locator: By.id: sort-by
+2025-10-01 14:32:52,305 INFO  [main] Finding element with locator: By.xpath: //button[@class='modern-button']
+2025-10-01 14:32:53,226 INFO  [main] Quiting driver...

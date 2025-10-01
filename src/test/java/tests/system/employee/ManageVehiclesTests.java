@@ -51,11 +51,12 @@ public class ManageVehiclesTests extends SmartGarageBaseWebTest {
 
     @Test
     public void filterVehiclesByOwnerFirstName() {
-        clientCarsPage.filterByFirstName("alex");
+        String name = "alex";
+        clientCarsPage.filterByFirstName(name);
         WebElement owner = clientCarsPage.getOwner();
 
         Assertions.assertTrue(
-                owner.getText().toLowerCase().contains("alex"),
+                owner.getText().toLowerCase().contains(name),
                 "Owner name does not match the expected result. Actual: " + owner.getText()
         );
     }

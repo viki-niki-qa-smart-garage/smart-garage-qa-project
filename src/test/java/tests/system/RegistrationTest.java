@@ -14,9 +14,9 @@ public class RegistrationTest extends SmartGarageBaseWebTest {
         String randomEmail = TestDataGeneration.randomEmail();
         String randomFirstName = TestDataGeneration.randomFirstName();
         String randomLastName = TestDataGeneration.randomLastName();
-        String randomNumber = TestDataGeneration.randomNumber();
+        long randomNumber = TestDataGeneration.randomNumber();
         
-        loginPage.register(randomUsername, randomEmail, randomFirstName, randomLastName, randomNumber);
+        loginPage.register(randomUsername, randomEmail, randomFirstName, randomLastName, String.valueOf(randomNumber));
 
         WebElement message = loginPage.getRegistrationMessage();
         Assertions.assertEquals("Registration successful!",

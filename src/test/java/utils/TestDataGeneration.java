@@ -1,9 +1,11 @@
 package utils;
 
+import com.github.javafaker.Faker;
 import org.apache.commons.lang3.RandomStringUtils;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class TestDataGeneration {
+    private static final Faker faker = new Faker();
     private static final String[] REGION_PREFIXES = {
             "A","B","CH","Y","TX","H","CC","PP","T","P",
             "BT","EB","CT","X","K","CM","PB","OB","EH","PA",
@@ -20,21 +22,24 @@ public class TestDataGeneration {
         return RandomStringUtils.randomAlphabetic(10).toUpperCase() + RandomStringUtils.randomNumeric(7);
     }
     public static String randomServiceName() {
-        return RandomStringUtils.randomAlphabetic(10).toLowerCase();
+          return faker.lorem().word().toLowerCase();
     }
     public static String randomUsername() {
-        return RandomStringUtils.randomAlphabetic(10).toLowerCase();
+          return faker.name().username();
     }
     public static String randomEmail() {
-        return RandomStringUtils.randomAlphabetic(10).toLowerCase() + "@gmail.com";
+          return faker.internet().emailAddress();
     }
     public static String randomFirstName() {
-        return RandomStringUtils.randomAlphabetic(10).toLowerCase();
+          return faker.name().firstName().toLowerCase();
     }
     public static String randomLastName() {
-        return RandomStringUtils.randomAlphabetic(10).toLowerCase();
+          return faker.name().lastName().toLowerCase();
     }
-    public static String randomNumber() {
-        return RandomStringUtils.randomNumeric(10).toLowerCase();
+    public static long randomNumber() {
+          return faker.number().randomNumber(10, true);
+    }
+    public static String randomPrice() {
+        return faker.number().digits(5);
     }
 }
