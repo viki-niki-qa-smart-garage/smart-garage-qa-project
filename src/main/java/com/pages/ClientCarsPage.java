@@ -26,7 +26,7 @@ public class ClientCarsPage extends BasePage {
     private final By engineTypeInput = By.id("engineType");
     private final By yearInput = By.id("yearOfCreation");
     private final By addClientCarButton = By.xpath("//button[@type='submit'and contains(text(), 'ADD CLIENT CAR')]");
-     private final By lastPageButton = By.xpath("//div[@class='pagination']//a[contains(text(), '3')]");
+    private final By lastPageButton = By.xpath("//div[@class='pagination']//a[contains(text(), '3')]");
     private final By vinAssertion = By.xpath("//div[@class='custom-car-list-container']//div[contains(text(), 'WAUZZZ8P4AA000102')]");
     private final By ErrorMessage = By.xpath("//div[@class='error-message']");
     private final By carList = By.cssSelector(".vehicle-item.custom-car-list-row");

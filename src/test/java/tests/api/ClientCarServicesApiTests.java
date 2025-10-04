@@ -8,6 +8,7 @@ import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import utils.TestDataGeneration;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -68,16 +69,8 @@ public class ClientCarServicesApiTests extends BaseApiTest {
 
     @Test
     void createNewClientCar() {
-        String[] regionPrefixes = { "A","B","CH","Y","TX","H","CC","PP","T","P",
-                "BT","EB","CT","X","K","CM","PB","OB","EH","PA",
-                "E","KH","PK","CA","C","CB","CO","BP","M","BH" };
-        String bgLetters = "ABEKMHOPCTYX";
-        String randomPlate =
-                regionPrefixes[ThreadLocalRandom.current().nextInt(regionPrefixes.length)] +
-                        RandomStringUtils.randomNumeric(4) +
-                        RandomStringUtils.random(2, bgLetters);
-        String randomVin = RandomStringUtils.randomAlphabetic(10).toUpperCase() + RandomStringUtils.randomNumeric(7);
-
+          String randomVin = TestDataGeneration.randomVin();
+          String randomPlate = TestDataGeneration.randomPlate();
          vehicles = new Vehicles("Audi", "Volkswagen", 2021, "3.0 TDI", randomVin, randomPlate);
         Response response =
                 given()
@@ -103,15 +96,8 @@ public class ClientCarServicesApiTests extends BaseApiTest {
 
     @Test
     void updateClientCarDetails() {
-        String[] regionPrefixes = { "A","B","CH","Y","TX","H","CC","PP","T","P",
-                "BT","EB","CT","X","K","CM","PB","OB","EH","PA",
-                "E","KH","PK","CA","C","CB","CO","BP","M","BH" };
-        String bgLetters = "ABEKMHOPCTYX";
-        String randomPlate =
-                regionPrefixes[ThreadLocalRandom.current().nextInt(regionPrefixes.length)] +
-                        RandomStringUtils.randomNumeric(4) +
-                        RandomStringUtils.random(2, bgLetters);
-        String randomVin = RandomStringUtils.randomAlphabetic(10).toUpperCase() + RandomStringUtils.randomNumeric(7);
+        String randomVin = TestDataGeneration.randomVin();
+        String randomPlate = TestDataGeneration.randomPlate();
         vehicles = new Vehicles(randomVin, randomPlate);
         Response response =
                 given()

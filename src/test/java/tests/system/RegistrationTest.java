@@ -1,6 +1,8 @@
 package tests.system;
 
 import core.SmartGarageBaseWebTest;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
@@ -8,6 +10,8 @@ import utils.TestDataGeneration;
 
 public class RegistrationTest extends SmartGarageBaseWebTest {
 
+    @Epic("SG-2 Public Portal Tests")
+    @Story("Registration Form Functionality")
     @Test
     public void successfulRegistration_when_validCredentials() {
         String randomUsername = TestDataGeneration.randomUsername();

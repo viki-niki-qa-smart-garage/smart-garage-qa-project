@@ -1,10 +1,15 @@
-2025-10-01 14:32:39,744 INFO  [main] Starting Chrome browser in normal mode...
-2025-10-01 14:32:45,973 INFO  [main] Navigating to page: http://localhost:8081/auth/login
-2025-10-01 14:32:46,968 INFO  [main] Finding element with locator: By.id: login-username
-2025-10-01 14:32:47,285 INFO  [main] Finding element with locator: By.id: login-password
-2025-10-01 14:32:47,467 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
-2025-10-01 14:32:48,612 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
-2025-10-01 14:32:51,720 INFO  [main] Finding element with locator: By.id: search
-2025-10-01 14:32:51,964 INFO  [main] Finding element with locator: By.id: sort-by
-2025-10-01 14:32:52,305 INFO  [main] Finding element with locator: By.xpath: //button[@class='modern-button']
-2025-10-01 14:32:53,226 INFO  [main] Quiting driver...
+2025-10-01 14:51:09,517 INFO  [main] Starting Chrome browser in normal mode...
+2025-10-01 14:51:16,496 INFO  [main] Navigating to page: http://localhost:8081/auth/login
+2025-10-01 14:51:17,603 INFO  [main] Finding element with locator: By.id: login-username
+2025-10-01 14:51:17,931 INFO  [main] Finding element with locator: By.id: login-password
+2025-10-01 14:51:18,098 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'Login')]
+2025-10-01 14:51:19,233 INFO  [main] Finding element with locator: By.xpath: //div[@class='menu-container clearfix vertical-align-cell']//a[contains(text(), 'Admin Panel')]
+2025-10-01 14:51:21,380 INFO  [main] Finding element with locator: By.id: vin
+2025-10-01 14:51:21,563 INFO  [main] Finding element with locator: By.id: licensePlate
+2025-10-01 14:51:21,698 INFO  [main] Finding element with locator: By.id: owner
+2025-10-01 14:51:21,851 INFO  [main] Finding element with locator: By.id: brand
+2025-10-01 14:51:22,092 INFO  [main] Finding element with locator: By.id: make
+2025-10-01 14:51:22,282 INFO  [main] Finding element with locator: By.id: engineType
+2025-10-01 14:51:22,412 INFO  [main] Finding element with locator: By.id: yearOfCreation
+2025-10-01 14:51:22,537 INFO  [main] Finding element with locator: By.xpath: //button[@type='submit'and contains(text(), 'ADD CLIENT CAR')]
+2025-10-01 14:51:23,945 INFO  [main] Finding element with locator: By.xpath: //div[@class='custom-car-list-container']//div[contains(text(), 'WAUZZZ8P4AA000102')]

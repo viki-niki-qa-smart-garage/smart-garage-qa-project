@@ -2,13 +2,16 @@ package tests.system.employee;
 
 import core.SmartGarageBaseWebTest;
 import enums.TestData;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
 
 public class ManageDetailsTests extends SmartGarageBaseWebTest {
-
+    @Epic("SG-1 Login and Entities Tests")
+    @Story("SG-14 Customer/Admin Change Password Functionality")
     @Test
     public void changePassword() {
         String username = TestData.EMPLOYEE2_USERNAME.getValue();
@@ -33,6 +36,8 @@ public class ManageDetailsTests extends SmartGarageBaseWebTest {
         myDetailsPage.clickLogoutButton();
     }
 
+    @Epic("SG-1 Login and Entities Tests")
+    @Story("SG-10 Customer/Admin Forgot Password Functionality")
     @Test
     public void forgotPassword() {
         homePage.clickLoginButton();

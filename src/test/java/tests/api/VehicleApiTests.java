@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import io.restassured.response.Response;
+import utils.TestDataGeneration;
+
 import java.util.List;
 import static org.apache.http.HttpStatus.SC_OK;
 
@@ -68,7 +70,7 @@ public class VehicleApiTests extends BaseApiTest {
 
     @Test
     void createVehicle() {
-        String randomModelName = RandomStringUtils.randomAlphabetic(5).toLowerCase();
+        String randomModelName = TestDataGeneration.randomModelName();
         Vehicles vehicles = new Vehicles("Volkswagen", randomModelName, 2008, "1.4 TSI");
 
         Response response =

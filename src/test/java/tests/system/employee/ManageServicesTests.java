@@ -2,6 +2,8 @@ package tests.system.employee;
 
 import core.SmartGarageBaseWebTest;
 import enums.TestData;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,6 +14,8 @@ import utils.TestDataGeneration;
 import java.util.List;
 
 public class ManageServicesTests extends SmartGarageBaseWebTest {
+    @Epic("SG-3 Admin/Employee Portal Tests")
+    @Story("SG-53 Manage Services")
     @BeforeEach
     public void setUp() {
         loginPage.login(TestData.EMPLOYEE_USERNAME.getValue(), TestData.EMPLOYEE_PASSWORD.getValue());

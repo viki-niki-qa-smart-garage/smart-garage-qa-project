@@ -2,6 +2,8 @@ package tests.system.employee;
 
 import core.SmartGarageBaseWebTest;
 import enums.TestData;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,6 +14,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class CustomerProfileTests extends SmartGarageBaseWebTest {
+    @Epic("SG-3 Admin/Employee Portal Tests")
+    @Story("SG-54 Manage Customer Profile")
     @BeforeEach
     public void setUp() {
         loginPage.login(TestData.EMPLOYEE_USERNAME.getValue(), TestData.EMPLOYEE_PASSWORD.getValue());

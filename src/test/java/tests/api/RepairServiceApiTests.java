@@ -7,6 +7,8 @@ import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import utils.TestDataGeneration;
+
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -41,7 +43,7 @@ public class RepairServiceApiTests extends BaseApiTest {
 
     @Test
     void updateService() {
-        String randomServiceName = RandomStringUtils.randomAlphabetic(15).toLowerCase();
+        String randomServiceName = TestDataGeneration.randomServiceName();
         services = new Services(randomServiceName, 120);
         final int id = 34;
         Response response =

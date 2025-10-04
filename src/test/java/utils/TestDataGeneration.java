@@ -42,4 +42,7 @@ public class TestDataGeneration {
     public static String randomPrice() {
         return faker.number().digits(5);
     }
+    public static String randomModelName() {
+        return faker.lorem().word().toLowerCase();
+    }
 }

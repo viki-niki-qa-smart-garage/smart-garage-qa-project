@@ -7,6 +7,8 @@ import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import utils.TestDataGeneration;
+
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 import static org.apache.http.HttpStatus.SC_OK;
@@ -80,10 +82,10 @@ public class UserApiCrudTests extends BaseApiTest {
 
     @Test
     void updateUser() {
-        String randomFirstName = RandomStringUtils.randomAlphabetic(10).toLowerCase();
-        String randomLastName = RandomStringUtils.randomAlphabetic(15).toLowerCase();
-        String randomEmail = RandomStringUtils.randomAlphabetic(10).toLowerCase() + "@abv.bg";
-        String randomNumber = RandomStringUtils.randomNumeric(10);
+        String randomFirstName = TestDataGeneration.randomFirstName();
+        String randomLastName = TestDataGeneration.randomLastName();
+        String randomEmail = TestDataGeneration.randomEmail();
+        String randomNumber = String.valueOf(TestDataGeneration.randomNumber());
         user = new User(randomFirstName, randomLastName, randomEmail, randomNumber);
         final int userID = 8;
         Response response =
@@ -135,9 +137,9 @@ public class UserApiCrudTests extends BaseApiTest {
 
     @Test
     void createCustomer() {
-        String randomUsername = RandomStringUtils.randomAlphabetic(10).toLowerCase();
-        String randomEmail = RandomStringUtils.randomAlphabetic(10).toLowerCase() + "@abv.bg";
-        String randomNumber = RandomStringUtils.randomNumeric(10);
+        String randomUsername = TestDataGeneration.randomUsername();
+        String randomEmail = TestDataGeneration.randomEmail();
+        String randomNumber = String.valueOf(TestDataGeneration.randomNumber());
         user = new User(randomUsername, "Anna", "Petrova", randomEmail, randomNumber);
         Response response =
                 given()
